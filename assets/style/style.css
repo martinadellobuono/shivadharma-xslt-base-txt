@@ -2,7 +2,7 @@
 html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 
 /* layout */
-.lay-app, .lay-prl, .lay-txt {overflow: auto; resize: both;}
+.lay-app, .lay-prl, .lay-txt {overflow-x: hidden; overflow-y: auto; resize: both;}
 
 /* collapse */
 .btn-collapse::after {content: "\25be"; color: #FFF; float:right; height: auto; top: -2px; margin-left: 5px;}
