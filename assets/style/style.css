@@ -14,7 +14,7 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 /* introduction */
 *[data-type='introduction'] {font-weight: 600;}
 
-/* term */
+/* commentary entry */
 *[data-type='gloss'] > *[data-type='term'] {font-weight: 700;}
 .term-icon {color: #D5DF2A; font-size: 12px; vertical-align: super;}
 .term-select {background-color: #D5DF2A;}
@@ -23,6 +23,9 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 /* quote */
 *[data-type='quote'] {color: #ED4C75;}
 *[data-type='quote']::before, *[data-type='quote']::after {content: '"';}
+
+/* apparatus */
+*[data-type='om-ins'] {font-style: italic;}
 
 /* wit */
 *[data-type="wit"][data-bs-toggle="popover"] {color:#008080;}

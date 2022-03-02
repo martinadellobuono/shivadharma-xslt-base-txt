@@ -59,10 +59,10 @@
                         <!-- apparatus -->
                         <div class="row lay-app">
                             <div class="col-md-12 border p-4">
-                                <a class="btn btn-collapse btn-primary" data-bs-toggle="collapse" href="#sec-app" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <a class="btn btn-collapse btn-primary" data-bs-toggle="collapse" href="#sec-app" role="button" aria-expanded="true" aria-controls="Open the apparatus">
                                     Apparatus
                                 </a>
-                                <div class="collapse mt-4 row" id="sec-app">
+                                <div class="collapse mt-4 row show" id="sec-app">
                                     <xsl:apply-templates select="//tei:app"/>
                                 </div>
                             </div>
@@ -354,7 +354,7 @@
                     <xsl:text> </xsl:text>
                 </span>
             </xsl:for-each>
-            <span> inserts: </span>
+            <span data-type="om-ins"> inserts: </span>
             <span data-type="{name()}"><xsl:value-of select="."/></span>
         </span>
     </xsl:template>
