@@ -14,6 +14,11 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 /* introduction */
 *[data-type='introduction'] {font-weight: 600;}
 
+/* uvaca */
+*[data-type='uvaca'] {margin-left: 5%;}
+*[data-type='uvaca']>span::after {content: ">";}
+*[data-type='uvaca']>span::before {content: "<";}
+
 /* commentary entry */
 *[data-type='gloss'] > *[data-type='term'] {font-weight: 700;}
 .term-icon {color: #D5DF2A; font-size: 12px; vertical-align: super;}

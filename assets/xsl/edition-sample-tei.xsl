@@ -359,6 +359,17 @@
         </span>
     </xsl:template>
 
+    <!-- uvaca -->
+    <xsl:template match="tei:div[@type='uvaca']">
+        <div class="row">
+            <div class="col-md-12 p-4" data-type="uvaca">
+                <span>
+                    <xsl:apply-templates select="@* | node()"/>
+                </span>
+            </div>
+        </div>
+    </xsl:template>
+
     <!-- attributes -->
     <xsl:template match="@*">
         <xsl:choose>

@@ -351,7 +351,11 @@
                 </app>
               </l>
               <l n="b">
-                phaṇīndraratnadyutikaṇṭharāgiṇe
+                phaṇīndraratnadyutikaṇṭha
+                <app resp="#flodes" loc="1b">
+                  <lem wit="#NC45 #NO15 #E" rend="circlefront">rāgiṇe</lem>
+                  <rdg wit="#NK82" rend="">dhāriṇeṃ</rdg>
+                </app>
               </l>
               <l n="c">
                 harāya śubhrābhrakapālamāline
@@ -385,6 +389,9 @@
               </l>
             </lg>
           </div>
+        </div>
+        <div type="uvaca">
+          agastir uvāca
         </div>
       </div>
     </body>
