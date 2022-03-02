@@ -107,17 +107,17 @@
     
     <!-- intro -->
     <xsl:template match="tei:head[@type='introduction']">
-        <xsl:variable name="app-loc">
+        <!--<xsl:variable name="app-loc">
             <xsl:value-of select="tei:app/@loc"/>
-        </xsl:variable>
+        </xsl:variable>-->
         <div class="row">
             <div class="col-md-12 p-4">
                 <span data-type="{@type}">
                     <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:app)]"/>
                     <xsl:apply-templates select="node()/tei:lem" mode="lemtxt"/>
                 </span>
-                <xsl:text> </xsl:text>
-                <sup><xsl:value-of select="$app-loc"/></sup>
+                <!--<xsl:text> </xsl:text>
+                <sup><xsl:value-of select="$app-loc"/></sup>-->
             </div>
         </div>
     </xsl:template>
@@ -132,9 +132,10 @@
 
     <!-- gap -->
     <xsl:template match="tei:lg/tei:gap">
-        <div data-type="{name()}" data-met="{@met}">
+        <div id="{./tei:app/@xml:id}" class="app-click" data-type="{name()}" data-met="{@met}">
             <span class="text-muted">Gap</span>
-            <span data-loc="{./tei:app/@loc}" data-type="loc"><sup><xsl:value-of select="./tei:app/@loc"/></sup></span>
+            <span data-loc="{./tei:app/@loc}" data-type="loc">
+            <sup><xsl:value-of select="./tei:app/@loc"/></sup></span>
         </div>
     </xsl:template>
 
@@ -150,18 +151,12 @@
                         <span data-type="{name()}" data-n="{@n}">
                             <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:app)]"/>
                             <xsl:apply-templates select="node()/tei:lem" mode="lemtxt"/>
-                            <xsl:text> </xsl:text>
-                            <sup><xsl:value-of select="$app-loc"/></sup>
-                            <xsl:text> </xsl:text>
                         </span>
                     </xsl:when>
                     <xsl:when test="./@n = 'b'">
                         <span data-type="{name()}" data-n="{@n}">
                             <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:app)]"/>
                             <xsl:apply-templates select="node()/tei:lem" mode="lemtxt"/>
-                            <xsl:text> </xsl:text>
-                            <sup><xsl:value-of select="$app-loc"/></sup>
-                            <span data-type="danda"> | </span>
                             <br/>
                         </span>
                     </xsl:when>
@@ -169,9 +164,6 @@
                         <span data-type="{name()}" data-n="{@n}">
                             <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:app)]"/>
                             <xsl:apply-templates select="node()/tei:lem" mode="lemtxt"/>
-                            <xsl:text> </xsl:text>
-                            <sup><xsl:value-of select="$app-loc"/></sup>
-                            <xsl:text> </xsl:text>
                         </span>
                     </xsl:when>
                     <xsl:otherwise>
@@ -179,7 +171,6 @@
                             <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:app)]"/>
                             <xsl:apply-templates select="node()/tei:lem" mode="lemtxt"/>
                             <xsl:text> </xsl:text>
-                            <sup><xsl:value-of select="$app-loc"/></sup>
                             <span data-type="double-danda"> || </span>
                         </span>
                     </xsl:otherwise>
@@ -192,7 +183,6 @@
                             <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:app)]"/>
                             <xsl:apply-templates select="node()/tei:lem" mode="lemtxt"/>
                             <xsl:text> </xsl:text>
-                            <sup><xsl:value-of select="$app-loc"/></sup>
                             <span data-type="danda"> | </span>
                             <br/>
                         </span>
@@ -202,7 +192,6 @@
                             <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:app)]"/>
                             <xsl:apply-templates select="node()/tei:lem" mode="lemtxt"/>
                             <xsl:text> </xsl:text>
-                            <sup><xsl:value-of select="$app-loc"/></sup>
                             <span data-type="double-danda"> || </span>
                         </span>
                     </xsl:when>
@@ -210,8 +199,6 @@
                         <span data-type="{name()}" data-n="{@n}">
                             <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:app)]"/>
                             <xsl:apply-templates select="node()/tei:lem" mode="lemtxt"/>
-                            <xsl:text> </xsl:text>
-                            <sup><xsl:value-of select="$app-loc"/></sup>
                             <br/>
                         </span>    
                     </xsl:otherwise> 
@@ -235,8 +222,8 @@
         <span data-type="{name()}">
             <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:app)]"/>
             <xsl:apply-templates select="node()/tei:lem" mode="lemtxt"/>
-            <xsl:text> </xsl:text>
-            <sup><xsl:value-of select="$app-loc"/></sup>
+            <!--<xsl:text> </xsl:text>
+            <sup><xsl:value-of select="$app-loc"/></sup>-->
             <span class="danda"> | </span>
         </span>
     </xsl:template>
@@ -273,7 +260,7 @@
     
     <!-- apparatus -->
     <xsl:template match="tei:app">
-        <div data-loc="{@loc}" data-type="{name()}">
+        <div class="app-click" ref="#{@xml:id}" data-loc="{@loc}" data-type="{name()}">
             <span data-type="loc"><sup><xsl:value-of select="@loc"/></sup></span>
             <xsl:text> </xsl:text>
             <!-- lem -->
@@ -294,13 +281,15 @@
     <xsl:template match="tei:lem" mode="lemtxt">
         <xsl:choose> 
             <xsl:when test="@rend = 'circlefront'">
-                <span class="term-inline" data-type="{name()}" data-wit="{@wit}">
+                <span id="{../@xml:id}" class="app-click term-inline" data-type="{name()}" data-wit="{@wit}">
                     <xsl:apply-templates/>
+                    <sup><xsl:value-of select="../@loc"/></sup>
                 </span>
             </xsl:when> 
             <xsl:otherwise> 
-                <span data-type="{name()}" data-wit="{@wit}">
+                <span id="{../@xml:id}" class="app-click" data-type="{name()}" data-wit="{@wit}">
                     <xsl:apply-templates/>
+                    <sup><xsl:value-of select="../@loc"/></sup>
                 </span>
             </xsl:otherwise>
         </xsl:choose>

@@ -332,7 +332,7 @@
           <div type="base-text">
             <lg met="">
               <gap>
-                <app resp="#flodes" loc="1">
+                <app xml:id="app-1-1-1" resp="#flodes" loc="1">
                   <lem wit="#NK28 #NKO77 #P" rend="">om.</lem>
                   <rdg wit="#PT75" rend="">śivam astu sarvajagatāṃ --- parahitaniratā bhavantu bhūtaguṇāḥ | doṣāḥ prayāntu śāntiṃ -- sarvatra su-khībhavantu sakalalokāḥ ||    </rdg>
                 </app>
@@ -345,14 +345,14 @@
             <lg met="Vaṃśastha">
               <l n="a">
                 namo ’stu tasmai śakalendu
-                <app resp="#flodes" loc="1a">
+                <app xml:id="app-1-1-1a" resp="#flodes" loc="1a">
                   <lem wit="#NK82 #NO15 #E" rend="circlefront">dhāriṇe</lem>
                   <rdg wit="#NC45" rend="">dhāraṇe</rdg>
                 </app>
               </l>
               <l n="b">
                 phaṇīndraratnadyutikaṇṭha
-                <app resp="#flodes" loc="1b">
+                <app xml:id="app-1-1-1b" resp="#flodes" loc="1b">
                   <lem wit="#NC45 #NO15 #E" rend="circlefront">rāgiṇe</lem>
                   <rdg wit="#NK82" rend="">dhāriṇeṃ</rdg>
                 </app>
@@ -377,7 +377,7 @@
               </l>
               <l n="c">
                 devāri
-                <app resp="#flodes" loc="2c">
+                <app xml:id="app-1-1-2c" resp="#flodes" loc="2c">
                   <lem wit="#NK28 #P" rend="">sūdanaṃ</lem>
                   <rdg wit="#NC45 #NK82 #NKo77 #E" rend="">skandanaṃ</rdg>
                   <rdg wit="#NO15" rend="">skadanaṃ</rdg>

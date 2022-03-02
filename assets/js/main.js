@@ -1,6 +1,6 @@
 $(document).ready(() => {
-    //selectedEntry();
     termLink();
+    appLink();
 });
 
 /*let selectedEntry = () => {
@@ -15,7 +15,7 @@ $(document).ready(() => {
 };*/
 
 /* TERMS - link between the term in the text and in the commentary */
-/* when you hover one of them the other is highlighted */
+/* when you click on one of them the other is highlighted */
 let termLink = () => {
     $("*[data-type='term']").each(function() {
         var term = $(this);
@@ -30,6 +30,26 @@ let termLink = () => {
                 var ref = $(this).attr("ref");
                 $(this).toggleClass("term-select");
                 $(ref).toggleClass("term-select");
+            };
+        });
+    });
+};
+
+/* APPARATUS ENTRY - link between the lemma in the text and the corresponding apparatus entry */
+/* when you hover one of them the other is highlighted */
+let appLink = () => {
+    $(".app-click").each(function() {
+        var app = $(this);
+        // click the term
+        $(app).on("click", function() {
+            if (this.hasAttribute("id")) {
+                var id = $(this).attr("id");
+                $(this).toggleClass("app-select");
+                $("*[ref='#" + id + "']").toggleClass("app-select");
+            } else {
+                var ref = $(this).attr("ref");
+                $(this).toggleClass("app-select");
+                $(ref).toggleClass("app-select");
             };
         });
     });

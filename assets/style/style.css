@@ -31,6 +31,9 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 
 /* apparatus */
 *[data-type='om-ins'] {font-style: italic;}
+.app-click:hover {text-decoration: 2px #92F393 underline;}
+.app-click:hover::after {color: #92F393; content: "→";}
+.app-select {background-color: #92F393;}
 
 /* wit */
 *[data-type="wit"][data-bs-toggle="popover"] {color:#008080;}
