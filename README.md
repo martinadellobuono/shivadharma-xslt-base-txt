@@ -4,4 +4,4 @@ To create and to test the model relying Shivadharma editions, a sample edition h
 
 The draft is available at:
 
-https://martinadellobuono.github.io/shivadharma-xslt-base-text/
+https://martinadellobuono.github.io/shivadharma-xslt-base-txt/
