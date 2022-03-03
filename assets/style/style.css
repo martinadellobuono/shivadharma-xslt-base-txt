@@ -8,6 +8,10 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 .btn-collapse::after {content: "\25be"; color: #FFF; float:right; height: auto; top: -2px; margin-left: 5px;}
 .btn-collapse[aria-expanded="true"]::after {content: "\25B4";}
 
+/* btn */
+.btn-cob {background-color: #047D92 !important; border: 1px solid #047D92 !important; color: #FFF !important;}
+.btn-cob:hover {background-color: #025564 !important; border: 1px solid #025564 !important; color: #FFF !important;}
+
 /* base text *//* commentary *//* introduction */
 *[data-type='base-text'], *[data-type='commentary'], *[data-type='introduction'] {font-size: 18px;}
 
@@ -15,7 +19,7 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 *[data-type='introduction'] {font-weight: 600;}
 
 /* uvaca */
-*[data-type='uvaca'] {margin-left: 5%;}
+*[data-type='uvaca'] {margin-left: 3%;}
 *[data-type='uvaca']>span::after {content: ">";}
 *[data-type='uvaca']>span::before {content: "<";}
 
@@ -31,9 +35,8 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 
 /* apparatus */
 *[data-type='om-ins'] {font-style: italic;}
-.app-click:hover {text-decoration: 2px #92F393 underline;}
-.app-click:hover::after {color: #92F393; content: "→";}
-.app-select {background-color: #92F393;}
+.app-select, .app-click:hover {text-decoration: 3px #80C3CF underline;}
+.app-click:hover::after {color: #80C3CF; content: "→";}
 
 /* wit */
 *[data-type="wit"][data-bs-toggle="popover"] {color:#008080;}
