@@ -3,17 +3,6 @@ $(document).ready(() => {
     appLink();
 });
 
-/*let selectedEntry = () => {
-    $(".entry").on("click", function() {
-        var entry = $(this);
-        if ($(".popover[id='" + $(entry).attr("aria-describedby") + "']").hasClass("show")) {
-            $(entry).addClass("entry-selected");
-        } else {
-            $(entry).removeClass("entry-selected");
-        };
-    });
-};*/
-
 /* TERMS - link between the term in the text and in the commentary */
 /* when you click on one of them the other is highlighted */
 let termLink = () => {

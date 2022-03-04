@@ -328,24 +328,25 @@
         <head type="introduction">
           Śivadharmottare ṣaḍaṅgavidhir nāma prathamo ’dhyāyaḥ
         </head>
+        <!-- stanza omitted -->
         <div type="section" n="1">
           <div type="base-text">
             <lg met="">
               <gap>
                 <app xml:id="app-1-1-1" resp="#flodes" loc="1">
                   <lem wit="#NK28 #NKO77 #P" rend="">om.</lem>
-                  <rdg wit="#PT75" rend="">śivam astu sarvajagatāṃ --- parahitaniratā bhavantu bhūtaguṇāḥ | doṣāḥ prayāntu śāntiṃ -- sarvatra su-khībhavantu sakalalokāḥ ||    </rdg>
+                  <rdg wit="#PT75" rend="">śivam astu sarvajagatāṃ --- parahitaniratā bhavantu bhūtaguṇāḥ | doṣāḥ prayāntu śāntiṃ -- sarvatra sukhībhavantu sakalalokāḥ ||    </rdg>
                 </app>
               </gap>
             </lg>
           </div>
         </div>
+        <!-- stanza 1 -->
         <div type="section" n="1">
           <div type="base-text">
-            <lg met="Vaṃśastha">
+            <lg met="Vaṃśastha" n="1">
               <l n="a">
-                namo ’stu tasmai śakalendu
-                <app xml:id="app-1-1-1a" resp="#flodes" loc="1a">
+                śrutimātranamo ’stu tasmai śakalendu<app xml:id="app-1-1-1-1a" resp="#flodes" loc="1a">
                   <lem wit="#NK82 #NO15 #E" rend="circlefront">dhāriṇe</lem>
                   <rdg wit="#NC45" rend="">dhāraṇe</rdg>
                 </app>
@@ -366,9 +367,10 @@
             </lg>
           </div>
         </div>
-        <div type="section" n="2">
+        <!-- stanza 2 -->
+        <div type="section" n="1">
           <div type="base-text">
-            <lg met="Anuṣṭubh">
+            <lg met="Anuṣṭubh" n="2">
               <l n="a">
                 jñānaśaktidharaṃ śāntaṃ
               </l>
@@ -392,7 +394,476 @@
         </div>
         <div type="uvaca">
           agastir uvāca
+        </div> 
+        <!-- stanza 3 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="3">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
         </div>
+        <!-- stanza 4 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="4">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 5 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="5">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 6 --> 
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="6">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>     
+        <!-- stanza 7 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="7">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 8 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="8">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 9 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="9">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 10 --> 
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="10">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 11 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="11">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 12 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="12">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>       
+        <!-- stanza 13 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="13">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 14 --> 
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="14">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 15 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="15">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>       
+        <!-- stanza 16 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="16">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>    
+        <!-- stanza 17 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="17">
+              <l n="a">
+              śraddhā<app xml:id="app-1-17-17a" resp="#flodes" loc="17a">
+                <lem wit="#NC45 #NK28 #NK82 #NO15 #GP43 #E" rend="circlefront">pūrvāḥ</lem>
+                <rdg wit="#NKo77" rend="">pūrvā</rdg>
+                <rdg wit="#PT75" rend="circlefront">pūrṇā</rdg>
+              </app>
+              sarvadharmāḥ
+              </l>
+              <l n="b">
+              śraddhāmadhyānta
+              <app xml:id="app-1-17-17b" resp="#flodes" loc="17b">
+                <lem wit="#all" rend="circlefront">saṃsthitāḥ</lem>
+                <rdg wit="#GP43" rend="">saṃsthataḥ</rdg>
+              </app>
+              </l>
+              <l n="c">
+                śraddhā<app xml:id="app-1-17-17c" resp="#flodes" loc="17c">
+                  <lem wit="#NK28 #NK82 #NKo77 #P" rend="circlefront">niṣṭhāḥ</lem>
+                  <rdg wit="#NC45 #E" rend="circlefront">niṣṭhā</rdg>
+                </app>
+                pratiṣṭhāś ca 
+              </l>
+              <l n="d">
+                dharmāḥ 
+                <app xml:id="app-1-17-17c" resp="#flodes" loc="17c">
+                  <lem wit="#all" rend="">śraddhaiva</lem>
+                  <rdg wit="#NC45" rend="">śraddharva</rdg>
+                </app>
+                  kīrtitāḥ
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 18 --> 
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="18">
+              <l n="a">
+                <app xml:id="app-1-18-18a-1" resp="#flodes" loc="18a">
+                  <lem wit="#all" rend="circleback">śruti</lem>
+                  <rdg wit="#NO15" rend="">śrutiṃ</rdg>
+                </app>mātra<app xml:id="app-1-18-18a-2" resp="#flodes" loc="18a">
+                  <lem wit="#NC45 #NK28 #NK82 #P #E" rend="circlefront">rasāḥ</lem>
+                  <rdg wit="#NKo77" rend="circlefront">ratāḥ</rdg>
+                  <rdg wit="#NO15" rend="circlefront">rasā</rdg>
+                </app>
+                 sūkṣmāḥ
+              </l>
+              <l n="b">
+                <app xml:id="app-1-18-18b" resp="#flodes" loc="18b">
+                  <lem wit="#NC45 #NK28 #NK82 #P #E" rend="">pradhānapuruṣeśvarāḥ</lem>
+                  <rdg wit="#NKo77" rend="">pradhānāḥ puruṣeśvarāḥ</rdg>
+                  <rdg wit="#NO15" rend="">pradhānapuruṣeśvaraṃ</rdg>
+                </app>
+              </l>
+              <l n="c">
+                śraddhāmātreṇa gṛhyante
+              </l>
+              <l n="d">
+                <app xml:id="app-1-18-18d" resp="#flodes" loc="18d">
+                  <lem wit="#all" rend="">na kareṇa na cakṣuṣā</lem>
+                  <rdg wit="#PT75cm" rend="">nakareṇā cakṣuṣā</rdg>
+                </app>
+              </l>
+            </lg>
+          </div>
+        </div>     
+        <!-- stanza 19 -->   
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="19">
+              <l n="a">
+                <app xml:id="app-1-19-19a" resp="#flodes" loc="19a">
+                  <lem wit="#all" rend="circleback">kāya</lem>
+                  <rdg wit="#NKo77" rend="">kāla</rdg>
+                </app>
+                kleśair na bahubhir
+              </l>
+              <l n="b">
+                na caivārthasya rāśibhiḥ
+              </l>
+              <l n="c">
+                dharmaḥ samprāpyate sūkṣmaḥ
+              </l>
+              <l n="d">
+                śraddhāhīnaiḥ surair api
+              </l>
+            </lg>
+          </div>
+        </div>    
+        <!-- stanza 20 --> 
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="20">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 21 --> 
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="21">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 22 --> 
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="22">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 23 --> 
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="23">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>       
+        <!-- stanza 24 --> 
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="24">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 25 -->  
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="25">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>     
+        <!-- stanza 26 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="26">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>       
+        <!-- stanza 27 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="27">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>       
+        <!-- stanza 28 --> 
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="28">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>      
+        <!-- stanza 29 -->
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="29">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>
+        <!-- stanza 30 -->  
+        <div type="section" n="1">
+          <div type="base-text">
+            <lg met="Anuṣṭubh" n="30">
+              <l n="a">
+              </l>
+              <l n="b">
+              </l>
+              <l n="c">
+              </l>
+              <l n="d">
+              </l>
+            </lg>
+          </div>
+        </div>     
       </div>
     </body>
   </text>
