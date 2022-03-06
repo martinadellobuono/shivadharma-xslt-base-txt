@@ -37,9 +37,8 @@ let appLink = () => {
             // select the new entry
             $("#" + id).addClass("app-select");
             $("*[ref='#" + id + "']").addClass("app-select");
-            // scroll to the entry in the apparatus
             $(".lay-app").animate({
-                scrollTop: $("*[ref='#" + id + "']").offset().top - $(".lay-app").offset().top
+                scrollTop: $("*[ref='#" + id + "']").position().top - $(".lay-app").position().top
             }, 100);
         };
         if (this.hasAttribute("ref")) {

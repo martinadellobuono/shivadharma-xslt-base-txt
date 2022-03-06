@@ -51,13 +51,13 @@
                                 </xsl:copy>
                             </div>
                             <!-- translation -->
-                            <div class="col-md-3 border lay-prl">
+                            <div class="col-md-4 border lay-prl">
                                 <div class="row p-4">
                                     translation
                                 </div>
                             </div>
                             <!-- parallels -->
-                            <div class="col-md-3 border lay-prl">
+                            <div class="col-md-2 border lay-prl">
                                 <div class="row p-4">
                                     parallels
                                 </div>
@@ -294,8 +294,10 @@
             <span class="app-click" ref="#{@xml:id}">
                 <span data-type="loc"><xsl:value-of select="$app-loc"/></span>
                 <xsl:text> </xsl:text>
-                <!-- lem -->
-                <xsl:apply-templates select="tei:lem" mode="lemapp"/>
+                <!-- lem | lacuna -->
+                <xsl:if test="not(./tei:rdg/tei:lacunaEnd)">
+                    <xsl:apply-templates select="tei:lem" mode="lemapp"/>
+                </xsl:if>
                 <!-- rdg -->
                 <xsl:choose>
                     <!-- gap -->
@@ -305,6 +307,10 @@
                     <!-- post correctionem -->
                     <xsl:when test="./tei:rdg/following-sibling::tei:witDetail/@type = 'pc'">
                         <xsl:apply-templates select="./tei:rdg" mode="rdgpc"/>
+                    </xsl:when>
+                    <!-- lacuna -->
+                    <xsl:when test="./tei:rdg/tei:lacunaStart">
+                        <xsl:apply-templates select="./tei:rdg" mode="rdglac"/>
                     </xsl:when>
                     <!-- normal rdg -->
                     <xsl:otherwise>
@@ -417,7 +423,7 @@
                 <sub><xsl:value-of select="//tei:witness[@xml:id = $wit-rdg]/descendant::tei:idno/tei:sub"/></sub>
             </span>-->
         </span>
-    </xsl:template>
+    </xsl:template>    
 
     <!-- gap -->
     <xsl:template match="tei:lg/tei:gap">
@@ -426,29 +432,12 @@
         </span>
     </xsl:template>
 
-    <!-- rdg in gap -->
-    <xsl:template match="tei:gap/tei:app/tei:rdg" mode="rdgap">  
-        <span class="ms-3" data-type="{name()}" data-wit="{@wit}">
-            <!-- wit -->
-            <xsl:for-each select="tokenize(translate(./@wit, ' ', ''), '#')">  
-                <span data-type="app-om-rdg">
-                    <xsl:value-of select="."/>
-                    <xsl:text> </xsl:text>
-                </span>
-            </xsl:for-each>
-            <span data-type="app-om-ins"> inserts: </span>
-            <span data-type="{name()}">
-                <xsl:apply-templates select="./tei:lg" mode="gaplg"/>
-            </span>
-        </span>
-    </xsl:template>
-
     <!-- lg in gap -->
     <xsl:template match="tei:gap/tei:app/tei:rdg/tei:lg" mode="gaplg">
         <span class="gap-lg">
             <xsl:apply-templates select="@* | node()" mode="gapl"/>
         </span>
-    </xsl:template> 
+    </xsl:template>
 
     <!-- l in gap -->
     <xsl:template match="tei:gap/tei:app/tei:rdg/tei:lg/tei:l" mode="gapl">
@@ -506,6 +495,23 @@
         </xsl:choose>
     </xsl:template>
 
+    <!-- rdg in gap -->
+    <xsl:template match="tei:gap/tei:app/tei:rdg" mode="rdgap">  
+        <span class="ms-3" data-type="{name()}" data-wit="{@wit}">
+            <!-- wit -->
+            <xsl:for-each select="tokenize(translate(./@wit, ' ', ''), '#')">  
+                <span data-type="app-om-rdg">
+                    <xsl:value-of select="."/>
+                    <xsl:text> </xsl:text>
+                </span>
+            </xsl:for-each>
+            <span data-type="app-om-ins"> inserts: </span>
+            <span data-type="{name()}">
+                <xsl:apply-templates select="./tei:lg" mode="gaplg"/>
+            </span>
+        </span>
+    </xsl:template>
+
     <!-- post correctionem -->
     <xsl:template match="tei:l/tei:app/tei:rdg | tei:gloss/tei:app/tei:rdg" mode="rdgpc">  
         <span class="ms-3" data-wit="{@wit}">
@@ -517,6 +523,22 @@
             <span><xsl:value-of select="./@wit"/></span>
         </span>
     </xsl:template>
+
+    <!-- lacuna -->
+    <!-- lacuna rdg -->
+    <xsl:template match="tei:l/tei:app/tei:rdg | tei:gloss/tei:app/tei:rdg" mode="rdglac">  
+        <span data-type="{name()}" data-wit="{@wit}">
+            <xsl:apply-templates select="@* | node() | node()/tei:lacunaEnd" />
+        </span>
+        <span data-type="divider"> ] </span>
+        <span data-type="dam"> dam. </span>
+        <span><xsl:value-of select="./@wit"/></span>
+    </xsl:template>
+
+    <!-- lacuna end -->
+    <xsl:template match="tei:lacunaEnd">  
+        <span data-type="{name()}">-</span>
+    </xsl:template>    
 
     <!-- note > philological --> 
     <xsl:template match="tei:note[@type='philological']">
