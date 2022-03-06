@@ -304,10 +304,6 @@
                     <xsl:when test="./ancestor::tei:gap">
                         <xsl:apply-templates select="./tei:rdg" mode="rdgap"/>
                     </xsl:when>
-                    <!-- post correctionem -->
-                    <xsl:when test="./tei:rdg/following-sibling::tei:witDetail/@type = 'pc'">
-                        <xsl:apply-templates select="./tei:rdg" mode="rdgpc"/>
-                    </xsl:when>
                     <!-- lacuna -->
                     <xsl:when test="./tei:rdg/tei:lacunaStart">
                         <xsl:apply-templates select="./tei:rdg" mode="rdglac"/>
@@ -408,20 +404,38 @@
     </xsl:template>
     
     <!-- rdg -->
-    <xsl:template match="tei:l/tei:app/tei:rdg | tei:gloss/tei:app/tei:rdg" mode="rdg">  
+    <xsl:template match="tei:l/tei:app/tei:rdg | tei:gloss/tei:app/tei:rdg" mode="rdg">
         <span class="ms-3" data-wit="{@wit}">
-            <span data-type="{name()}"><xsl:value-of select="."/></span>
-            <xsl:text> </xsl:text>
-            <!-- wit -->
-            <span><xsl:value-of select="./@wit"/></span>
-            <!--<xsl:variable name="wit-rdg">
-                <xsl:value-of select="substring-after(./@wit, '#')"/>
-            </xsl:variable>
-            <span data-type="wit" title="witness" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Settlement: {//tei:witness[@xml:id = $wit-rdg]/descendant::tei:settlement}">
-                <span><xsl:value-of select="//tei:witness[@xml:id = $wit-rdg]/descendant::tei:idno/node()[not(self::tei:sub or self::tei:sup)]"/></span>
-                <sup><xsl:value-of select="//tei:witness[@xml:id = $wit-rdg]/descendant::tei:idno/tei:sup"/></sup>
-                <sub><xsl:value-of select="//tei:witness[@xml:id = $wit-rdg]/descendant::tei:idno/tei:sub"/></sub>
-            </span>-->
+            <xsl:choose>
+                <!-- post correctionem -->
+                <xsl:when test="./descendant::tei:witDetail[@type='pc']">
+                    <span data-type="{name()}"><xsl:value-of select="."/></span>
+                    <span> added </span>
+                    <span data-type="pc">p.c.</span>
+                    <span> in </span>
+                    <!-- wit -->
+                    <span><xsl:value-of select="./@wit"/></span>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:choose>
+                        <xsl:when test="@rend = 'circlefront'">
+                            °<span data-type="{name()}"><xsl:value-of select="."/></span>
+                        </xsl:when>
+                        <xsl:when test="@rend = 'circleback'">
+                            <span data-type="{name()}"><xsl:value-of select="."/></span>°
+                        </xsl:when>
+                        <xsl:when test="@rend = 'circlearound'">
+                            °<span data-type="{name()}"><xsl:value-of select="."/></span>°
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <span data-type="{name()}"><xsl:value-of select="."/></span>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <xsl:text> </xsl:text>
+                    <!-- wit -->
+                    <span><xsl:value-of select="@wit"/></span>
+                </xsl:otherwise>
+            </xsl:choose>
         </span>
     </xsl:template>    
 
@@ -509,18 +523,6 @@
             <span data-type="{name()}">
                 <xsl:apply-templates select="./tei:lg" mode="gaplg"/>
             </span>
-        </span>
-    </xsl:template>
-
-    <!-- post correctionem -->
-    <xsl:template match="tei:l/tei:app/tei:rdg | tei:gloss/tei:app/tei:rdg" mode="rdgpc">  
-        <span class="ms-3" data-wit="{@wit}">
-            <span data-type="{name()}"><xsl:value-of select="."/></span>
-            <span> added </span>
-            <span data-type="pc">p.c.</span>
-            <span> in </span>
-            <!-- wit -->
-            <span><xsl:value-of select="./@wit"/></span>
         </span>
     </xsl:template>
 
