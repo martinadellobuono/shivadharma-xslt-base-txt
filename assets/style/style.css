@@ -53,7 +53,7 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 /* apparatus */
 .lay-app *[data-type='lem'], *[data-type='rdg'] {font-style: italic;}
 .lay-app .app-click {margin-bottom: 5px;}
-.app-select, .app-click:hover {text-decoration: 3px #80C3CF underline;}
+.app-select, .app-click:hover {text-decoration: 3px #80C3CF underline; -webkit-text-decoration-line:  underline; -webkit-text-decoration-color: #80C3CF; -webkit-text-decoration-style: solid; -webkit-text-decoration-thickness: 3px;}
 .app-click:hover::after {color: #80C3CF; content: "→";}
 
 /* apparatus > omission */
@@ -67,4 +67,4 @@ sup {top: -1em !important;}
 
 /* note */
 span[data-type="ph-nt"] {color: #99603D;}
-.ph-nt-select {text-decoration: 3px #99603D underline;}
+.ph-nt-select {text-decoration: 3px #99603D underline; -webkit-text-decoration-line:  underline !important; -webkit-text-decoration-color: #99603D !important; -webkit-text-decoration-style: solid !important; -webkit-text-decoration-thickness: 3px !important;}
