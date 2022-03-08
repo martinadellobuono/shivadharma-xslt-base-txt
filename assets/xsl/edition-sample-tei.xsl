@@ -18,7 +18,7 @@
                 <body>
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="border col-md-12 px-4 pt-2">
+                            <div class="border col-md-12 px-3 pt-2">
                                 <header>
                                     <h1 class="h2">
                                         <xsl:value-of select="//tei:title[@type='main']"/>
@@ -44,27 +44,49 @@
                             </div>
                         </div>
                         <div class="row">
+                            <!-- apparatus > damages -->
+                            <div class="border col-md-2 lay-dam">
+                                <div class="icon-close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <div class="row p-3">
+                                    <xsl:for-each select="//tei:l/tei:app/tei:rdg">
+                                        <xsl:if test="./descendant::tei:lacunaEnd">
+                                            <xsl:apply-templates select="." mode="rdglac"/>  
+                                        </xsl:if>
+                                    </xsl:for-each>  
+                                </div>
+                            </div>
                             <!-- text and commentary -->
-                            <div class="border col-md-6 lay-txt">
-                                <xsl:copy>
+                            <div class="border col-md-5 lay-txt">
+                                <div class="icon-close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <div class="row p-3">
                                     <xsl:apply-templates select="//tei:text"/>
-                                </xsl:copy>
+                                </div>
                             </div>
                             <!-- translation -->
                             <div class="col-md-4 border lay-prl">
-                                <div class="row p-4">
+                                <div class="icon-close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <div class="row p-3">
                                     translation
                                 </div>
                             </div>
                             <!-- parallels -->
-                            <div class="col-md-2 border lay-prl">
-                                <div class="row p-4">
+                            <div class="col-md-1 border lay-prl">
+                                <div class="icon-close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <div class="row p-3">
                                     parallels
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12 border-top lay-btn p-4">
+                            <div class="col-md-12 border-top lay-btn p-3">
                                 <ul class="nav nav-pills" id="tools-txt" role="tablist">
                                     <li class="nav-item" role="presentation">
                                         <button class="btn-app btn-sm nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#app" type="button" role="tab" aria-controls="app" aria-selected="true">Apparatus</button>
@@ -83,14 +105,14 @@
                         </div>
                         <div class="tab-content" id="tools-txt">
                             <div class="lay-app tab-pane fade show active" id="app" role="tabpanel" aria-labelledby="app-tab">
-                                <div class="col-md-12 px-4">
+                                <div class="col-md-12 px-3">
                                     <div class="row">
                                         <xsl:apply-templates select="//tei:app"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="ph-nt" role="tabpanel" aria-labelledby="ph-nt-tab">
-                                <div class="col-md-12 px-4">
+                                <div class="col-md-12 px-3">
                                     <div class="row">
                                         <xsl:apply-templates select="//tei:note[@type='philological']"/>
                                     </div>
@@ -125,7 +147,7 @@
     <!-- intro base-text -->
     <xsl:template match="tei:div[@type='chapter']/tei:head[@type='introduction']">
         <div class="row">
-            <div class="col-md-12 p-4">
+            <div class="col-md-12 p-3">
                 <span class="{@type}-base" data-type="{@type}">
                     <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:app)] | node()/tei:lem"/>
                 </span>
@@ -142,7 +164,7 @@
 
     <!-- lg -->
     <xsl:template match="tei:lg">
-        <div class="col-md-12 px-4 py-2" data-type="{name()}" data-met="{@met}">
+        <div class="col-md-12 px-3 py-2" data-type="{name()}" data-met="{@met}">
             <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:gap)]"/>
             <xsl:apply-templates select="tei:gap"/>
         </div>
@@ -218,7 +240,7 @@
                 Commentary
             </a>
         </div>
-        <div id="sec-comm" class="bg-light col-md-12 pb-4 px-4 show" data-type="{@type}">
+        <div id="sec-comm" class="bg-light col-md-12 pb-4 px-3 show" data-type="{@type}">
             <xsl:apply-templates select="@* | node()"/>
         </div>
     </xsl:template>
@@ -283,44 +305,39 @@
         <xsl:value-of select="/descendant::tei:witness"/>
     </xsl:variable>
     
-    <!-- apparatus -->
+    <!-- apparatus > philological -->
     <xsl:template match="tei:app">
-        <!-- app loc -->
-        <xsl:variable name="app-loc">
-            <xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/>
-            <xsl:value-of select="./ancestor::tei:l/@n"/>
-        </xsl:variable>    
-        <div data-loc="{$app-loc}" data-type="{name()}">
-            <span class="app-click" ref="#{@xml:id}">
+        <xsl:if test="not(./tei:rdg/tei:lacunaEnd)">
+            <!-- app loc -->
+            <xsl:variable name="app-loc">
+                <xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/>
+                <xsl:value-of select="./ancestor::tei:l/@n"/>
+            </xsl:variable>
+            <div class="app-target" ref="{@xml:id}" data-loc="{$app-loc}" data-type="{name()}">
                 <span data-type="loc"><xsl:value-of select="$app-loc"/></span>
                 <xsl:text> </xsl:text>
                 <!-- lem | lacuna -->
-                <xsl:if test="not(./tei:rdg/tei:lacunaEnd)">
-                    <xsl:apply-templates select="tei:lem" mode="lemapp"/>
-                </xsl:if>
+                <xsl:apply-templates select="tei:lem" mode="lemapp"/>
                 <!-- rdg -->
                 <xsl:choose>
                     <!-- gap -->
                     <xsl:when test="./ancestor::tei:gap">
                         <xsl:apply-templates select="./tei:rdg" mode="rdgap"/>
                     </xsl:when>
-                    <!-- lacuna -->
-                    <xsl:when test="./tei:rdg/tei:lacunaStart">
-                        <xsl:apply-templates select="./tei:rdg" mode="rdglac"/>
-                    </xsl:when>
                     <!-- normal rdg -->
                     <xsl:otherwise>
                         <xsl:apply-templates select="./tei:rdg" mode="rdg"/>
                     </xsl:otherwise>
                 </xsl:choose>
-            </span>
-            <!-- notes -->
-            <xsl:if test="./following-sibling::tei:note[@type='philological']">
-                <span class="nt-click ms-3" data-type="ph-nt" ref="#{./following-sibling::tei:note[@type='philological']/@xml:id}">
-                    <i class="fa-solid fa-caret-right"></i> Note
-                </span>
-            </xsl:if>
-        </div>
+                <!-- notes -->
+                <xsl:if test="./following-sibling::tei:note[@type='philological']">
+                    <span class="nt-click ms-3" data-type="ph-nt" ref="#{./following-sibling::tei:note[@type='philological']/@xml:id}">
+                        <i class="fa-solid fa-caret-right"></i>
+                        Note
+                    </span>
+                </xsl:if>
+            </div>
+        </xsl:if>
     </xsl:template>
 
     <!-- lem in txt -->
@@ -390,7 +407,7 @@
             </xsl:otherwise>
         </xsl:choose>
         <!-- wit -->
-        <span><xsl:value-of select="./@wit"/></span>
+        <span data-type="wit"><xsl:value-of select="./@wit"/></span>
 
         <!-- wit -->
         <!--<xsl:variable name="wit-lem">
@@ -414,7 +431,7 @@
                     <span data-type="pc">p.c.</span>
                     <span> in </span>
                     <!-- wit -->
-                    <span><xsl:value-of select="./@wit"/></span>
+                    <span data-type="wit"><xsl:value-of select="./@wit"/></span>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:choose>
@@ -433,7 +450,7 @@
                     </xsl:choose>
                     <xsl:text> </xsl:text>
                     <!-- wit -->
-                    <span><xsl:value-of select="@wit"/></span>
+                    <span data-type="wit"><xsl:value-of select="@wit"/></span>
                 </xsl:otherwise>
             </xsl:choose>
         </span>
@@ -529,12 +546,20 @@
     <!-- lacuna -->
     <!-- lacuna rdg -->
     <xsl:template match="tei:l/tei:app/tei:rdg | tei:gloss/tei:app/tei:rdg" mode="rdglac">  
-        <span data-type="{name()}" data-wit="{@wit}">
-            <xsl:apply-templates select="@* | node() | node()/tei:lacunaEnd" />
-        </span>
-        <span data-type="divider"> ] </span>
-        <span data-type="dam"> dam. </span>
-        <span><xsl:value-of select="./@wit"/></span>
+        <!-- app loc -->
+        <xsl:variable name="app-loc">
+            <xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/>
+            <xsl:value-of select="./ancestor::tei:l/@n"/>
+        </xsl:variable>
+        <div class="app-target mt-2" ref="{@xml:id}" data-loc="{$app-loc}" data-type="{name()}">
+            <span data-type="loc"><xsl:value-of select="$app-loc"/></span>
+            <span data-type="{name()}" data-wit="{@wit}">
+                <xsl:apply-templates select="@* | node() | node()/tei:lacunaEnd" />
+            </span>
+            <span data-type="divider"> ] </span>
+            <span data-type="dam"> dam. </span>
+            <span data-type="wit"><xsl:value-of select="./@wit"/></span>
+        </div>
     </xsl:template>
 
     <!-- lacuna end -->

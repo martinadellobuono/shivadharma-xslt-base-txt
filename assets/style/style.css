@@ -8,10 +8,10 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 ::-webkit-scrollbar-track{background: #FFF; border-radius: 10px; box-shadow: inset 7px 10px 12px #F0F0F0;}
 
 /* layout */
-.lay-app {height: 20vh;}
+.lay-app {height: 25vh;}
 .lay-btn {background-color: #FFF; z-index: 90000;}
 .lay-txt {height: 50vh;}
-.lay-app, .lay-prl, .lay-txt {overflow-x: hidden; overflow-y: scroll; resize: both;}
+.lay-app, .lay-prl, .lay-txt {overflow-x: hidden; overflow-y: scroll;} /* resize: both; */
 
 /* collapse */
 .btn-collapse::after {content: "\25be"; color: #FFF; float:right; height: auto; top: -2px; margin-left: 5px;}
@@ -28,6 +28,10 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 .btn-hs-nt.active, .btn-hs-nt:hover {background-color: #506E50 !important; border: 1px solid #506E50 !important; color: #FFF !important;}
 .btn-br {background-color: #C56D37 !important; border: 1px solid #C56D37 !important; color: #FFF !important;}
 .btn-br:hover {background-color: #C56D37 !important; border: 1px solid #C56D37 !important; color: #FFF !important;}
+
+/* icons */
+.icon-close {color: #DEE2E6; position: fixed;}
+.icon-close:hover {color: #6C757D;}
 
 /* base text *//* commentary *//* introduction */
 *[data-type='base-text'], *[data-type='commentary'], *[data-type='introduction'] {font-size: 18px;}
@@ -51,7 +55,8 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 *[data-type='quote']::before, *[data-type='quote']::after {content: '"';}
 
 /* apparatus */
-.lay-app *[data-type='lem'], *[data-type='rdg'] {font-style: italic;}
+*[data-type='lem'], *[data-type='rdg'] {font-style: italic;}
+*[data-type='divider'], *[data-type='loc'], *[data-type='wit'] {font-style: normal;}
 .lay-app .app-click {margin-bottom: 5px;}
 .app-select, .app-click:hover {text-decoration: 3px #80C3CF underline; -webkit-text-decoration-line:  underline; -webkit-text-decoration-color: #80C3CF; -webkit-text-decoration-style: solid; -webkit-text-decoration-thickness: 3px;}
 .app-click:hover::after {color: #80C3CF; content: "→";}

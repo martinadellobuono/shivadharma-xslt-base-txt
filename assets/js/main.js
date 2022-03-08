@@ -28,31 +28,15 @@ let termLink = () => {
 /* APPARATUS ENTRY - link between the lemma in the text and the corresponding apparatus entry */
 /* when you click on one of them the other is highlighted */
 let appLink = () => {
-    // click on the term
-    $(".app-click").on("click", function() {
-        if (this.hasAttribute("id")) {
-            var id = $(this).attr("id");
-            // remove already selected entry
-            $(".app-select").removeClass("app-select");
-            // select the new entry
-            $("#" + id).addClass("app-select");
-            $("*[ref='#" + id + "']").addClass("app-select");
-            $(".lay-app").animate({
-                scrollTop: $("*[ref='#" + id + "']").position().top - $(".lay-app").position().top
-            }, 100);
-        };
-        if (this.hasAttribute("ref")) {
-            var id = $(this).attr("ref");
-            // remove already selected entry
-            $(".app-select").removeClass("app-select");
-            // select the new entry
-            $(id).addClass("app-select");
-            $("*[ref='" + id + "']").addClass("app-select");
-            // scroll to the entry in the apparatus
-            $(".lay-txt").animate({
-                scrollTop: $(id).offset().top - $(".lay-txt").offset().top
-            }, 100);
-        };
+    $(".app-click").on("click", function(e) {
+        e.preventDefault();
+        var term = $(this).attr("id");
+        var target = $(".app-target[ref='" + term + "']");
+        var divToScroll = $(".lay-app");
+        divToScroll.animate({
+            scrollTop: target.position().top - divToScroll.position().top
+        }, 500, "swing");
+        target.css("background", "pink");
     });
 };
 

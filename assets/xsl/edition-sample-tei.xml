@@ -662,7 +662,7 @@
                   <rdg wit="#GP43" rend="">dhyānanirmmitaḥ</rdg>
                   <rdg wit="#PT75" rend="">dhyānanirvṛttiḥ</rdg>
                 </app>
-                <app xml:id="app-1-10-10b-1" resp="#flodes">
+                <app xml:id="app-1-10-10b-2" resp="#flodes">
                   <rdg wit="#Nko77">
                     <lacunaStart/>dhyā<lacunaEnd/>ca
                   </rdg>
@@ -752,7 +752,7 @@
                   <rdg wit="#GP43" rend="">svarginārakinā puṃsām</rdg>
                   <rdg wit="#PT75" rend="">svargā nārakiṇāṃ</rdg>
                 </app>
-                <app xml:id="app-1-13-13a-1" resp="#flodes">
+                <app xml:id="app-1-13-13a-2" resp="#flodes">
                   <rdg wit="#Nko77">
                     <lacunaStart/>rganā<lacunaEnd/>mā
                   </rdg>
@@ -882,7 +882,7 @@
           <div type="section" n="17">
             <lg met="Anuṣṭubh">
               <l n="a">
-              śraddhā<app xml:id="app-1-17-17a" resp="#flodes">
+              śraddhā<app xml:id="app-1-17-17a-1" resp="#flodes">
                 <lem wit="#NC45 #NK28 #NK82 #NO15 #GP43 #E" rend="circlefront">pūrvāḥ</lem>
                 <rdg wit="#NKo77" rend="">pūrvā</rdg>
                 <rdg wit="#PT75" rend="circlefront">pūrṇā</rdg>
@@ -890,13 +890,13 @@
               sarvadharmāḥ
               </l>
               <l n="b">
-              śraddhāmadhyānta<app xml:id="app-1-17-17b" resp="#flodes">
+              śraddhāmadhyānta<app xml:id="app-1-17-17b-1" resp="#flodes">
                 <lem wit="#Σ" rend="circlefront">saṃsthitāḥ</lem>
                 <rdg wit="#GP43" rend="">saṃsthataḥ</rdg>
               </app>
               </l>
               <l n="c">
-                śraddhā<app xml:id="app-1-17-17c" resp="#flodes">
+                śraddhā<app xml:id="app-1-17-17c-1" resp="#flodes">
                   <lem wit="#NK28 #NK82 #NKo77 #P" rend="circlefront">niṣṭhāḥ</lem>
                   <rdg wit="#NC45 #E" rend="circlefront">niṣṭhā</rdg>
                 </app>
@@ -904,7 +904,7 @@
               </l>
               <l n="d">
                 dharmāḥ 
-                <app xml:id="app-1-17-17c" resp="#flodes">
+                <app xml:id="app-1-17-17c-2" resp="#flodes">
                   <lem wit="#Σ" rend="">śraddhaiva</lem>
                   <rdg wit="#NC45" rend="">śraddharva</rdg>
                 </app>
@@ -927,7 +927,7 @@
                   sūkṣmāḥ
               </l>
               <l n="b">
-                <app xml:id="app-1-18-18b" resp="#flodes">
+                <app xml:id="app-1-18-18b-1" resp="#flodes">
                   <lem wit="#NC45 #NK28 #NK82 #P #E" rend="">pradhānapuruṣeśvarāḥ</lem>
                   <rdg wit="#NKo77" rend="">pradhānāḥ puruṣeśvarāḥ</rdg>
                   <rdg wit="#NO15" rend="">pradhānapuruṣeśvaraṃ</rdg>
@@ -937,7 +937,7 @@
                 śraddhāmātreṇa gṛhyante
               </l>
               <l n="d">
-                <app xml:id="app-1-18-18d" resp="#flodes">
+                <app xml:id="app-1-18-18d-1" resp="#flodes">
                   <lem wit="#Σ" rend="">na kareṇa na cakṣuṣā</lem>
                   <rdg wit="#PT75cm" rend="">nakareṇā cakṣuṣā</rdg>
                 </app>
@@ -959,7 +959,7 @@
               </l>
               <l n="b">
                 <app xml:id="app-1-19-19b-1" resp="#flodes">
-                  <lem wit="#NE" rend="">na caivārthasya</lem>
+                  <lem wit="#N #E" rend="">na caivārthasya</lem>
                   <rdg wit="#GP43cm" rend="">caivarthāsya</rdg>
                   <rdg wit="#PT75" rend="circleback">caivārthani</rdg>
                 </app>
@@ -967,7 +967,7 @@
               </l>
               <l n="c">
                 dharmaḥ samprāpyate sūkṣmaḥ
-                <app xml:id="app-1-19-19C-1" resp="#flodes">
+                <app xml:id="app-1-19-19c-1" resp="#flodes">
                   <rdg wit="#NK28">
                     <lacunaStart/>rmaḥ<lacunaEnd/>sū
                   </rdg>
