@@ -17,82 +17,105 @@
                 </head>
                 <body>
                     <div class="container-fluid">
+                        <!-- lay 0 -->
                         <div class="row">
                             <div class="border col-md-12 px-3 pt-2">
-                                <header>
-                                    <h1 class="h2">
-                                        <xsl:value-of select="//tei:title[@type='main']"/>
-                                        <xsl:text> </xsl:text>
-                                        <span class="text-secondary">Scholarly Digital Edition</span>
-                                    </h1>
-                                    <h2 class="h5 text-muted" data-type="{//tei:editor/name()}">
+                                <h1 class="h4">
+                                    <xsl:value-of select="//tei:title[@type='main']"/>
+                                    <xsl:text> </xsl:text>
+                                    <span class="text-secondary">Scholarly Digital Edition</span>
+                                    <span class="h6 text-muted" data-type="{//tei:editor/name()}">
                                         Edited by 
                                         <span id="{//tei:editor/@xml:id}">
                                             <xsl:value-of select="//tei:editor"/>
                                         </span>
-                                    </h2>
-                                    <xsl:if test="//tei:div[@type='chapter']">
-                                        <h5 data-type="{//tei:div[@type='chapter']/@type}">
-                                            <xsl:text> </xsl:text>
-                                            <xsl:value-of select="upper-case(substring(//tei:div[@type='chapter']/@type, 1, 1))"/>
-                                            <xsl:value-of select="substring(//tei:div[@type='chapter']/@type, 2)"/>
-                                            <xsl:text> </xsl:text>
-                                            <xsl:value-of select="//tei:div[@type='chapter']/@n"/>
-                                        </h5>
-                                    </xsl:if>
-                                </header>
+                                    </span>
+                                </h1>
                             </div>
                         </div>
-                        <div class="row">
+                        <!-- lay 1 -->
+                        <div class="row lay-1">
                             <!-- apparatus > damages -->
-                            <div class="border col-md-2 lay-dam">
-                                <div class="icon-close">
+                            <div class="border col-md-2 sec" id="app-dmg">
+                                <div class="icon-cls">
                                     <i class="fa-solid fa-xmark"></i>
                                 </div>
-                                <div class="row p-3">
-                                    <xsl:for-each select="//tei:l/tei:app/tei:rdg">
-                                        <xsl:if test="./descendant::tei:lacunaEnd">
-                                            <xsl:apply-templates select="." mode="rdglac"/>  
-                                        </xsl:if>
-                                    </xsl:for-each>  
+                                <div class="icon-opn">
+                                    <i class="fa-solid fa-expand"></i>
+                                </div>
+                                <div class="row p-3 lay-dmg scrollbar">
+                                    <div class="row">
+                                        <xsl:for-each select="//tei:l/tei:app/tei:rdg">
+                                            <xsl:if test="./descendant::tei:lacunaEnd">
+                                                <xsl:apply-templates select="." mode="rdglac"/>  
+                                            </xsl:if>
+                                        </xsl:for-each>
+                                    </div>
                                 </div>
                             </div>
                             <!-- text and commentary -->
-                            <div class="border col-md-5 lay-txt">
-                                <div class="icon-close">
+                            <div class="border col-md-5 sec" id="txt">
+                                <div class="icon-cls">
                                     <i class="fa-solid fa-xmark"></i>
                                 </div>
-                                <div class="row p-3">
+                                <div class="icon-opn">
+                                    <i class="fa-solid fa-expand"></i>
+                                </div>
+                                <div class="row p-3 lay-txt scrollbar">
                                     <xsl:apply-templates select="//tei:text"/>
                                 </div>
                             </div>
                             <!-- translation -->
-                            <div class="col-md-4 border lay-prl">
-                                <div class="icon-close">
+                            <div class="border col-md-3 sec" id="trl">
+                                <div class="icon-cls">
                                     <i class="fa-solid fa-xmark"></i>
                                 </div>
-                                <div class="row p-3">
-                                    translation
+                                <div class="icon-opn">
+                                    <i class="fa-solid fa-expand"></i>
+                                </div>
+                                <div class="row p-3 lay-trs scrollbar">
+                                    <div class="row">
+                                        translation
+                                    </div>
                                 </div>
                             </div>
                             <!-- parallels -->
-                            <div class="col-md-1 border lay-prl">
-                                <div class="icon-close">
+                            <div class="border col-md-2 sec" id="prl">
+                                <div class="icon-cls">
                                     <i class="fa-solid fa-xmark"></i>
                                 </div>
-                                <div class="row p-3">
-                                    parallels
+                                <div class="icon-opn">
+                                    <i class="fa-solid fa-expand"></i>
+                                </div>
+                                <div class="row p-3 lay-prl scrollbar">
+                                    <div class="row">
+                                       parallels
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12 border-top lay-btn p-3">
-                                <ul class="nav nav-pills" id="tools-txt" role="tablist">
+                        <!-- lay 2 -->
+                        <!-- apparatus -->
+                        <div class="app-nt-comp collapse lay-2 row" id="app-see">
+                            <div class="col-md-12 border-top lay-btn pt-3">
+                                <div>
+                                    <button class="btn-app btn-sm nav-link active">
+                                        <i class="fa-solid fa-xmark"></i>
+                                        Apparatus
+                                    </button>
+                                </div>
+                                <div class="lay-app scrollbar">
+                                    <xsl:apply-templates select="//tei:app"/>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- lay 3 -->
+                        <!-- notes -->
+                        <div class="row lay-3">
+                            <div class="col-md-12 border-top lay-btn pt-3">
+                                <ul class="nav nav-pills" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <button class="btn-app btn-sm nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#app" type="button" role="tab" aria-controls="app" aria-selected="true">Apparatus</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="btn-ph-nt btn-sm nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#ph-nt" type="button" role="tab" aria-controls="ph-nt" aria-selected="false">Philological notes</button>
+                                        <button class="btn-ph-nt btn-sm nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#ph-nt" type="button" role="tab" aria-controls="ph-nt" aria-selected="false">Philological notes</button>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <button class="btn-lt-nt btn-sm nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#lt-nt" type="button" role="tab" aria-controls="lt-nt" aria-selected="false">Literary notes</button>
@@ -102,27 +125,16 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="tab-content" id="tools-txt">
-                            <div class="lay-app tab-pane fade show active" id="app" role="tabpanel" aria-labelledby="app-tab">
-                                <div class="col-md-12 px-3">
-                                    <div class="row">
-                                        <xsl:apply-templates select="//tei:app"/>
-                                    </div>
+                            <div class="app-nt-comp tab-content">
+                                <div class="tab-pane fade show active" id="ph-nt" role="tabpanel" aria-labelledby="ph-nt-tab">
+                                    <xsl:apply-templates select="//tei:note[@type='philological']"/>
                                 </div>
-                            </div>
-                            <div class="tab-pane fade" id="ph-nt" role="tabpanel" aria-labelledby="ph-nt-tab">
-                                <div class="col-md-12 px-3">
-                                    <div class="row">
-                                        <xsl:apply-templates select="//tei:note[@type='philological']"/>
-                                    </div>
+                                <div class="tab-pane fade" id="lt-nt" role="tabpanel" aria-labelledby="lt-nt-tab">
+                                    Literary notes
                                 </div>
-                            </div>
-                            <div class="tab-pane fade" id="lt-nt" role="tabpanel" aria-labelledby="lt-nt-tab">
-                                Literary notes
-                            </div>
-                            <div class="tab-pane fade" id="hs-nt" role="tabpanel" aria-labelledby="hs-nt-tab">
-                                Historical notes
+                                <div class="tab-pane fade" id="hs-nt" role="tabpanel" aria-labelledby="hs-nt-tab">
+                                    Historical notes
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -139,15 +151,15 @@
 
     <!-- section -->
     <xsl:template match="tei:div[@type='section']">
-        <div class="row" data-type="{@type}">
+        <div class="row px-4 py-2" data-type="{@type}">
             <xsl:apply-templates select="@* | node()"/>
         </div>
     </xsl:template>
     
     <!-- intro base-text -->
     <xsl:template match="tei:div[@type='chapter']/tei:head[@type='introduction']">
-        <div class="row">
-            <div class="col-md-12 p-3">
+        <div class="row px-4">
+            <div class="col-md-12">
                 <span class="{@type}-base" data-type="{@type}">
                     <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:app)] | node()/tei:lem"/>
                 </span>
@@ -164,9 +176,17 @@
 
     <!-- lg -->
     <xsl:template match="tei:lg">
-        <div class="col-md-12 px-3 py-2" data-type="{name()}" data-met="{@met}">
+        <div class="col-md-12" data-type="{name()}" data-met="{@met}">
             <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:gap)]"/>
             <xsl:apply-templates select="tei:gap"/>
+            <span class="btn-collapse" data-bs-toggle="collapse" href="#app-inline-{../@n}" aria-expanded="false" aria-controls="app-inline-{../@n}"> app.</span>
+        </div>
+        <!-- inline app -->
+        <div class="collapse pt-2" id="app-inline-{../@n}">
+            <div class="app-nt-comp border card card-body">
+                <xsl:apply-templates select="./descendant::tei:app"/>
+                <span class="btn-collapse" data-bs-toggle="collapse" href="#app-see" aria-expanded="false" aria-controls="See the entire apparatus">Open the entire apparatus of the edition</span>
+            </div>
         </div>
     </xsl:template>
 
@@ -313,7 +333,7 @@
                 <xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/>
                 <xsl:value-of select="./ancestor::tei:l/@n"/>
             </xsl:variable>
-            <div class="app-target" ref="{@xml:id}" data-loc="{$app-loc}" data-type="{name()}">
+            <div class="app-target" ref="#{@xml:id}" data-loc="{$app-loc}" data-type="{name()}">
                 <span data-type="loc"><xsl:value-of select="$app-loc"/></span>
                 <xsl:text> </xsl:text>
                 <!-- lem | lacuna -->
@@ -459,7 +479,7 @@
     <!-- gap -->
     <xsl:template match="tei:lg/tei:gap">
         <span id="{./tei:app/@xml:id}" class="app-click" data-type="{name()}" data-met="{@met}">
-            <span class="text-muted">→</span>
+            <span class="text-muted">om.</span>
         </span>
     </xsl:template>
 
@@ -551,7 +571,7 @@
             <xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/>
             <xsl:value-of select="./ancestor::tei:l/@n"/>
         </xsl:variable>
-        <div class="app-target mt-2" ref="{@xml:id}" data-loc="{$app-loc}" data-type="{name()}">
+        <div class="app-target col-md-12" ref="{@xml:id}" data-loc="{$app-loc}" data-type="{name()}">
             <span data-type="loc"><xsl:value-of select="$app-loc"/></span>
             <span data-type="{name()}" data-wit="{@wit}">
                 <xsl:apply-templates select="@* | node() | node()/tei:lacunaEnd" />

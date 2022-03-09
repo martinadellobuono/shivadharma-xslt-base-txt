@@ -2,6 +2,8 @@ $(document).ready(() => {
     termLink();
     appLink();
     appNtClick();
+    clsOpnSec();
+    closeApp();
 });
 
 /* TERMS - link between the term in the text and in the commentary */
@@ -28,15 +30,46 @@ let termLink = () => {
 /* APPARATUS ENTRY - link between the lemma in the text and the corresponding apparatus entry */
 /* when you click on one of them the other is highlighted */
 let appLink = () => {
-    $(".app-click").on("click", function(e) {
-        e.preventDefault();
-        var term = $(this).attr("id");
-        var target = $(".app-target[ref='" + term + "']");
-        var divToScroll = $(".lay-app");
-        divToScroll.animate({
-            scrollTop: target.position().top - divToScroll.position().top
-        }, 500, "swing");
-        target.css("background", "pink");
+    // click on the apparatus entry in the text
+    $(".app-click").on("click", function() {
+        // unselect the apparatus entry
+        if ($(this).hasClass("app-select")) {
+            $(".app-select").removeClass("app-select");
+        // select the apparatus entry
+        } else {
+            var term = "#" + $(this).attr("id");
+            var target = $(".card-body .app-target[ref='" + term + "']");
+            var btn = $(term).parents("div[data-type='lg']").find(".btn-collapse");
+            var app = $(term).parents("div[data-type='lg']").find(".btn-collapse").attr("href");
+            if (!$(app).hasClass("show")) {
+                $(btn).click();
+            };
+            $(".app-select").removeClass("app-select");
+            $(term).addClass("app-select");
+            $(target).addClass("app-select");
+        };
+    });
+    // click on the apparatus entry in the apparatus
+    $(".app-target").on("click", function() {
+        // unselect the apparatus entry
+        if ($(this).hasClass("app-select")) {
+            $(".app-select").removeClass("app-select");
+        // select the apparatus entry
+        } else {
+            var term = $(this);
+            var target = $(this).attr("ref");
+            $(".app-select").removeClass("app-select");
+            $(term).addClass("app-select");
+            $(target).addClass("app-select");
+        };
+    });
+};
+
+// close the section of the apparatus
+let closeApp = () => {
+    $("#app-see .btn-app").on("click", function() {
+        $("#app-see").removeClass("show");
+        $(".app-nt-comp .btn-collapse").attr("aria-expanded", "false");
     });
 };
 
@@ -54,5 +87,43 @@ let appNtClick = () => {
         $(nt).animate({
             scrollTop: $(id).offset().top - $(nt).offset().top
         }, 100);
+    });
+};
+
+/* CLOSE SECTIONS */
+/* when you click on close button the section is automatically closed */
+let clsOpnSec = () => {
+    $(".icon-cls").on("click", function() {
+        var cls = $(this);
+        var opn = $(this).next(".icon-opn");
+        var sec = $(this).parent(".sec");
+        var cl = $(this).parent(".sec").attr("class").split(" ");
+
+        $(cl).each(function() {
+            if (this.indexOf("col-md-") != -1) {
+                var clRem = "" + this;
+                $(cls).hide();
+                $(opn).show();
+                $(sec).removeClass(clRem).addClass("col-md-1");
+                $(sec).find(".row").hide();
+                $(sec).next(".sec").css("background", "red");
+            };
+        });
+
+    });
+    $(".icon-opn").on("click", function() {
+        var cls = $(this);
+        var opn = $(this).prev(".icon-cls");
+        var sec = $(this).parent(".sec");
+        var cl = $(this).parent(".sec").attr("class").split(" ");
+        $(cl).each(function() {
+            if (this.indexOf("col-md-") != -1) {
+                var clRem = "" + this;
+                $(cls).hide();
+                $(opn).show();
+                $(sec).removeClass(clRem).addClass("col-md-1");
+                $(sec).find(".row").show();
+            };
+        });
     });
 };
