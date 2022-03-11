@@ -37,13 +37,17 @@ let appLink = () => {
             $(".app-select").removeClass("app-select");
         // select the apparatus entry
         } else {
-            var term = "#" + $(this).attr("id");
-            var target = $(".card-body .app-target[ref='" + term + "']");
+            var term = "#" + $(this).attr("id");           
+            var target = $(".app-target[ref='" + term + "']");
             var btn = $(term).parents("div[data-type='lg']").find(".btn-collapse");
             var app = $(term).parents("div[data-type='lg']").find(".btn-collapse").attr("href");
-            if (!$(app).hasClass("show")) {
-                $(btn).click();
+            // open the inline apparatus only if it is not a lacuna
+            if (!$(target).hasClass("app-lac")) {
+                if (!$(app).hasClass("show")) {
+                    $(btn).click();
+                };
             };
+            // identify the apparatus entry
             $(".app-select").removeClass("app-select");
             $(term).addClass("app-select");
             $(target).addClass("app-select");
@@ -61,6 +65,11 @@ let appLink = () => {
             $(".app-select").removeClass("app-select");
             $(term).addClass("app-select");
             $(target).addClass("app-select");
+            // scroll the text if the apparatus entry refers to a lacuna
+            var divToScroll = $(".lay-txt");
+            divToScroll.animate({
+                scrollTop: $(target).position().top - divToScroll.position().top
+            }, 500, "swing");
         };
     });
 };

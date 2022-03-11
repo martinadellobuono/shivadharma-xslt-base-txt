@@ -45,11 +45,7 @@
                                 </div>
                                 <div class="row p-3 lay-dmg scrollbar">
                                     <div class="row">
-                                        <xsl:for-each select="//tei:l/tei:app/tei:rdg">
-                                            <xsl:if test="./descendant::tei:lacunaEnd">
-                                                <xsl:apply-templates select="." mode="rdglac"/>  
-                                            </xsl:if>
-                                        </xsl:for-each>
+                                        <xsl:apply-templates select="//tei:gap[@start]" mode="gapapp"/>
                                     </div>
                                 </div>
                             </div>
@@ -327,37 +323,35 @@
     
     <!-- apparatus > philological -->
     <xsl:template match="tei:app">
-        <xsl:if test="not(./tei:rdg/tei:lacunaEnd)">
-            <!-- app loc -->
-            <xsl:variable name="app-loc">
-                <xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/>
-                <xsl:value-of select="./ancestor::tei:l/@n"/>
-            </xsl:variable>
-            <div class="app-target" ref="#{@xml:id}" data-loc="{$app-loc}" data-type="{name()}">
-                <span data-type="loc"><xsl:value-of select="$app-loc"/></span>
-                <xsl:text> </xsl:text>
-                <!-- lem | lacuna -->
-                <xsl:apply-templates select="tei:lem" mode="lemapp"/>
-                <!-- rdg -->
-                <xsl:choose>
-                    <!-- gap -->
-                    <xsl:when test="./ancestor::tei:gap">
-                        <xsl:apply-templates select="./tei:rdg" mode="rdgap"/>
-                    </xsl:when>
-                    <!-- normal rdg -->
-                    <xsl:otherwise>
-                        <xsl:apply-templates select="./tei:rdg" mode="rdg"/>
-                    </xsl:otherwise>
-                </xsl:choose>
-                <!-- notes -->
-                <xsl:if test="./following-sibling::tei:note[@type='philological']">
-                    <span class="nt-click ms-3" data-type="ph-nt" ref="#{./following-sibling::tei:note[@type='philological']/@xml:id}">
-                        <i class="fa-solid fa-caret-right"></i>
-                        Note
-                    </span>
-                </xsl:if>
-            </div>
-        </xsl:if>
+        <!-- app loc -->
+        <xsl:variable name="app-loc">
+            <xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/>
+            <xsl:value-of select="./ancestor::tei:l/@n"/>
+        </xsl:variable>
+        <div class="app-target" ref="#{@xml:id}" data-loc="{$app-loc}" data-type="{name()}">
+            <span data-type="loc"><xsl:value-of select="$app-loc"/></span>
+            <xsl:text> </xsl:text>
+            <!-- lem -->
+            <xsl:apply-templates select="tei:lem" mode="lemapp"/>
+            <!-- rdg -->
+            <xsl:choose>
+                <!-- gap -->
+                <xsl:when test="./ancestor::tei:gap">
+                    <xsl:apply-templates select="./tei:rdg" mode="rdgap"/>
+                </xsl:when>
+                <!-- normal rdg -->
+                <xsl:otherwise>
+                    <xsl:apply-templates select="./tei:rdg" mode="rdg"/>
+                </xsl:otherwise>
+            </xsl:choose>
+            <!-- notes -->
+            <xsl:if test="./following-sibling::tei:note[@type='philological']">
+                <span class="nt-click ms-3" data-type="ph-nt" ref="#{./following-sibling::tei:note[@type='philological']/@xml:id}">
+                    <i class="fa-solid fa-caret-right"></i>
+                    Note
+                </span>
+            </xsl:if>
+        </div>
     </xsl:template>
 
     <!-- lem in txt -->
@@ -394,24 +388,30 @@
                 <span data-type="{name()}" data-wit="{@wit}">
                     °<xsl:apply-templates/>
                 </span>
-                <span data-type="divider"> ] </span>
+                <xsl:text> </xsl:text>
+                <span data-type="divider-lem"></span>
+                <xsl:text> </xsl:text>
             </xsl:when>
             <xsl:when test="@rend = 'circleback'">
                 <span data-type="{name()}" data-wit="{@wit}">
                     <xsl:apply-templates/>°
                 </span>
-                <span data-type="divider"> ] </span>
+                <xsl:text> </xsl:text>
+                <span data-type="divider-lem"></span>
+                <xsl:text> </xsl:text>
             </xsl:when>
             <xsl:when test="@rend = 'circlearound'">
                 <span data-type="{name()}" data-wit="{@wit}">
                     °<xsl:apply-templates/>°
                 </span>
-                <span data-type="divider"> ] </span>
+                <xsl:text> </xsl:text>
+                <span data-type="divider-lem"></span>
+                <xsl:text> </xsl:text>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:choose>
                     <!-- omission -->
-                    <xsl:when test="./descendant::tei:gap">
+                    <xsl:when test="./descendant::tei:gap[not(@start)]">
                         <span data-type="app-om-lem" data-wit="{@wit}">
                             om.
                         </span>
@@ -421,23 +421,15 @@
                         <span data-type="{name()}" data-wit="{@wit}">
                             <xsl:apply-templates/>
                         </span>
-                        <span data-type="divider"> ] </span>
+                        <xsl:text> </xsl:text>
+                        <span data-type="divider-lem"></span>
+                        <xsl:text> </xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:otherwise>
         </xsl:choose>
         <!-- wit -->
         <span data-type="wit"><xsl:value-of select="./@wit"/></span>
-
-        <!-- wit -->
-        <!--<xsl:variable name="wit-lem">
-            <xsl:value-of select="substring-after(./@wit, '#')"/>
-        </xsl:variable>
-        <span data-type="wit" title="witness" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Settlement: {//tei:witness[@xml:id = $wit-lem]/descendant::tei:settlement}">
-            <span><xsl:value-of select="//tei:witness[@xml:id = $wit-lem]/descendant::tei:idno/node()[not(self::tei:sub or self::tei:sup)]"/></span>
-            <sup><xsl:value-of select="//tei:witness[@xml:id = $wit-lem]/descendant::tei:idno/tei:sup"/></sup>
-            <sub><xsl:value-of select="//tei:witness[@xml:id = $wit-lem]/descendant::tei:idno/tei:sub"/></sub>
-        </span>--> 
     </xsl:template>
     
     <!-- rdg -->
@@ -476,21 +468,22 @@
         </span>
     </xsl:template>    
 
-    <!-- gap -->
+    <!-- omission -->
+    <!-- omission in apparatus -->
     <xsl:template match="tei:lg/tei:gap">
         <span id="{./tei:app/@xml:id}" class="app-click" data-type="{name()}" data-met="{@met}">
             <span class="text-muted">om.</span>
         </span>
     </xsl:template>
 
-    <!-- lg in gap -->
+    <!-- omission in gap in apparatus -->
     <xsl:template match="tei:gap/tei:app/tei:rdg/tei:lg" mode="gaplg">
         <span class="gap-lg">
             <xsl:apply-templates select="@* | node()" mode="gapl"/>
         </span>
     </xsl:template>
 
-    <!-- l in gap -->
+    <!-- l in omission in apparatus -->
     <xsl:template match="tei:gap/tei:app/tei:rdg/tei:lg/tei:l" mode="gapl">
         <xsl:choose>
             <xsl:when test="../@met = 'Anuṣṭubh'">
@@ -546,7 +539,7 @@
         </xsl:choose>
     </xsl:template>
 
-    <!-- rdg in gap -->
+    <!-- rdg in omission in apparatus -->
     <xsl:template match="tei:gap/tei:app/tei:rdg" mode="rdgap">  
         <span class="ms-3" data-type="{name()}" data-wit="{@wit}">
             <!-- wit -->
@@ -564,28 +557,34 @@
     </xsl:template>
 
     <!-- lacuna -->
-    <!-- lacuna rdg -->
-    <xsl:template match="tei:l/tei:app/tei:rdg | tei:gloss/tei:app/tei:rdg" mode="rdglac">  
-        <!-- app loc -->
+    <!-- lacuna in text -->
+    <xsl:template match="tei:lg/tei:l/tei:gap">
+        <span id="{@xml:id}" class="app-click" data-type="{name()}">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <!-- lacuna in apparatus -->
+    <xsl:template match="tei:gap[@start]" mode="gapapp">
         <xsl:variable name="app-loc">
             <xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/>
             <xsl:value-of select="./ancestor::tei:l/@n"/>
         </xsl:variable>
-        <div class="app-target col-md-12" ref="{@xml:id}" data-loc="{$app-loc}" data-type="{name()}">
+        <div class="app-lac app-target col-md-12" ref="#{@xml:id}" data-loc="{$app-loc}" data-type="{name()}">
             <span data-type="loc"><xsl:value-of select="$app-loc"/></span>
+            <xsl:text> </xsl:text>
             <span data-type="{name()}" data-wit="{@wit}">
-                <xsl:apply-templates select="@* | node() | node()/tei:lacunaEnd" />
+                <xsl:value-of select="./@start"/>
+                <span data-type="divider-lac"></span>
+                <xsl:value-of select="./@end"/>
             </span>
-            <span data-type="divider"> ] </span>
+            <xsl:text> </xsl:text>
+            <span data-type="divider-lem"></span>
+            <xsl:text> </xsl:text>
             <span data-type="dam"> dam. </span>
             <span data-type="wit"><xsl:value-of select="./@wit"/></span>
         </div>
     </xsl:template>
-
-    <!-- lacuna end -->
-    <xsl:template match="tei:lacunaEnd">  
-        <span data-type="{name()}">-</span>
-    </xsl:template>    
 
     <!-- note > philological --> 
     <xsl:template match="tei:note[@type='philological']">

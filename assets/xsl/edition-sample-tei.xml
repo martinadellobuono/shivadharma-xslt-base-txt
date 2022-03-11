@@ -597,14 +597,7 @@
                 </app>
               </l>
               <l n="d">
-                vidyādānam
-                <!-- lacuna -->
-                <app xml:id="app-1-8-8d-1" resp="#flodes">
-                  <rdg wit="#NK28">
-                    <lacunaStart/>dyā<lacunaEnd/>m
-                  </rdg>
-                </app>
-                anuttamam
+                vidyā<gap xml:id="app-1-8-8d-1" resp="#flodes" reason="" extent="15" unit="chars" start="dyā" end="m" wit="#NK28">dānam anuttama</gap>m
               </l>
             </lg>
           </div>      
@@ -658,14 +651,9 @@
               <l n="b">
                 svādhyāyo
                 <app xml:id="app-1-10-10b-1" resp="#flodes">
-                  <lem wit="#N #E" rend="">dhyānam eva ca</lem>
+                  <lem wit="#N #E" rend="">dhyā<gap xml:id="app-1-10-10b-2" resp="#flodes" reason="" extent="10" unit="chars" start="dhyā" end="ca" wit="#NKo77">nam eva ca</gap></lem>
                   <rdg wit="#GP43" rend="">dhyānanirmmitaḥ</rdg>
                   <rdg wit="#PT75" rend="">dhyānanirvṛttiḥ</rdg>
-                </app>
-                <app xml:id="app-1-10-10b-2" resp="#flodes">
-                  <rdg wit="#Nko77">
-                    <lacunaStart/>dhyā<lacunaEnd/>ca
-                  </rdg>
                 </app>
               </l>
               <l n="c">
@@ -767,7 +755,7 @@
                 kṣitau
               </l>
               <l n="c">
-                kāni cihnāni jāyante
+                kā<gap xml:id="app-1-13-13c-1" reason="" extent="8" unit="chars">ni cihnā</gap>ni jāyante
                 <app xml:id="app-1-13-13c-1" resp="#flodes">
                   <rdg wit="#NK28">
                     <lacunaStart/>kā<lacunaEnd/>ni
@@ -969,7 +957,7 @@
                 dharmaḥ samprāpyate sūkṣmaḥ
                 <app xml:id="app-1-19-19c-1" resp="#flodes">
                   <rdg wit="#NK28">
-                    <lacunaStart/>rmaḥ<lacunaEnd/>sū
+                    <lacunaStart href="lac-1"/>rmaḥ<lacunaEnd/>sū
                   </rdg>
                 </app>
               </l>
