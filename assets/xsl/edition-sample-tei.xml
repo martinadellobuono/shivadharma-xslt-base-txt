@@ -31,22 +31,77 @@
     <!-- sources -->
     <sourceDesc>
       <!-- list quotes -->
-      <!--<listBibl type="cited-sources">
-        <bibl xml:id="work-panini-astadhyayi" resp="#alebat">
-          <ref type="bibliographicCitation" xml:lang="sans1269">Pāṇini, Aṣṭādhyāyī</ref>
-          <author ref="#auth-panini"/>
-          <title level="" type="" subtype="" sameAs="">Aṣṭādhyāyī</title>
-          <citedRange xml:id="bibl-1-1-1" unit="excerpt">1.2.67</citedRange>
-          <citedRange xml:id="bibl-1-1-3" unit="excerpt">1.1.74</citedRange>
-          <citedRange xml:id="bibl-1-1-4" unit="excerpt">4.2.114</citedRange>
-        </bibl>
-        <bibl xml:id="work-amarasimha-amarakosa" resp="#alebat">
-          <ref type="bibliographicCitation" xml:lang="sans1269">Amarasiṃha, Amarakoṣa</ref>
-          <author ref="#auth-amarasimha"/>
-          <title level="" type="" subtype="" sameAs="">Amarakoṣa</title>
-          <citedRange xml:id="bibl-1-1-2" unit="excerpt">2.6.70</citedRange>
-        </bibl>
-      </listBibl>-->
+      <listBibl type="cited-sources" xml:id="prova-container-paralleli-1">
+        <cit xml:id="bhap-1-187-1">
+          <bibl>
+            <author ref="">Unknown</author>
+            <title ref="">Bhaviṣyapurāṇa</title>
+            <citedRange corresp="">1.187.1</citedRange>
+          </bibl>
+          <quote>
+            <lg met="Anuṣṭubh">
+                <l n="a">
+                  kāni puṇyāni kṛtveha
+                </l>
+                <l n="b"> 
+                  svargaṃ gacchanti mānavāḥ
+                </l>
+                <l n="c">
+                  manuṣyaloke sambhūtāḥ
+                </l>
+                <l n="d">
+                  svarloke gāminaḥ param
+                </l>
+              </lg>
+          </quote>
+        </cit>
+        <cit xml:id="bhap-1-187-2">
+          <bibl>
+            <author ref="">Unknown</author>
+            <title ref="">Bhaviṣyapurāṇa</title>
+            <citedRange corresp="">1.187.2</citedRange>
+          </bibl>
+          <quote>
+            <lg met="Anuṣṭubh">
+                <l n="a">
+                  karmayajñas tapoyajñaḥ
+                </l>
+                <l n="b"> 
+                  svādhyāyo dhyānanirmitaḥ
+                </l>
+                <l n="c">
+                  jñānayajñaś ca pañcaite
+                </l>
+                <l n="d">
+                  mahāyajñāḥ prakīrtitāḥ
+                </l>
+              </lg>
+          </quote>
+        </cit>
+        <cit xml:id="bhap-1-187-3">
+          <bibl>
+            <author ref="">Unknown</author>
+            <title ref="">Bhaviṣyapurāṇa</title>
+            <citedRange corresp="">1.187.3</citedRange>
+          </bibl>
+          <quote>
+            <lg met="Anuṣṭubh">
+                <l n="a">
+                  eteṣām eva yajñānām
+                </l>
+                <l n="b"> 
+                  uttamaḥ katamaḥ smṛtaḥ
+                </l>
+                <l n="c">
+                  etad yajñaphalānāṃ ca
+                </l>
+                <l n="d">
+                  kiṃ kalaṃ kā yatir bhavet
+                </l>
+              </lg>
+          </quote>
+        </cit>
+      </listBibl>
       <!-- list witnesses -->
       <listWit>
         <!-- E -->
@@ -597,102 +652,111 @@
                 </app>
               </l>
               <l n="d">
-                vidyā<gap xml:id="app-1-8-8d-1" resp="#flodes" reason="" extent="15" unit="chars" start="dyā" end="m" wit="#NK28">dānam anuttama</gap>m
+                vidyā<gap xml:id="app-1-8-8d-1" resp="#flodes" reason="damage" extent="15" unit="chars" start="dyā" end="m" wit="#NK28">dāna</gap>m anuttamam
               </l>
             </lg>
           </div>      
           <!-- stanza 9 -->
           <div type="section" n="9">
-            <lg met="Anuṣṭubh">
-              <l n="a">
-                kāni
-                <app xml:id="app-1-9-9a-1" resp="#flodes">
-                  <lem wit="#N #E" rend="">puṇyāni kṛtveha</lem>
-                  <rdg wit="#GP43" rend="">karmaṇi kṛtveha</rdg>
-                  <rdg wit="#PT75" rend="">kṛtvaiva karmāṇi</rdg>
-                </app>
-              </l>
-              <l n="b"> 
-                <app xml:id="app-1-9-9b-1" resp="#flodes">
-                  <lem wit="#N #PT75" rend="">gṛhiṇaḥ svargatāḥ</lem>
-                  <rdg wit="#GP43cm" rend="">gṛhasthasvarggāt</rdg>
-                  <rdg wit="#E" rend="">gṛhiṇaḥ svargiṇaḥ</rdg>
-                </app>
-                punaḥ
-              </l>
-              <l n="c">
-                <app xml:id="app-1-9-9c-1" resp="#flodes">
-                  <lem wit="#NC45 #NK28 #NKo77 #NO15 #E" rend="circleback">manuṣyaloka</lem>
-                  <rdg wit="#NK82 #P" rend="">manuṣyaloke</rdg>
-                </app>sambhūtā
-              </l>
-              <l n="d">
-                yogaṃ 
-                <app xml:id="app-1-9-9d-1" resp="#flodes">
-                  <lem wit="#NK82 #NKo77 #PT75 #E" rend="">vindanti śāṅkaram</lem>
-                  <rdg wit="#NC45" rend="">vidanti śaṅkaram</rdg>
-                  <rdg wit="#NK28" rend="">vindanti śaṅkaram</rdg>
-                  <rdg wit="#NO15" rend="">vindanti sākaram</rdg>
-                </app>
-              </l>
-            </lg>
+            <!-- parallel -->
+            <seg source="#bhap-1-187-1" type="" subtype="">
+              <lg met="Anuṣṭubh">
+                <l n="a">
+                  kāni
+                  <app xml:id="app-1-9-9a-1" resp="#flodes">
+                    <lem wit="#N #E" rend="">puṇyāni kṛtveha</lem>
+                    <rdg wit="#GP43" rend="">karmaṇi kṛtveha</rdg>
+                    <rdg wit="#PT75" rend="">kṛtvaiva karmāṇi</rdg>
+                  </app>
+                </l>
+                <l n="b"> 
+                  <app xml:id="app-1-9-9b-1" resp="#flodes">
+                    <lem wit="#N #PT75" rend="">gṛhiṇaḥ svargatāḥ</lem>
+                    <rdg wit="#GP43cm" rend="">gṛhasthasvarggāt</rdg>
+                    <rdg wit="#E" rend="">gṛhiṇaḥ svargiṇaḥ</rdg>
+                  </app>
+                  punaḥ
+                </l>
+                <l n="c">
+                  <app xml:id="app-1-9-9c-1" resp="#flodes">
+                    <lem wit="#NC45 #NK28 #NKo77 #NO15 #E" rend="circleback">manuṣyaloka</lem>
+                    <rdg wit="#NK82 #P" rend="">manuṣyaloke</rdg>
+                  </app>sambhūtā
+                </l>
+                <l n="d">
+                  yogaṃ 
+                  <app xml:id="app-1-9-9d-1" resp="#flodes">
+                    <lem wit="#NK82 #NKo77 #PT75 #E" rend="">vindanti śāṅkaram</lem>
+                    <rdg wit="#NC45" rend="">vidanti śaṅkaram</rdg>
+                    <rdg wit="#NK28" rend="">vindanti śaṅkaram</rdg>
+                    <rdg wit="#NO15" rend="">vindanti sākaram</rdg>
+                  </app>
+                </l>
+              </lg>
+            </seg>
           </div>      
           <!-- stanza 10 --> 
           <div type="section" n="10">
-            <lg met="Anuṣṭubh">
-              <l n="a"> 
-                <app xml:id="app-1-10-10a-1" resp="#flodes">
-                  <lem wit="#NC45 #NK82  #PT75 #E" rend="">karmayajñas</lem>
-                  <rdg wit="#NK28" rend="">karmayajña</rdg>
-                  <rdg wit="#NO15" rend="">karmayajñās</rdg>
-                </app>
-                tapoyajñaḥ
-              </l>
-              <l n="b">
-                svādhyāyo
-                <app xml:id="app-1-10-10b-1" resp="#flodes">
-                  <lem wit="#N #E" rend="">dhyā<gap xml:id="app-1-10-10b-2" resp="#flodes" reason="" extent="10" unit="chars" start="dhyā" end="ca" wit="#NKo77">nam eva ca</gap></lem>
-                  <rdg wit="#GP43" rend="">dhyānanirmmitaḥ</rdg>
-                  <rdg wit="#PT75" rend="">dhyānanirvṛttiḥ</rdg>
-                </app>
-              </l>
-              <l n="c">
-                jñānayajñaś ca pañcaite
-              </l>
-              <l n="d">
-                mahāyajñāḥ prakīrtitāḥ
-              </l>
-            </lg>
+            <!-- parallel -->
+            <seg source="#bhap-1-187-2" type="" subtype="">
+              <lg met="Anuṣṭubh">
+                <l n="a"> 
+                  <app xml:id="app-1-10-10a-1" resp="#flodes">
+                    <lem wit="#NC45 #NK82  #PT75 #E" rend="">karmayajñas</lem>
+                    <rdg wit="#NK28" rend="">karmayajña</rdg>
+                    <rdg wit="#NO15" rend="">karmayajñās</rdg>
+                  </app>
+                  tapoyajñaḥ
+                </l>
+                <l n="b">
+                  svādhyāyo
+                  <app xml:id="app-1-10-10b-1" resp="#flodes">
+                    <lem wit="#N #E" rend="">dhyā<gap xml:id="app-1-10-10b-2" resp="#flodes" reason="damage" extent="10" unit="chars" start="dhyā" end="ca" wit="#NKo77">nam eva</gap> ca</lem>
+                    <rdg wit="#GP43" rend="">dhyānanirmmitaḥ</rdg>
+                    <rdg wit="#PT75" rend="">dhyānanirvṛttiḥ</rdg>
+                  </app>
+                </l>
+                <l n="c">
+                  jñānayajñaś ca pañcaite
+                </l>
+                <l n="d">
+                  mahāyajñāḥ prakīrtitāḥ
+                </l>
+              </lg>
+            </seg>
           </div>      
           <!-- stanza 11 -->
           <div type="section" n="11">
-            <lg met="Anuṣṭubh">
-              <l n="a">
-                <app xml:id="app-1-11-11a-1" resp="#flodes">
-                  <lem wit="#NC45 #NK28 #NKo77 #NO15 #PT75 #E" rend="">eṣāṃ ca</lem>
-                  <rdg wit="#NK82 #GP43" rend="">eteṣām</rdg>
-                </app>
-                pañcayajñānām
-              </l>
-              <l n="b">
-                <app xml:id="app-1-11-11b-1" resp="#flodes">
-                  <lem wit="#Σ" rend="">uttamaḥ katamaḥ</lem>
-                  <rdg wit="#NO15" rend="">uttamakattamaḥ</rdg>
-                </app>
-                smṛtaḥ
-              </l>
-              <l n="c">
-                etadyajñaratānāṃ ca
-              </l>
-              <l n="d">
-                pradāne
-                <app xml:id="app-1-11-11d-1" resp="#flodes">
-                  <lem wit="#Σ" rend="">kīdṛśaṃ</lem>
-                  <rdg wit="#NO15" rend="">kīdṛśa</rdg>
-                </app>
-                phalam
-              </l>
-            </lg>
+            <!-- parallel -->
+            <seg source="#bhap-1-187-3" type="" subtype="">
+              <lg met="Anuṣṭubh">
+                <l n="a">
+                  <app xml:id="app-1-11-11a-1" resp="#flodes">
+                    <lem wit="#NC45 #NK28 #NKo77 #NO15 #PT75 #E" rend="">eṣāṃ ca</lem>
+                    <rdg wit="#NK82 #GP43" rend="">eteṣām</rdg>
+                  </app>
+                  pañcayajñānām
+                </l>
+                <l n="b">
+                  <app xml:id="app-1-11-11b-1" resp="#flodes">
+                    <lem wit="#Σ" rend="">uttamaḥ katamaḥ</lem>
+                    <rdg wit="#NO15" rend="">uttamakattamaḥ</rdg>
+                  </app>
+                  smṛtaḥ
+                </l>
+                <l n="c">
+                  etadyajñaratānāṃ ca
+                </l>
+                <l n="d">
+                  pradāne
+                  <app xml:id="app-1-11-11d-1" resp="#flodes">
+                    <lem wit="#Σ" rend="">kīdṛśaṃ</lem>
+                    <rdg wit="#NO15" rend="">kīdṛśa</rdg>
+                  </app>
+                  phalam
+                </l>
+              </lg>
+            </seg>
           </div>      
           <!-- stanza 12 -->
           <div type="section" n="12">
@@ -740,11 +804,6 @@
                   <rdg wit="#GP43" rend="">svarginārakinā puṃsām</rdg>
                   <rdg wit="#PT75" rend="">svargā nārakiṇāṃ</rdg>
                 </app>
-                <app xml:id="app-1-13-13a-2" resp="#flodes">
-                  <rdg wit="#Nko77">
-                    <lacunaStart/>rganā<lacunaEnd/>mā
-                  </rdg>
-                </app>
               </l>
               <l n="b">
                 <app xml:id="app-1-13-13b-1" resp="#flodes">
@@ -755,12 +814,7 @@
                 kṣitau
               </l>
               <l n="c">
-                kā<gap xml:id="app-1-13-13c-1" reason="" extent="8" unit="chars">ni cihnā</gap>ni jāyante
-                <app xml:id="app-1-13-13c-1" resp="#flodes">
-                  <rdg wit="#NK28">
-                    <lacunaStart/>kā<lacunaEnd/>ni
-                  </rdg>
-                </app>
+                kā<gap xml:id="app-1-13-13c-1" resp="#flodes" reason="damage" extent="8" unit="chars" start="kā" end="ni" wit="#NK28">ni cihnā</gap>ni jāyante
               </l>
               <l n="d">
                 <app xml:id="app-1-13-13d-1" resp="#flodes">
@@ -809,6 +863,7 @@
                   <rdg wit="#GP43" rend="">sañcoditaskandas</rdg>
                 </app>
               </l>
+              <!-- try > lacuna blank space vd. 15b-c -->
               <l n="b">
                 sarvapraśn<app xml:id="app-1-15-15b-1" resp="#flodes">
                   <lem wit="#NC45 #NK82 #E" rend="circleback">ārthabhāṣakaḥ</lem>
@@ -820,7 +875,7 @@
               <l n="c">
                 pratyuvāca 
                 <app xml:id="app-1-15-15c-1" resp="#flodes">
-                  <lem wit="#Σ" rend="">mahāseno</lem>
+                  <lem wit="#Σ" rend="">mahā<gap xml:id="app-1-15-15c-2" resp="#flodes" reason="omitted" extent="12" unit="chars" start="pra" end="se" wit="#GP43"/>seno</lem>
                   <rdg wit="#NK28" rend="">mahāsenau</rdg>
                 </app>
               </l>
@@ -847,12 +902,7 @@
                 </app>
               </l>
               <l n="c">
-                śivadharmottaraṃ nāma
-                <app xml:id="app-1-16-16c-1" resp="#flodes">
-                  <rdg wit="#NK28">
-                    <lacunaStart/>rmo<lacunaEnd/>śā
-                  </rdg>
-                </app>
+                śivadharmo<gap xml:id="app-1-16-16c-1" resp="#flodes" reason="damage" extent="11" unit="chars" start="rmo" end="śā" wit="#NK28">ttaraṃ nāma</gap>
               </l>
               <l n="d">
                 śāstram 
@@ -965,7 +1015,62 @@
                 śraddhāhīnaiḥ surair api
               </l>
             </lg>
-          </div>     
+          </div>
+          <!-- stanza 20 -->   
+          <div type="section" n="20">
+            <lg met="Anuṣṭubh">
+            <!-- try -->
+              <!--<gap xml:id="app-1-20-20ab-1" resp="#flodes" reason="illegible" extent="" unit="chars" start="" end="" wit="#NKA12">-->
+                <l n="a">
+                  <app xml:id="app-1-20-20a-1" resp="#flodes">
+                    <lem wit="#NKA12 #NK82 #NKo77 #NO15 #GP43 #E" rend="">śraddhā dharmaḥ paraḥ sūkṣmaḥ</lem>
+                    <rdg wit="#NC45" rend="">śraddhā dharmaḥ varaḥ sūkṣmaḥ</rdg>
+                    <rdg wit="#NK28" rend="">dharmādharmaḥ paraḥ sūkṣmaḥ</rdg>
+                    <rdg wit="#PT45" rend="">śraddhā dharmaṃ paraṃ sūkṣmaṃ</rdg>
+                  </app>
+                </l>
+                <l n="b">
+                  śraddhā 
+                  <app xml:id="app-1-20-20b-1" resp="#flodes">
+                    <lem wit="#NC45 #NK28 #NK82 #GP43 #E" rend="">jñānaṃ</lem>
+                    <rdg wit="#NKo77" rend="">jñāna</rdg>
+                    <rdg wit="#NO15" rend="">jānaṃ</rdg>
+                    <rdg wit="#PT75" rend="">dānaṃ</rdg>
+                  </app>
+                  hutaṃ tapaḥ
+                </l>
+              <!--</gap>-->
+              <l n="c">
+                <app xml:id="app-1-20-20c-1" resp="#flodes">
+                  <lem wit="#Σ" rend="">śraddhā</lem>
+                  <rdg wit="#NK82" rend="">
+                    śraddhātaḥ
+                    <witDetail wit="#NK82" type="ac"/>
+                  </rdg>
+                </app>
+                <app xml:id="app-1-20-20c-2" resp="#flodes">
+                  <lem wit="#NC45 #NKA12 #NK82 #NKo77 #P #E" rend="">
+                    svargaś ca mokṣaś
+                    <witDetail wit="#NK82" type="pc"/>
+                  </lem>
+                  <rdg wit="#NK28" rend="">svargaṃ ca mokṣaṃ</rdg>
+                  <rdg wit="#NK82" rend="">
+                    svargomokṣaś
+                    <witDetail wit="#NK82" type="ac"/>
+                  </rdg>
+                  <rdg wit="#NO15" rend="">svargaś ca mokṣaṃ</rdg>
+                </app>
+                ca
+              </l>
+              <l n="d">
+                śraddhā sarvam idaṃ
+                <app xml:id="app-1-20-20d-1" resp="#flodes">
+                  <lem wit="#Σ" rend="">jagat</lem>
+                  <rdg wit="#NK82" rend="">jagataḥ</rdg>
+                </app>
+              </l>
+            </lg>
+          </div>      
         </div>
       </div>
     </body>

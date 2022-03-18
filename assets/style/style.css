@@ -94,8 +94,13 @@ sup {top: -1em !important;}
 
 /* note */
 span[data-type="ph-nt"] {color: #99603D;}
-.ph-nt-select {text-decoration: 3px #99603D underline; -webkit-text-decoration-line:  underline !important; -webkit-text-decoration-color: #99603D !important; -webkit-text-decoration-style: solid !important; -webkit-text-decoration-thickness: 3px !important;}
+.ph-nt-select {background: #99603d4d;}
 
 /* dividers */
 *[data-type="divider-lac"]::after {content: "\2013";}
 *[data-type="divider-lem"]::after {content: "\005D";}
+
+/* parallels */
+.prl-bibl {font-size: 12px;}
+.lay-prl *[data-type="parallel"] {font-size: 15px;}
+.lay-prl *[data-type="parallel"]:hover {background-color: rgba(255, 166, 0, 0.733);}

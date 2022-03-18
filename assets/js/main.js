@@ -68,7 +68,7 @@ let appLink = () => {
             // scroll the text if the apparatus entry refers to a lacuna
             var divToScroll = $(".lay-txt");
             divToScroll.animate({
-                scrollTop: $(target).position().top - divToScroll.position().top
+                scrollTop: $(target).position().top + divToScroll.scrollTop() - 100
             }, 500, "swing");
         };
     });
@@ -100,7 +100,7 @@ let appNtClick = () => {
 };
 
 /* CLOSE SECTIONS */
-/* when you click on close button the section is automatically closed */
+/* when you click on close button the section is closed */
 let clsOpnSec = () => {
     $(".icon-cls").on("click", function() {
         var cls = $(this);
