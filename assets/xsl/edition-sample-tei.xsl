@@ -452,13 +452,8 @@
                 </xsl:choose>
             </xsl:otherwise>
         </xsl:choose>
-
-        <!-- try -->
-        <span style="background: #92f393;">Manoscritto</span>
-
         <!-- wit -->
-        <!--<span data-type="wit"><xsl:value-of select="./@wit"/></span>-->
-
+        <xsl:apply-templates select="." mode="wit-codes"/>
     </xsl:template>
     
     <!-- rdg -->
@@ -471,12 +466,8 @@
                     <span> added </span>
                     <span data-type="pc">p.c.</span>
                     <span> in </span>
-
-                    <!-- try -->
-                    <xsl:apply-templates select="." mode="wit"/>
-                    <!-- wit -->
-                    <!--<span data-type="wit"><xsl:value-of select="./@wit"/></span>-->
-
+                    <!-- wit -->  
+                    <xsl:apply-templates select="." mode="wit-codes"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:choose>
@@ -494,14 +485,8 @@
                         </xsl:otherwise>
                     </xsl:choose>
                     <xsl:text> </xsl:text>
-
                     <!-- wit -->
-                    <xsl:variable name="main-root" select="/"/>
-                    <xsl:for-each select="tokenize(translate(./@wit, ' ', ''), '#')">
-                        <xsl:variable name="wit" select="."/>
-                        <xsl:apply-templates select="$main-root/descendant::tei:witness[@xml:id=$wit]/descendant::tei:idno"/>
-                    </xsl:for-each>
-
+                    <xsl:apply-templates select="." mode="wit-codes"/>
                 </xsl:otherwise>
             </xsl:choose>
         </span>
@@ -595,17 +580,8 @@
     <!-- rdg in omission in apparatus -->
     <xsl:template match="tei:gap/tei:app/tei:rdg" mode="rdgap">  
         <span class="ms-3" data-type="{name()}" data-wit="{@wit}">
-
-            <!-- try -->
             <!-- wit -->
-            <!--<xsl:for-each select="tokenize(translate(./@wit, ' ', ''), '#')">  
-                <span data-type="app-om-rdg">
-                    <xsl:value-of select="."/>
-                    <xsl:text> </xsl:text>
-                </span>
-            </xsl:for-each>-->
-            <span style="background: #92f393;">Manoscritto</span>
-
+            <xsl:apply-templates select="." mode="wit-codes"/>
             <span data-type="app-om-ins"> inserts: </span>
             <span data-type="{name()}">
                 <xsl:apply-templates select="./tei:lg" mode="gaplg"/>
@@ -639,11 +615,8 @@
             <span data-type="divider-lem"></span>
             <xsl:text> </xsl:text>
             <span data-type="dam"> dam. </span>
-
-            <!-- try -->
-            <span style="background: #92f393;">Manoscritto</span>
-            <!--<span data-type="wit"><xsl:value-of select="./@wit"/></span>-->
-
+            <!-- wit -->
+            <xsl:apply-templates select="." mode="wit-codes"/>
         </div>
     </xsl:template>
 
@@ -706,6 +679,15 @@
         <span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title/name()}"><xsl:apply-templates select="//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title"/></span>
         <xsl:text>, </xsl:text>
         <span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:citedRange/name()}"><xsl:apply-templates select="//tei:cit[@xml:id=$parallel]/tei:bibl/tei:citedRange"/></span>
+    </xsl:template>
+
+    <!-- witness -->
+    <xsl:template match="tei:gap | tei:lem | tei:rdg" mode="wit-codes">
+        <xsl:variable name="main-root" select="/"/>
+        <xsl:for-each select="tokenize(translate(./@wit, ' ', ''), '#')">
+            <xsl:variable name="wit" select="."/>
+            <xsl:apply-templates select="$main-root/descendant::tei:witness[@xml:id=$wit]/descendant::tei:idno"/>
+        </xsl:for-each>
     </xsl:template>
 
     <!-- attributes -->

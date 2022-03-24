@@ -89,8 +89,9 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 /* wit */
 *[data-type="wit"][data-bs-toggle="popover"] {color:#008080;}
 *[data-type="wit"][data-bs-toggle="popover"]:hover {color:#029b9b;}
-sub {left: -0.5em;}
-sup {top: -1em !important;}
+sub {left: -5px;}
+sup {top: -10px !important;}
+sub, sup {font-size: 8px !important;}
 
 /* note */
 span[data-type="ph-nt"] {color: #99603D;}
