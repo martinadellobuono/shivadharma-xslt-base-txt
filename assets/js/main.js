@@ -2,7 +2,6 @@ $(document).ready(() => {
     termLink();
     appLink();
     appNtClick();
-    clsOpnSec();
     closeApp();
 });
 
@@ -32,41 +31,46 @@ let termLink = () => {
 let appLink = () => {
     // click on the apparatus entry in the text
     $(".app-click").on("click", function() {
-        // unselect the apparatus entry
-        if ($(this).hasClass("app-select")) {
-            $(".app-select").removeClass("app-select");
-        // select the apparatus entry
-        } else {
-            var term = "#" + $(this).attr("id");           
-            var target = $(".app-target[ref='" + term + "']");
-            var btn = $(term).parents("div[data-type='lg']").find(".btn-collapse");
-            var app = $(term).parents("div[data-type='lg']").find(".btn-collapse").attr("href");
-            // open the inline apparatus only if it is not a lacuna
-            if (!$(target).hasClass("app-lac")) {
-                if (!$(app).hasClass("show")) {
-                    $(btn).click();
-                };
-            };
-            // identify the apparatus entry
-            $(".app-select").removeClass("app-select");
+        var term = $(this);
+        var target = $(this).attr("id");
+        var btn = $(term).parents("div[data-type='lg']").find(".btn-collapse[data-target='app']");
+        var app = $(term).parents("div[data-type='lg']").find(".btn-collapse[data-target='app']").attr("href");
+        $(".app-select").removeClass("app-select");
+        // highlight the apparatus entry
+        $(".app-target[ref='#" + target + "']").addClass("app-select");
+        // highlight the lemma in the text
+        if (term.attr("data-type") !== "parallel") {
             $(term).addClass("app-select");
-            $(target).addClass("app-select");
+        };
+        // open the apparatus entry        
+        if (!$(app).hasClass("show")) {
+            $(btn).click();
         };
     });
-    // click on the apparatus entry in the apparatus
+    // click on the apparatus entry in the apparatus 
+    // and scrolls the text to the corresponding point
     $(".app-target").on("click", function() {
-        // unselect the apparatus entry
-        if ($(this).hasClass("app-select")) {
-            $(".app-select").removeClass("app-select");
-        // select the apparatus entry
-        } else {
-            var term = $(this);
-            var target = $(this).attr("ref");
-            $(".app-select").removeClass("app-select");
-            $(term).addClass("app-select");
+        var term = $(this);
+        var target = $(this).attr("ref");
+        var divToScroll = $(".lay-txt");
+        $(".app-select").removeClass("app-select");
+        $(term).addClass("app-select");
+        // parallels
+        if (term.attr("data-type") == "parallel") {
+            // scroll to the point
+            divToScroll.animate({
+                scrollTop: $(target).parent().position().top + divToScroll.scrollTop() - 100
+            }, 500, "swing");
+            // open the parallel entry
+            if (!$(target).hasClass("show")) {
+                $(".btn-collapse[href='" + target + "']").click();
+            };
+        }
+        // else
+        else {
+            // highlight the lemma in the text
             $(target).addClass("app-select");
-            // scroll the text if the apparatus entry refers to a lacuna
-            var divToScroll = $(".lay-txt");
+            // scroll to the point
             divToScroll.animate({
                 scrollTop: $(target).position().top + divToScroll.scrollTop() - 100
             }, 500, "swing");
@@ -96,43 +100,5 @@ let appNtClick = () => {
         $(nt).animate({
             scrollTop: $(id).offset().top - $(nt).offset().top
         }, 100);
-    });
-};
-
-/* CLOSE SECTIONS */
-/* when you click on close button the section is closed */
-let clsOpnSec = () => {
-    $(".icon-cls").on("click", function() {
-        var cls = $(this);
-        var opn = $(this).next(".icon-opn");
-        var sec = $(this).parent(".sec");
-        var cl = $(this).parent(".sec").attr("class").split(" ");
-
-        $(cl).each(function() {
-            if (this.indexOf("col-md-") != -1) {
-                var clRem = "" + this;
-                $(cls).hide();
-                $(opn).show();
-                $(sec).removeClass(clRem).addClass("col-md-1");
-                $(sec).find(".row").hide();
-                $(sec).next(".sec").css("background", "red");
-            };
-        });
-
-    });
-    $(".icon-opn").on("click", function() {
-        var cls = $(this);
-        var opn = $(this).prev(".icon-cls");
-        var sec = $(this).parent(".sec");
-        var cl = $(this).parent(".sec").attr("class").split(" ");
-        $(cl).each(function() {
-            if (this.indexOf("col-md-") != -1) {
-                var clRem = "" + this;
-                $(cls).hide();
-                $(opn).show();
-                $(sec).removeClass(clRem).addClass("col-md-1");
-                $(sec).find(".row").show();
-            };
-        });
     });
 };

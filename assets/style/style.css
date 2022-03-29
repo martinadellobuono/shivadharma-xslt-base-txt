@@ -102,6 +102,7 @@ span[data-type="ph-nt"] {color: #99603D;}
 *[data-type="divider-lem"]::after {content: "\005D";}
 
 /* parallels */
+.card-prl {background-color: rgba(255, 166, 0, 0.733) !important;} /* rendi automatici i colori e rimuovi le classi */
 .prl-bibl {font-size: 12px;}
 .lay-prl *[data-type="parallel"] {font-size: 15px;}
 .lay-prl *[data-type="parallel"]:hover {background-color: rgba(255, 166, 0, 0.733);}

@@ -59,8 +59,22 @@
                                     <xsl:apply-templates select="//tei:text"/>
                                 </div>
                             </div>
-                            <!-- translation -->
+                            <!-- parallels -->
                             <div class="border col-md-5 sec" id="trl">
+                                <div class="icon-cls">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <div class="icon-opn">
+                                    <i class="fa-solid fa-expand"></i>
+                                </div>
+                                <div class="row p-3 lay-trs scrollbar">
+                                    <div class="row">
+                                        parallels
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- translation -->
+                            <!--<div class="border col-md-5 sec" id="trl">
                                 <div class="icon-cls">
                                     <i class="fa-solid fa-xmark"></i>
                                 </div>
@@ -72,7 +86,7 @@
                                         translation
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <!-- parallels -->
                             <div class="border col-md-1 sec" id="prl">
                                 <div class="icon-cls">
@@ -173,15 +187,15 @@
             <xsl:apply-templates select="tei:gap"/>
             <!-- parallels button -->
             <xsl:if test="./ancestor::tei:seg">
-                <span class="btn-collapse" data-bs-toggle="collapse" href="{./ancestor::tei:seg/@source}" aria-expanded="false" aria-controls="{./ancestor::tei:seg/@source}"> par.</span>
+                <span class="btn-collapse" data-bs-toggle="collapse" href="{./ancestor::tei:seg/@source}" aria-expanded="false" aria-controls="{./ancestor::tei:seg/@source}" data-target="prl"> par.</span>
             </xsl:if>
             <!-- inline apparatus button -->
-            <span class="btn-collapse" data-bs-toggle="collapse" href="#app-inline-{./ancestor::tei:div[@type='section']/@n}" aria-expanded="false" aria-controls="app-inline-{./ancestor::tei:div[@type='section']/@n}"> app.</span>
+            <span class="btn-collapse" data-bs-toggle="collapse" href="#app-inline-{./ancestor::tei:div[@type='section']/@n}" aria-expanded="false" aria-controls="app-inline-{./ancestor::tei:div[@type='section']/@n}" data-target="app"> app.</span>
         </div>
         <!-- parallels -->
         <xsl:if test="./ancestor::tei:seg">
-            <div class="collapse pt-2" id="{./ancestor::tei:seg/substring-after(@source, '#')}">
-                <div class="app-nt-comp border card card-body">
+            <div class="app-click collapse pt-2" id="{./ancestor::tei:seg/substring-after(@source, '#')}" data-type="parallel">
+                <div class="app-nt-comp border card card-body card-prl">
                     <xsl:apply-templates select=".." mode="prl-txt"/>
                     <span class="prl-bibl"><xsl:apply-templates select=".." mode="prl-bibl"/></span>
                 </div>
@@ -650,7 +664,7 @@
         <xsl:variable name="parallel">
             <xsl:value-of select="substring-after(./@source, '#')"/>
         </xsl:variable>
-        <div class="" ref="#{$parallel}" data-type="parallel">
+        <div class="app-target" ref="#{$parallel}" data-type="parallel">
             <span data-type="prl-{../../@n/name()}"><xsl:value-of select="../../@n"/>.<xsl:value-of select="../@n"/></span>
             <span> = </span>
             <span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title/name()}"><xsl:value-of select="//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title"/></span>
