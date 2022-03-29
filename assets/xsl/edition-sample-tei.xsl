@@ -60,21 +60,20 @@
                                 </div>
                             </div>
                             <!-- parallels -->
-                            <div class="border col-md-5 sec" id="trl">
+                            <div class="border d-none sec" id="full-prl">
                                 <div class="icon-cls">
                                     <i class="fa-solid fa-xmark"></i>
                                 </div>
                                 <div class="icon-opn">
                                     <i class="fa-solid fa-expand"></i>
                                 </div>
-                                <div class="row p-3 lay-trs scrollbar">
-                                    <div class="row">
-                                        parallels
-                                    </div>
+                                <div class="p-3 scrollbar">
+                                    <h5 class="introduction-base title-full-prl"></h5>
+                                    <div class="lay-full-prl"></div>
                                 </div>
                             </div>
                             <!-- translation -->
-                            <!--<div class="border col-md-5 sec" id="trl">
+                            <div class="border col-md-5 sec" id="trl">
                                 <div class="icon-cls">
                                     <i class="fa-solid fa-xmark"></i>
                                 </div>
@@ -86,7 +85,7 @@
                                         translation
                                     </div>
                                 </div>
-                            </div>-->
+                            </div>
                             <!-- parallels -->
                             <div class="border col-md-1 sec" id="prl">
                                 <div class="icon-cls">
@@ -197,7 +196,6 @@
             <div class="app-click collapse pt-2" id="{./ancestor::tei:seg/substring-after(@source, '#')}" data-type="parallel">
                 <div class="app-nt-comp border card card-body card-prl">
                     <xsl:apply-templates select=".." mode="prl-txt"/>
-                    <span class="prl-bibl"><xsl:apply-templates select=".." mode="prl-bibl"/></span>
                 </div>
             </div>
         </xsl:if>
@@ -678,21 +676,15 @@
         <xsl:variable name="parallel">
             <xsl:value-of select="substring-after(./@source, '#')"/>
         </xsl:variable>
-        <div data-type="parallel">
-            <span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:quote/name()}"><xsl:apply-templates select="//tei:cit[@xml:id=$parallel]/tei:quote/tei:lg/tei:l"/></span>
+        <div data-source="{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title}" data-type="parallel">
+            <div class="py-2" data-excerpt="{$parallel}">
+                <span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:quote/name()}"><xsl:apply-templates select="//tei:cit[@xml:id=$parallel]/tei:quote/tei:lg/tei:l"/></span>
+            </div>
         </div>
-    </xsl:template>
-
-    <!-- parallels bibl -->
-    <xsl:template match="tei:seg" mode="prl-bibl">
-        <xsl:variable name="parallel">
-            <xsl:value-of select="substring-after(./@source, '#')"/>
-        </xsl:variable>
-        <!--<span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:author/name()}"><xsl:apply-templates select="//tei:cit[@xml:id=$parallel]/tei:bibl/tei:author"/></span>
-        <xsl:text>, </xsl:text>-->
-        <span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title/name()}"><xsl:apply-templates select="//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title"/></span>
-        <xsl:text>, </xsl:text>
-        <span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:citedRange/name()}"><xsl:apply-templates select="//tei:cit[@xml:id=$parallel]/tei:bibl/tei:citedRange"/></span>
+        <!-- open the entire parallel -->
+        <div>
+            <a class="prl-bibl" data-source="{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title}" data-excerpt-ref="{$parallel}">Open the entire parallel</a>
+        </div>
     </xsl:template>
 
     <!-- witness -->

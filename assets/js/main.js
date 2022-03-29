@@ -3,6 +3,7 @@ $(document).ready(() => {
     appLink();
     appNtClick();
     closeApp();
+    getPrl();
 });
 
 /* TERMS - link between the term in the text and in the commentary */
@@ -100,5 +101,28 @@ let appNtClick = () => {
         $(nt).animate({
             scrollTop: $(id).offset().top - $(nt).offset().top
         }, 100);
+    });
+};
+
+/* PARALLELS - click on a source and get the full-text */
+let getPrl = () => {
+    $(".prl-bibl").on("click", function() {
+        var excerpt = $(this).data("excerpt-ref");
+        // hide the translation
+        // show the full-text of parallels
+        $("#full-prl").removeClass("d-none").addClass("col-md-5");
+        $("#trl").addClass("d-none").removeClass("col-md-5");
+        // print the full-text of parallels
+        var src = $(this).attr("data-source");
+        var arr = [];
+        $("div[data-source='" + src + "']").each(function() {
+            var txt = $(this).html();
+            arr.push(txt);
+        });
+        $(".title-full-prl").html(src);
+        $(".lay-full-prl").html(arr);
+        // highlight the clicked parallel in the full-text of parallels
+        $(".bg-orange").removeClass("bg-orange");
+        $("div[data-excerpt='" + excerpt + "']").addClass("bg-orange");
     });
 };

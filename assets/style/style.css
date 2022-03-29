@@ -25,6 +25,8 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 /* collapse */
 .btn-collapse::after {content: "\25be"; height: auto; top: -2px; margin-left: 5px;}
 .btn-collapse[aria-expanded="true"]::after {content: "\25B4";}
+.btn-collapse[data-target="prl"] {color: rgb(255, 166, 0) !important;}
+.btn-collapse[data-target="prl"]:hover {color: rgb(197, 128, 0) !important;}
 
 /* btn */
 .btn-app {color: #047D92 !important;}
@@ -43,6 +45,9 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 .icon-opn {display: none;}
 .icon-cls i, .icon-opn i {color: #DEE2E6;}
 .icon-cls i:hover, .icon-opn i:hover {color: #6C757D;}
+
+/* background */
+.bg-orange {background-color: #FABD4CBB;}
 
 /* header */
 *[data-type="editor"] {font-style: italic;}
@@ -75,8 +80,13 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 .app-nt-comp *[data-type="lem"], .app-nt-comp *[data-type="rdg"] {font-style: italic;}
 *[data-type="divider"], *[data-type="loc"], *[data-type="wit"] {font-style: normal;}
 .lay-app .app-click {margin-bottom: 5px;}
+
+/*.app-select, .app-click:hover {background: #80C3CF5D;}*/
 .app-select, .app-click:hover {background: #80C3CF5D;}
-.app-click:hover::after {color: #80C3CF; content: "→";}
+*[data-type="parallel"].app-click:hover {background: rgba(0, 0, 0, 0);}
+*[data-type="parallel"].app-select {background: rgba(255, 166, 0, 0.733);}
+
+/*.app-click:hover::after {color: #80C3CF; content: "→";}*/
 
 /* apparatus > omission */
 *[data-type="app-om-ins"], *[data-type="app-om-lm"], *[data-type="app-om-rdg"], *[data-type="rdg"] *[data-type="double-danda"], *[data-type="single-danda"] {font-style: normal !important;}

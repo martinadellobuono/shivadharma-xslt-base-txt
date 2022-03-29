@@ -31,7 +31,7 @@
     <!-- sources -->
     <sourceDesc>
       <!-- list quotes -->
-      <listBibl type="cited-sources" xml:id="prova-container-paralleli-1">
+      <listBibl type="cited-sources">
         <cit xml:id="bhap-1-187-1">
           <bibl>
             <author ref="">Unknown</author>
