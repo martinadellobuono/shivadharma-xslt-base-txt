@@ -688,8 +688,8 @@
         <xsl:variable name="parallel">
             <xsl:value-of select="substring-after(./@source, '#')"/>
         </xsl:variable>
-        <span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:author/name()}"><xsl:apply-templates select="//tei:cit[@xml:id=$parallel]/tei:bibl/tei:author"/></span>
-        <xsl:text>, </xsl:text>
+        <!--<span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:author/name()}"><xsl:apply-templates select="//tei:cit[@xml:id=$parallel]/tei:bibl/tei:author"/></span>
+        <xsl:text>, </xsl:text>-->
         <span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title/name()}"><xsl:apply-templates select="//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title"/></span>
         <xsl:text>, </xsl:text>
         <span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:citedRange/name()}"><xsl:apply-templates select="//tei:cit[@xml:id=$parallel]/tei:bibl/tei:citedRange"/></span>
