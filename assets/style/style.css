@@ -9,12 +9,12 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 
 /* layers */
 .lay-0 {height: 5vh;}
-.lay-1 {height: 70vh;}
+.lay-1 {height: 85vh;}
 .lay-2 {height: 20vh;}
 .lay-3 {height: 15vh;}
 
 /* layout */
-.lay-prl, .lay-trs, .lay-txt {height: 70vh;}
+.lay-prl, .lay-trs, .lay-txt {height: 80vh;}
 .lay-app {height: 20vh;}
 .lay-btn {background-color: #FFF; z-index: 90000;}
 .lay-dmg {font-size: 15px;}
@@ -85,7 +85,6 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 .app-select, .app-click:hover {background: #80C3CF5D;}
 *[data-type="parallel"].app-click:hover {background: rgba(0, 0, 0, 0);}
 *[data-type="parallel"].app-select {background: rgba(255, 166, 0, 0.733);}
-
 /*.app-click:hover::after {color: #80C3CF; content: "→";}*/
 
 /* apparatus > omission */

@@ -110,8 +110,7 @@ let getPrl = () => {
         var excerpt = $(this).data("excerpt-ref");
         // hide the translation
         // show the full-text of parallels
-        $("#full-prl").removeClass("d-none").addClass("col-md-5");
-        $("#trl").addClass("d-none").removeClass("col-md-5");
+        $("#prl-tab").click();
         // print the full-text of parallels
         var src = $(this).attr("data-source");
         var arr = [];

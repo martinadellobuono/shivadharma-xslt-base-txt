@@ -419,6 +419,9 @@
                 vibhinnadaityasphuritaikaśūline
               </l>
             </lg>
+            <translation>
+              Veneration to the one who wears the half moon, whose colour in his throat has the splendour of the jewels [on the hood] of the serpent-king: to Hara, garlanded with skulls that are as bright as clouds, who holds a single-tipped spear trembling for the slaying of the Daitya [=Andhaka].
+            </translation>
           </div>
           <!-- stanza 2 -->
           <div type="section" n="2">
@@ -448,9 +451,15 @@
                 </app>
               </l>
             </lg>
+            <translation>
+              Agastya asks Skanda, the holder of the spear of knowledge, appeased, the child born from Śaṅkara, slayer of the Gods’ enemies:
+            </translation>
           </div>
           <div type="uvaca">
-            agastir uvāca
+            <p>agastir uvāca</p>
+            <translation>
+              Agastya said
+            </translation>
           </div> 
           <!-- stanza 3 -->
           <div type="section" n="3">
@@ -491,6 +500,9 @@
                 </app>
               </l>
             </lg>
+            <translation>
+              “O Bhagavān, by seeing you a good rebirth [comes to pass] even for a man of the lowest caste. Then, once this one falls from Heaven, he is reborn as a Brahmin for seven rebirths
+            </translation>
           </div>
           <!-- stanza 4 -->
           <div type="section" n="4">
@@ -528,6 +540,9 @@
                 </app>
               </l>
             </lg>
+            <translation>
+              Therefore, o Lord, you are compassionate towards all beings; for this reason, tell us/me concisely the Dharma that is beneficial to all.
+            </translation>
           </div>      
           <!-- stanza 5 -->
           <div type="section" n="5">
@@ -571,6 +586,9 @@
                 </app>
               </l>
             </lg>
+            <translation>
+              It is said that many kinds of religious norms have been taught by the god for the goddess, and they have all been heard by you. For this reason, I ask you:
+            </translation>
           </div>      
           <!-- stanza 6 --> 
           <div type="section" n="6">
@@ -602,6 +620,10 @@
                 vidhinā samprasīdati
               </l>
             </lg>
+            <translation>
+              What are the main religious rules with reference to Śiva, and what are the features of Śiva’s teachings? By which procedure is Śiva satisfied when he is worshipped in the liṅga?
+              Śiva is satisfied when he is worshipped in the liṅga following which procedure?
+            </translation>
           </div>     
           <!-- stanza 7 -->
           <div type="section" n="7">
@@ -634,6 +656,9 @@
                 nānyeṣāṃ samudāhṛtam
               </l> 
             </lg>
+            <translation>
+              Moreover, it is said that the gift of knowledge is the most important of all gifts; and it has been described in the Revelation for no others than for the best among the twice-born:
+            </translation>
           </div>      
           <!-- stanza 8 -->
           <div type="section" n="8">
@@ -655,6 +680,9 @@
                 vidyā<gap xml:id="app-1-8-8d-1" resp="#flodes" reason="damage" extent="15" unit="chars" start="dyā" end="m" wit="#NK28">dāna</gap>m anuttamam
               </l>
             </lg>
+            <translation>
+              By means of what ritual procedure is merit deriving from this [practice] brought about for all varṇas? And [divided into] how many [different] types will this unsurpassable gift of knowledge be known?
+            </translation>
           </div>      
           <!-- stanza 9 -->
           <div type="section" n="9">
@@ -694,6 +722,9 @@
                 </l>
               </lg>
             </seg>
+            <translation>
+              By means of what meritorious actions done in this world do the householders who have gone to Heaven perform the yoga of Śaṅkara, once they are born again in the human world?
+            </translation>
           </div>      
           <!-- stanza 10 --> 
           <div type="section" n="10">
@@ -724,6 +755,9 @@
                 </l>
               </lg>
             </seg>
+            <translation>
+              The practice of rituals (karmayajña), the practice of askesis (tapoyajña), self-study [of the Vedas] (svādhyāya), meditation (dhyāna), and the practice of knowledge (jñānayajña): these are known as the five great religious practices (mahāyajña).
+            </translation>
           </div>      
           <!-- stanza 11 -->
           <div type="section" n="11">
@@ -757,6 +791,9 @@
                 </l>
               </lg>
             </seg>
+            <translation>
+              And, among these practices, which one is remembered as the best? And of what kind is that fruit [obtained] from gifting to those who rejoice in these five practices?
+            </translation>
           </div>      
           <!-- stanza 12 -->
           <div type="section" n="12">
@@ -792,6 +829,9 @@
                 </app>
               </l>
             </lg>
+            <translation>
+              And of what kind are the divisions of Dharma and Adharma said [to be]? Of how many kinds are the instruments for their realization, and the paths belonging to (leading to)  them?
+            </translation>
           </div>       
           <!-- stanza 13 -->
           <div type="section" n="13">
@@ -823,6 +863,9 @@
                 </app>śeṣeṇa karmaṇā
               </l>
             </lg>
+            <translation>
+              Which distinctive marks arise through a karman that is left to be experienced for the inhabitants of heaven and hell, once they have come back to earth?
+            </translation>
           </div>      
           <!-- stanza 14 --> 
           <div type="section" n="14">
@@ -850,6 +893,9 @@
                 dehinaḥ katham
               </l>
             </lg>
+            <translation>
+              How do people endowed with a body free themselves from the terrible ocean of transmigration, agitated with the waves of Dharma and Adharma, abundant with the foam that is the anguish [experienced] by the embryos and so on?
+            </translation>
           </div>      
           <!-- stanza 15 -->
           <div type="section" n="15">
@@ -888,6 +934,9 @@
                 maheśvaram
               </l>
             </lg>
+            <translation>
+              Thus impelled Skanda, the one who illustrates the contents of all queries, [leader of] the great [Gaṇa’s] army (mahāsena), after having revered Maheśvara, replied
+            </translation>
           </div>       
           <!-- stanza 16 -->
           <div type="section" n="16">
@@ -912,9 +961,15 @@
                 </app>bhāṣitam
               </l>
             </lg>
+            <translation>
+              [by expounding] what bestows the fruit of Heaven and liberation, what saves from the sea of hells, namely the treatise called Śivadharmottara, that has been taught by the Lord.
+            </translation>
           </div> 
           <div type="uvaca">
-            skanda uvāca
+            <p>skanda uvāca</p>
+            <translation>
+              Skanda said
+            </translation>
           </div>    
           <!-- stanza 17 -->
           <div type="section" n="17">
@@ -949,6 +1004,9 @@
                   kīrtitāḥ
               </l>
             </lg>
+            <translation>
+              All teachings have faith at their beginning, they are established as having faith in the middle and at the end and the basements are grounded on faith, teachings are said to be just faith,
+            </translation>
           </div>      
           <!-- stanza 18 --> 
           <div type="section" n="18">
@@ -981,6 +1039,9 @@
                 </app>
               </l>
             </lg>
+            <translation>
+              Having an essence that is nothing but Revelation, subtle, dealing with prakṛti, puruṣa, and the Lord, [these teachings] are seized only through faith, not with the hand nor with the eye. Check Niśvāsakārikā 34.17 – Note parallel in the DP with tarka, referring to the 3 pramāṇas 
+            </translation>
           </div>     
           <!-- stanza 19 -->   
           <div type="section" n="19">
@@ -1015,6 +1076,9 @@
                 śraddhāhīnaiḥ surair api
               </l>
             </lg>
+            <translation>
+              Not by means of many bodily afflictions, nor by heaping up wealth is a subtle teaching understood, not even by the gods, if they are devoid of faith.
+            </translation>
           </div>
           <!-- stanza 20 -->   
           <div type="section" n="20">
@@ -1070,6 +1134,9 @@
                 </app>
               </l>
             </lg>
+            <translation>
+              Faith is the supreme, subtle Dharma; faith is knowledge, oblation and askesis; faith is both heaven and emancipation; faith is this entire universe.
+            </translation>
           </div>      
         </div>
       </div>

@@ -59,30 +59,40 @@
                                     <xsl:apply-templates select="//tei:text"/>
                                 </div>
                             </div>
-                            <!-- parallels -->
-                            <div class="border d-none sec" id="full-prl">
+                            <!-- translation / full-text of parallels / citations -->
+                            <div class="border col-md-5 sec" id="full-prl">
                                 <div class="icon-cls">
                                     <i class="fa-solid fa-xmark"></i>
                                 </div>
                                 <div class="icon-opn">
                                     <i class="fa-solid fa-expand"></i>
                                 </div>
-                                <div class="p-3 scrollbar">
-                                    <h5 class="introduction-base title-full-prl"></h5>
-                                    <div class="lay-full-prl"></div>
+                                <div>
+                                    <ul class="nav nav-pills" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="btn-ph-nt btn-sm nav-link active" id="trl-tab" data-bs-toggle="tab" data-bs-target="#trl-targ" type="button" role="tab" aria-controls="ph-nt" aria-selected="false">Translation</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="btn-lt-nt btn-sm nav-link" id="prl-tab" data-bs-toggle="tab" data-bs-target="#prl-targ" type="button" role="tab" aria-controls="lt-nt" aria-selected="false">Parallels</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="btn-hs-nt btn-sm nav-link" id="cit-tab" data-bs-toggle="tab" data-bs-target="#cit-targ" type="button" role="tab" aria-controls="hs-nt" aria-selected="false">Citations</button>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <!-- translation -->
-                            <div class="border col-md-5 sec" id="trl">
-                                <div class="icon-cls">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </div>
-                                <div class="icon-opn">
-                                    <i class="fa-solid fa-expand"></i>
-                                </div>
-                                <div class="row p-3 lay-trs scrollbar">
-                                    <div class="row">
-                                        translation
+                                <div class="tab-content">
+                                    <!-- translation -->
+                                    <div class="fade p-3 lay-txt scrollbar tab-pane fade show active" id="trl-targ" role="tabpanel" aria-labelledby="Open the translation">
+                                        <xsl:apply-templates select="//tei:div[@type='section']/tei:translation | //tei:div[@type='uvaca']/tei:translation" />
+                                    </div>
+                                    <!-- parallels -->
+                                    <div class="fade p-3 scrollbar tab-pane" id="prl-targ" role="tabpanel" aria-labelledby="Open the parallels">
+                                        <h5 class="introduction-base title-full-prl"></h5>
+                                        <div class="lay-full-prl"></div>
+                                    </div>
+                                    <!-- citations -->
+                                    <div class="fade p-3 scrollbar tab-pane fade" id="cit-targ" role="tabpanel" aria-labelledby="Open the citations">
+                                        Citations
                                     </div>
                                 </div>
                             </div>
@@ -116,11 +126,11 @@
                         </div>
                         <!-- lay 3 -->
                         <!-- notes -->
-                        <div class="row lay-3">
+                        <div class="row">
                             <div class="col-md-12 border-top lay-btn pt-3">
                                 <ul class="nav nav-pills" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <button class="btn-ph-nt btn-sm nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#ph-nt" type="button" role="tab" aria-controls="ph-nt" aria-selected="false">Philological notes</button>
+                                        <button class="btn-ph-nt btn-sm nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#ph-nt" type="button" role="tab" aria-controls="ph-nt" aria-selected="false">Philological notes</button>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <button class="btn-lt-nt btn-sm nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#lt-nt" type="button" role="tab" aria-controls="lt-nt" aria-selected="false">Literary notes</button>
@@ -131,7 +141,7 @@
                                 </ul>
                             </div>
                             <div class="app-nt-comp tab-content">
-                                <div class="tab-pane fade show active" id="ph-nt" role="tabpanel" aria-labelledby="ph-nt-tab">
+                                <div class="tab-pane fade" id="ph-nt" role="tabpanel" aria-labelledby="ph-nt-tab">
                                     <xsl:apply-templates select="//tei:note[@type='philological']"/>
                                 </div>
                                 <div class="tab-pane fade" id="lt-nt" role="tabpanel" aria-labelledby="lt-nt-tab">
@@ -156,8 +166,8 @@
 
     <!-- section -->
     <xsl:template match="tei:div[@type='section']">
-        <div class="row px-4 py-2" data-type="{@type}">
-            <xsl:apply-templates select="@* | node()"/>
+        <div class="row px-4 py-3" data-type="{@type}">
+            <xsl:apply-templates select="@* | node()[not(self::tei:translation)]"/>
         </div>
     </xsl:template>
     
@@ -646,17 +656,6 @@
         </div>
     </xsl:template>
 
-    <!-- uvaca -->
-    <xsl:template match="tei:div[@type='uvaca']">
-        <div class="row">
-            <div class="col-md-12 p-4" data-type="uvaca">
-                <span>
-                    <xsl:apply-templates select="@* | node()"/>
-                </span>
-            </div>
-        </div>
-    </xsl:template>
-
     <!-- parallels in apparatus -->
     <xsl:template match="tei:seg" mode="prl-app">
         <xsl:variable name="parallel">
@@ -677,13 +676,45 @@
             <xsl:value-of select="substring-after(./@source, '#')"/>
         </xsl:variable>
         <div data-source="{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title}" data-type="parallel">
-            <div class="py-2" data-excerpt="{$parallel}">
+            <div class="py-3" data-excerpt="{$parallel}">
                 <span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:quote/name()}"><xsl:apply-templates select="//tei:cit[@xml:id=$parallel]/tei:quote/tei:lg/tei:l"/></span>
             </div>
         </div>
         <!-- open the entire parallel -->
         <div>
             <a class="prl-bibl" data-source="{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title}" data-excerpt-ref="{$parallel}">Open the entire parallel</a>
+        </div>
+    </xsl:template>
+
+    <!-- translation of lg -->
+    <xsl:template match="tei:div[@type='section']/tei:translation">
+        <div class="row py-3">
+            <span>
+                <span><xsl:value-of select="./ancestor::tei:div[@type='chapter']/@n"/></span>.<span><xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/></span>
+                <xsl:value-of select="."/>
+            </span>
+        </div>
+    </xsl:template>
+
+    <!-- translation of uvaca -->
+    <xsl:template match="tei:div[@type='uvaca']/tei:translation">
+        <div class="row">
+            <div class="col-md-12 p-2" data-type="uvaca">
+                <span>
+                    <xsl:value-of select="."/>
+                </span>
+            </div>
+        </div>
+    </xsl:template>
+
+    <!-- uvaca -->
+    <xsl:template match="tei:div[@type='uvaca']">
+        <div class="row">
+            <div class="col-md-12 p-4" data-type="uvaca">
+                <span>
+                    <xsl:apply-templates select="node()[not(self::tei:translation)]"/>
+                </span>
+            </div>
         </div>
     </xsl:template>
 
