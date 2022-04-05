@@ -70,33 +70,30 @@
                                 <div>
                                     <ul class="nav nav-pills" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                            <button class="btn-ph-nt btn-sm nav-link active" id="trl-tab" data-bs-toggle="tab" data-bs-target="#trl-targ" type="button" role="tab" aria-controls="ph-nt" aria-selected="false">Translation</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="btn-lt-nt btn-sm nav-link" id="prl-tab" data-bs-toggle="tab" data-bs-target="#prl-targ" type="button" role="tab" aria-controls="lt-nt" aria-selected="false">Parallels</button>
+                                            <button class="btn-or btn-sm nav-link active" id="prl-tab" data-bs-toggle="tab" data-bs-target="#prl-targ" type="button" role="tab" aria-controls="lt-nt" aria-selected="false">Parallels</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="btn-hs-nt btn-sm nav-link" id="cit-tab" data-bs-toggle="tab" data-bs-target="#cit-targ" type="button" role="tab" aria-controls="hs-nt" aria-selected="false">Citations</button>
                                         </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="btn-ph-nt btn-sm nav-link" id="trl-tab" data-bs-toggle="tab" data-bs-target="#trl-targ" type="button" role="tab" aria-controls="ph-nt" aria-selected="false">Translation</button>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="tab-content">
-                                    <!-- translation -->
-                                    <div class="fade p-3 lay-txt scrollbar tab-pane fade show active" id="trl-targ" role="tabpanel" aria-labelledby="Open the translation">
-                                        <xsl:apply-templates select="//tei:div[@type='section']/tei:translation | //tei:div[@type='uvaca']/tei:translation" />
-                                    </div>
-                                    <!-- parallels -->
-                                    <div class="fade p-3 scrollbar tab-pane" id="prl-targ" role="tabpanel" aria-labelledby="Open the parallels">
-                                        <h5 class="introduction-base title-full-prl"></h5>
-                                        <div class="lay-full-prl"></div>
-                                    </div>
+                                    <!-- parallels full text-->
+                                    <div class="fade p-3 scrollbar tab-pane fade show active" id="prl-targ" role="tabpanel" aria-labelledby="Open the parallels"></div>
                                     <!-- citations -->
                                     <div class="fade p-3 scrollbar tab-pane fade" id="cit-targ" role="tabpanel" aria-labelledby="Open the citations">
                                         Citations
                                     </div>
+                                    <!-- translation -->
+                                    <div class="fade p-3 lay-txt scrollbar tab-pane fade" id="trl-targ" role="tabpanel" aria-labelledby="Open the translation">
+                                        <xsl:apply-templates select="//tei:div[@type='section']/tei:translation | //tei:div[@type='uvaca']/tei:translation" />
+                                    </div>
                                 </div>
                             </div>
-                            <!-- parallels -->
+                            <!-- parallels bibl -->
                             <div class="border col-md-1 sec" id="prl">
                                 <div class="icon-cls">
                                     <i class="fa-solid fa-xmark"></i>
@@ -196,14 +193,14 @@
             <xsl:apply-templates select="tei:gap"/>
             <!-- parallels button -->
             <xsl:if test="./ancestor::tei:seg">
-                <span class="btn-collapse" data-bs-toggle="collapse" href="{./ancestor::tei:seg/@source}" aria-expanded="false" aria-controls="{./ancestor::tei:seg/@source}" data-target="prl"> par.</span>
+                <span class="btn-collapse" data-bs-toggle="collapse" href="#prl-{./ancestor::tei:div[@type='chapter']/@n}-{./ancestor::tei:div[@type='section']/@n}" aria-expanded="false" aria-controls="" data-target="prl"> par.</span>
             </xsl:if>
             <!-- inline apparatus button -->
             <span class="btn-collapse" data-bs-toggle="collapse" href="#app-inline-{./ancestor::tei:div[@type='section']/@n}" aria-expanded="false" aria-controls="app-inline-{./ancestor::tei:div[@type='section']/@n}" data-target="app"> app.</span>
         </div>
         <!-- parallels -->
         <xsl:if test="./ancestor::tei:seg">
-            <div class="app-click collapse pt-2" id="{./ancestor::tei:seg/substring-after(@source, '#')}" data-type="parallel">
+            <div class="collapse pt-2" id="prl-{./ancestor::tei:div[@type='chapter']/@n}-{./ancestor::tei:div[@type='section']/@n}" data-type="parallel">
                 <div class="app-nt-comp border card card-body card-prl">
                     <xsl:apply-templates select=".." mode="prl-txt"/>
                 </div>
@@ -658,32 +655,44 @@
 
     <!-- parallels in apparatus -->
     <xsl:template match="tei:seg" mode="prl-app">
-        <xsl:variable name="parallel">
-            <xsl:value-of select="substring-after(./@source, '#')"/>
-        </xsl:variable>
-        <div class="app-target" ref="#{$parallel}" data-type="parallel">
-            <span data-type="prl-{../../@n/name()}"><xsl:value-of select="../../@n"/>.<xsl:value-of select="../@n"/></span>
-            <span> = </span>
-            <span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title/name()}"><xsl:value-of select="//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title"/></span>
-            <xsl:text> </xsl:text>
-            <span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:citedRange/name()}"><xsl:value-of select="//tei:cit[@xml:id=$parallel]/tei:bibl/tei:citedRange"/></span>
-        </div>
-    </xsl:template>
+        <xsl:variable name="main-root" select="/"/>
+        <xsl:variable name="chapter" select="./ancestor::tei:div[@type='chapter']/@n"/>
+        <xsl:variable name="section" select="../@n"/>
+        <xsl:for-each select="tokenize(translate(./@source, ' ', ''), '#')">
+            <xsl:variable name="prl" select="."/>
+            <xsl:if test="$prl != ''">
+                <div class="prl-target" ref="#{$prl}" data-type="parallel">
+                    <span data-type="prl-n"><xsl:value-of select="$chapter"/>.<span><xsl:value-of select="$section"/></span></span>
+                    <xsl:text> </xsl:text>
+                    <span> = </span>
+                    <span data-type="prl-title"><xsl:apply-templates select="$main-root/descendant::tei:cit[@xml:id=$prl]/descendant::tei:abbr"/></span>
+                    <br/>
+                    <span data-type="prl-locus"><xsl:apply-templates select="$main-root/descendant::tei:cit[@xml:id=$prl]/descendant::tei:citedRange"/></span>
+                </div>
+            </xsl:if>
+        </xsl:for-each>
+    </xsl:template>    
 
     <!-- parallels in text -->
     <xsl:template match="tei:seg" mode="prl-txt">
-        <xsl:variable name="parallel">
-            <xsl:value-of select="substring-after(./@source, '#')"/>
-        </xsl:variable>
-        <div data-source="{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title}" data-type="parallel">
-            <div class="py-3" data-excerpt="{$parallel}">
-                <span data-type="prl-{//tei:cit[@xml:id=$parallel]/tei:quote/name()}"><xsl:apply-templates select="//tei:cit[@xml:id=$parallel]/tei:quote/tei:lg/tei:l"/></span>
-            </div>
-        </div>
-        <!-- open the entire parallel -->
-        <div>
-            <a class="prl-bibl" data-source="{//tei:cit[@xml:id=$parallel]/tei:bibl/tei:title}" data-excerpt-ref="{$parallel}">Open the entire parallel</a>
-        </div>
+        <xsl:variable name="main-root" select="/"/>
+        <xsl:variable name="chapter" select="./ancestor::tei:div[@type='chapter']/@n"/>
+        <xsl:variable name="section" select="../@n"/>
+        <xsl:for-each select="tokenize(translate(./@source, ' ', ''), '#')">
+            <xsl:variable name="prl" select="."/>
+            <xsl:if test="$prl != ''">
+                <div class="prl-target" ref="#{$prl}" data-type="parallel">
+                    <div data-source="{$main-root/descendant::tei:cit[@xml:id=$prl]/descendant::tei:title/node()[not(self::tei:abbr)]}" data-type="parallel">
+                        <div class="full-txt py-3" data-source="{$main-root/descendant::tei:cit[@xml:id=$prl]/descendant::tei:title/node()[not(self::tei:abbr)]}" data-excerpt="{$prl}" data-type="parallel">
+                            <span data-type="l"><xsl:apply-templates select="$main-root/descendant::tei:cit[@xml:id=$prl]/tei:quote/tei:lg/tei:l"/></span>
+                        </div>
+                    </div>
+                </div>
+                <div> 
+                    <a class="prl-bibl" data-source="{$main-root/descendant::tei:cit[@xml:id=$prl]/descendant::tei:title/node()[not(self::tei:abbr)]}" data-excerpt-ref="{$prl}"><span data-type="prl-title"><xsl:apply-templates select="$main-root/descendant::tei:cit[@xml:id=$prl]/descendant::tei:title/node()[not(self::tei:abbr)]"/></span>: Open the entire parallel</a>
+                </div>
+            </xsl:if>
+        </xsl:for-each>
     </xsl:template>
 
     <!-- translation of lg -->

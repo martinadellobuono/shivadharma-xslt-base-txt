@@ -35,7 +35,7 @@
         <cit xml:id="bhap-1-187-1">
           <bibl>
             <author ref="">Unknown</author>
-            <title ref="">Bhaviṣyapurāṇa</title>
+            <title ref="">Bhaviṣyapurāṇa<abbr>BhaP</abbr></title>
             <citedRange corresp="">1.187.1</citedRange>
           </bibl>
           <quote>
@@ -58,7 +58,7 @@
         <cit xml:id="bhap-1-187-2">
           <bibl>
             <author ref="">Unknown</author>
-            <title ref="">Bhaviṣyapurāṇa</title>
+            <title ref="">Bhaviṣyapurāṇa<abbr>BhaP</abbr></title>
             <citedRange corresp="">1.187.2</citedRange>
           </bibl>
           <quote>
@@ -81,7 +81,7 @@
         <cit xml:id="bhap-1-187-3">
           <bibl>
             <author ref="">Unknown</author>
-            <title ref="">Bhaviṣyapurāṇa</title>
+            <title ref="">Bhaviṣyapurāṇa<abbr>BhaP</abbr></title>
             <citedRange corresp="">1.187.3</citedRange>
           </bibl>
           <quote>
@@ -97,6 +97,52 @@
                 </l>
                 <l n="d">
                   kiṃ kalaṃ kā yatir bhavet
+                </l>
+              </lg>
+          </quote>
+        </cit>
+        <cit xml:id="bhap-1-187-9">
+          <bibl>
+            <author ref="">Unknown</author>
+            <title ref="">Bhaviṣyapurāṇa<abbr>BhaP</abbr></title>
+            <citedRange corresp="">1.187.9</citedRange>
+          </bibl>
+          <quote>
+            <lg met="Anuṣṭubh">
+                <l n="a">
+                  śraddhāpūrvaḥ sadā dharmaḥ
+                </l>
+                <l n="b"> 
+                  śraddhāmadhyāntasahasthitaḥ
+                </l>
+                <l n="c">
+                  śraddhāniṣṭhapratiṣṭhaś ca
+                </l>
+                <l n="d">
+                  dharmaḥ śraddhā prakīrtitā
+                </l>
+              </lg>
+          </quote>
+        </cit>
+        <cit xml:id="devi-127-12">
+          <bibl>
+            <author ref="">Unknown</author>
+            <title ref="">Devīpurāṇa<abbr>DeP</abbr></title>
+            <citedRange corresp="">127.12</citedRange>
+          </bibl>
+          <quote>
+            <lg met="Anuṣṭubh">
+                <l n="a">
+                  śraddhāpūrvāḥ smṛtā dharmā
+                </l>
+                <l n="b"> 
+                  śraddhāmadhyāntasaṃsthitā
+                </l>
+                <l n="c">
+                  śraddhāniṣṭhā pratiṣṭhāś ca
+                </l>
+                <l n="d">
+                  dharmāḥśraddhaiva kīrttitaḥ
                 </l>
               </lg>
           </quote>
@@ -973,37 +1019,39 @@
           </div>    
           <!-- stanza 17 -->
           <div type="section" n="17">
-            <lg met="Anuṣṭubh">
-              <l n="a">
-              śraddhā<app xml:id="app-1-17-17a-1" resp="#flodes">
-                <lem wit="#NC45 #NK28 #NK82 #NO15 #GP43 #E" rend="circlefront">pūrvāḥ</lem>
-                <rdg wit="#NKo77" rend="">pūrvā</rdg>
-                <rdg wit="#PT75" rend="circlefront">pūrṇā</rdg>
-              </app>
-              sarvadharmāḥ
-              </l>
-              <l n="b">
-              śraddhāmadhyānta<app xml:id="app-1-17-17b-1" resp="#flodes">
-                <lem wit="#Σ" rend="circlefront">saṃsthitāḥ</lem>
-                <rdg wit="#GP43" rend="">saṃsthataḥ</rdg>
-              </app>
-              </l>
-              <l n="c">
-                śraddhā<app xml:id="app-1-17-17c-1" resp="#flodes">
-                  <lem wit="#NK28 #NK82 #NKo77 #P" rend="circlefront">niṣṭhāḥ</lem>
-                  <rdg wit="#NC45 #E" rend="circlefront">niṣṭhā</rdg>
+            <seg source="#bhap-1-187-9 #devi-127-12" type="" subtype="">
+              <lg met="Anuṣṭubh">
+                <l n="a">
+                śraddhā<app xml:id="app-1-17-17a-1" resp="#flodes">
+                  <lem wit="#NC45 #NK28 #NK82 #NO15 #GP43 #E" rend="circlefront">pūrvāḥ</lem>
+                  <rdg wit="#NKo77" rend="">pūrvā</rdg>
+                  <rdg wit="#PT75" rend="circlefront">pūrṇā</rdg>
                 </app>
-                pratiṣṭhāś ca 
-              </l>
-              <l n="d">
-                dharmāḥ 
-                <app xml:id="app-1-17-17c-2" resp="#flodes">
-                  <lem wit="#Σ" rend="">śraddhaiva</lem>
-                  <rdg wit="#NC45" rend="">śraddharva</rdg>
+                sarvadharmāḥ
+                </l>
+                <l n="b">
+                śraddhāmadhyānta<app xml:id="app-1-17-17b-1" resp="#flodes">
+                  <lem wit="#Σ" rend="circlefront">saṃsthitāḥ</lem>
+                  <rdg wit="#GP43" rend="">saṃsthataḥ</rdg>
                 </app>
-                  kīrtitāḥ
-              </l>
-            </lg>
+                </l>
+                <l n="c">
+                  śraddhā<app xml:id="app-1-17-17c-1" resp="#flodes">
+                    <lem wit="#NK28 #NK82 #NKo77 #P" rend="circlefront">niṣṭhāḥ</lem>
+                    <rdg wit="#NC45 #E" rend="circlefront">niṣṭhā</rdg>
+                  </app>
+                  pratiṣṭhāś ca 
+                </l>
+                <l n="d">
+                  dharmāḥ 
+                  <app xml:id="app-1-17-17c-2" resp="#flodes">
+                    <lem wit="#Σ" rend="">śraddhaiva</lem>
+                    <rdg wit="#NC45" rend="">śraddharva</rdg>
+                  </app>
+                    kīrtitāḥ
+                </l>
+              </lg>
+            </seg>
             <translation>
               All teachings have faith at their beginning, they are established as having faith in the middle and at the end and the basements are grounded on faith, teachings are said to be just faith,
             </translation>

@@ -39,6 +39,9 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 .btn-hs-nt.active, .btn-hs-nt:hover {background-color: #506E50 !important; border: 1px solid #506E50 !important; color: #FFF !important;}
 .btn-br {background-color: #C56D37 !important; border: 1px solid #C56D37 !important; color: #FFF !important;}
 .btn-br:hover {background-color: #C56D37 !important; border: 1px solid #C56D37 !important; color: #FFF !important;}
+.btn-or {color: #FABD4CBB !important;}
+.btn-or.active {background-color: #FFA600 !important; border: 1px solid #FFA600 !important; color: #FFF !important;}
+.btn-or:hover {background-color: #FFA600 !important; border: 1px solid #FFA600 !important; color: #FFF !important;}
 .btn-sm {font-size: 12px !important; margin-right: 5px !important; padding: 5px !important;}
 
 /* icons */
@@ -84,8 +87,9 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 /*.app-select, .app-click:hover {background: #80C3CF5D;}*/
 .app-select, .app-click:hover {background: #80C3CF5D;}
 *[data-type="parallel"].app-click:hover {background: rgba(0, 0, 0, 0);}
-*[data-type="parallel"].app-select {background: rgba(255, 166, 0, 0.733);}
+/**[data-type="parallel"].app-select {background: rgba(255, 166, 0, 0.733);}*/
 /*.app-click:hover::after {color: #80C3CF; content: "→";}*/
+.prl-select {background: rgba(255, 166, 0, 0.733);}
 
 /* apparatus > omission */
 *[data-type="app-om-ins"], *[data-type="app-om-lm"], *[data-type="app-om-rdg"], *[data-type="rdg"] *[data-type="double-danda"], *[data-type="single-danda"] {font-style: normal !important;}
@@ -111,7 +115,7 @@ span[data-type="ph-nt"] {color: #99603D;}
 *[data-type="divider-lem"]::after {content: "\005D";}
 
 /* parallels */
-.card-prl {background-color: rgba(255, 166, 0, 0.733) !important;} /* rendi automatici i colori e rimuovi le classi */
+.card-prl {background-color: rgba(255, 166, 0, 0.733) !important;}
 .prl-bibl {font-size: 12px;}
 .lay-prl *[data-type="parallel"] {font-size: 15px;}
 .lay-prl *[data-type="parallel"]:hover {background-color: rgba(255, 166, 0, 0.733);}

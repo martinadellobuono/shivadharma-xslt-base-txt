@@ -106,22 +106,74 @@ let appNtClick = () => {
 
 /* PARALLELS - click on a source and get the full-text */
 let getPrl = () => {
-    $(".prl-bibl").on("click", function() {
-        var excerpt = $(this).data("excerpt-ref");
-        // hide the translation
-        // show the full-text of parallels
-        $("#prl-tab").click();
-        // print the full-text of parallels
-        var src = $(this).attr("data-source");
-        var arr = [];
-        $("div[data-source='" + src + "']").each(function() {
-            var txt = $(this).html();
-            arr.push(txt);
-        });
-        $(".title-full-prl").html(src);
-        $(".lay-full-prl").html(arr);
-        // highlight the clicked parallel in the full-text of parallels
-        $(".bg-orange").removeClass("bg-orange");
-        $("div[data-excerpt='" + excerpt + "']").addClass("bg-orange");
+
+    // arrays of titles and texts
+    var titlesArr = [];
+    var txtArr = [];
+    $("div[data-type='parallel']").each(function() {
+        var title = $(this).data("source");
+        var txt = $(this).clone().html();
+        if (title !== undefined) {
+            // array of titles
+            if (!titlesArr.includes(title)) {
+                titlesArr.push(title);
+            };
+            // array of full-texts
+            if (!txtArr.includes(txt)) {
+                txtArr.push(txt);
+            };
+        };
     });
+        
+    // titles
+    titlesArr.forEach(function(title) {
+        // create a div for title
+        $("<div>", {
+            class: "container-" + title + " mt-3"
+        }).appendTo("#prl-targ");
+        $(".container-" + title).html('<a class="btn-collapse introduction-base title-full-prl" data-bs-toggle="collapse" href="#' + title + '" role="button" aria-expanded="true" aria-controls="Open the parallel">' + title + "</a>");
+    });
+
+    // texts
+    txtArr.forEach(function(txt) {
+        titlesArr.forEach(function(title) {
+            if (txt.indexOf(title) !== -1) {
+                $(".container-" + title).append('<div class="show" id=' + title + '>' + txt + '</div>');
+            };
+        });
+    });
+
+    // click on the open the entire parallel button
+    $(".prl-bibl").click("on", function() {
+        var ex = $(this).data("excerpt-ref");
+        // remove other selected txt
+        $(".prl-select").removeClass("prl-select");
+        // highlight the corresponding txt
+        $("div[data-excerpt='" + ex + "']").addClass("prl-select");
+        // highlight the corresponding sigla
+        $(".prl-target[ref='#" + ex + "']").addClass("prl-select");
+    });
+
+    // click on the txt
+    $(".full-txt").click("on", function() {
+        var ex = $(this).data("excerpt");
+        // remove other selected txt
+        $(".prl-select").removeClass("prl-select");
+        // highlight the corresponding txt
+        $("div[data-excerpt='" + ex + "']").addClass("prl-select");
+        // highlight the corresponding sigla
+        $(".prl-target[ref='#" + ex + "']").addClass("prl-select");
+        // open the corresponding inline parallel
+        var prl = $(".prl-target[ref='#" + ex + "']").parents(".collapse[data-type='parallel']").attr("id");
+        var target = $(".btn-collapse[href='#" + prl + "']").parents(".row[data-type='section']");
+        if ($(".prl-target[ref='#" + ex + "']").parents(".collapse[data-type='parallel']").hasClass("show") == false) {
+            $(".btn-collapse[href='#" + prl + "']").click();
+        };
+        // scroll the text of the edition
+        var divToScroll = $(".lay-txt");
+        divToScroll.animate({
+            scrollTop: $(target).position().top + divToScroll.scrollTop() - 100
+        }, 500, "swing");
+    });
+
 };
