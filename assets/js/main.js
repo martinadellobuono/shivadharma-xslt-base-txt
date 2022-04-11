@@ -4,6 +4,7 @@ $(document).ready(() => {
     appNtClick();
     closeApp();
     getPrl();
+    collapsibleDiv();
 });
 
 /* TERMS - link between the term in the text and in the commentary */
@@ -112,7 +113,7 @@ let getPrl = () => {
     var txtArr = [];
     $("div[data-type='parallel']").each(function() {
         var title = $(this).data("source");
-        var txt = $(this).clone().html();
+        var txt = $(this).html();
         if (title !== undefined) {
             // array of titles
             if (!titlesArr.includes(title)) {
@@ -132,13 +133,16 @@ let getPrl = () => {
             class: "container-" + title + " mt-3"
         }).appendTo("#prl-targ");
         $(".container-" + title).html('<a class="btn-collapse introduction-base title-full-prl" data-bs-toggle="collapse" href="#' + title + '" role="button" aria-expanded="true" aria-controls="Open the parallel">' + title + "</a>");
+        $("<div>", {
+            class: "full-" + title + " prl-sec"
+        }).appendTo(".container-" + title);
     });
 
     // texts
     txtArr.forEach(function(txt) {
         titlesArr.forEach(function(title) {
             if (txt.indexOf(title) !== -1) {
-                $(".container-" + title).append('<div class="show" id=' + title + '>' + txt + '</div>');
+                $(".full-" + title).append('<div class="show" id=' + title + '>' + txt + '</div>');
             };
         });
     });
@@ -146,11 +150,45 @@ let getPrl = () => {
     // click on the open the entire parallel button
     $(".prl-bibl").click("on", function() {
         var ex = $(this).data("excerpt-ref");
+
+        var src = $(this).data("source");
+
+        // click on the parallel tab
+        $("#prl-tab").click();
         // remove other selected txt
         $(".prl-select").removeClass("prl-select");
-        // highlight the corresponding txt
+        $(".prl-select-btn").removeClass("prl-select-btn");
+        // highlight the txt
         $("div[data-excerpt='" + ex + "']").addClass("prl-select");
-        // highlight the corresponding sigla
+
+
+
+        
+        // open the collapsible div
+        if ($(".title-full-prl[href='#" + src + "']").attr("aria-expanded") == "false") {
+            $(".title-full-prl[href='#" + src + "']").attr("aria-expanded", "true");
+            $(".full-" + src).addClass("prl-sec");
+            $(".full-" + src).find(".collapse").addClass("show");
+        };
+        
+
+
+
+        // scroll the txt to the top
+        var txtToScroll = $("div[data-excerpt='" + ex + "']").parents(".prl-sec");
+        var target = $("div[data-excerpt='" + ex + "']");
+        txtToScroll.animate({
+            scrollTop: $(target).position().top + 50
+        }, 500, "swing");
+        
+
+
+        // highlight the stanza
+        var prl = $(".prl-target[ref='#" + ex + "']").parents(".collapse[data-type='parallel']").attr("id");
+        var target = $(".btn-collapse[href='#" + prl + "']").parents(".row[data-type='section']");
+        $(target).find("div[data-type='lg']").addClass("prl-select");
+        $(target).find(".btn-collapse[data-target='prl']").addClass("prl-select-btn");
+        // highlight the sigla
         $(".prl-target[ref='#" + ex + "']").addClass("prl-select");
     });
 
@@ -159,16 +197,20 @@ let getPrl = () => {
         var ex = $(this).data("excerpt");
         // remove other selected txt
         $(".prl-select").removeClass("prl-select");
-        // highlight the corresponding txt
+        $(".prl-select-btn").removeClass("prl-select-btn");
+        // highlight the txt
         $("div[data-excerpt='" + ex + "']").addClass("prl-select");
-        // highlight the corresponding sigla
+        // highlight the sigla
         $(".prl-target[ref='#" + ex + "']").addClass("prl-select");
-        // open the corresponding inline parallel
+        // open the inline parallel
         var prl = $(".prl-target[ref='#" + ex + "']").parents(".collapse[data-type='parallel']").attr("id");
         var target = $(".btn-collapse[href='#" + prl + "']").parents(".row[data-type='section']");
         if ($(".prl-target[ref='#" + ex + "']").parents(".collapse[data-type='parallel']").hasClass("show") == false) {
             $(".btn-collapse[href='#" + prl + "']").click();
         };
+        // highlight the stanza
+        $(target).find("div[data-type='lg']").addClass("prl-select");
+        $(target).find(".btn-collapse[data-target='prl']").addClass("prl-select-btn");
         // scroll the text of the edition
         var divToScroll = $(".lay-txt");
         divToScroll.animate({
@@ -176,4 +218,63 @@ let getPrl = () => {
         }, 500, "swing");
     });
 
+    // click on the sigla
+    $(".prl-target").click("on", function() {
+        var ex = $(this).attr("ref").replace("#", "");
+        var src = $(this).data("source");
+
+        // remove other selected txt
+        $(".prl-select").removeClass("prl-select");
+        $(".prl-select-btn").removeClass("prl-select-btn");
+        // highlight the sigla
+        $(this).addClass("prl-select");
+        // highlight the text
+        $("div[data-excerpt='" + ex + "']").addClass("prl-select");
+
+
+        // open the collapsible div
+        if ($(".title-full-prl[href='#" + src + "']").attr("aria-expanded") == "false") {
+            $(".title-full-prl[href='#" + src + "']").attr("aria-expanded", "true");
+            $(".full-" + src).addClass("prl-sec");
+            $(".full-" + src).find(".collapse").addClass("show");
+        };
+
+
+        // scroll the txt to the top
+        var txtToScroll = $("div[data-excerpt='" + ex + "']").parents(".prl-sec");
+        var target = $("div[data-excerpt='" + ex + "']");
+        txtToScroll.animate({
+            scrollTop: $(target).position().top + 50
+        }, 500, "swing");
+
+
+
+        
+        // open the inline parallel
+        var prl = $(".prl-target[ref='#" + ex + "']").parents(".collapse[data-type='parallel']").attr("id");
+        var target = $(".btn-collapse[href='#" + prl + "']").parents(".row[data-type='section']");
+        if ($(".prl-target[ref='#" + ex + "']").parents(".collapse[data-type='parallel']").hasClass("show") == false) {
+            $(".btn-collapse[href='#" + prl + "']").click();
+        };
+        // highlight the stanza
+        $(target).find("div[data-type='lg']").addClass("prl-select");
+        $(target).find(".btn-collapse[data-target='prl']").addClass("prl-select-btn");
+        // scroll the text of the edition
+        var divToScroll = $(".lay-txt");
+        divToScroll.animate({
+            scrollTop: $(target).position().top + divToScroll.scrollTop() - 100
+        }, 500, "swing");
+    });
+
+};
+
+/* DIMENSIONS COLLAPSE - on default the collapsible div have to measure 0 */
+let collapsibleDiv = () => {
+    $(".title-full-prl").on("click", function() {
+        if ($(this).attr("aria-expanded") == "true") {
+            $(this).next().addClass("prl-sec");
+        } else {
+            $(this).next().removeClass("prl-sec");
+        };
+    });
 };

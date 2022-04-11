@@ -661,7 +661,7 @@
         <xsl:for-each select="tokenize(translate(./@source, ' ', ''), '#')">
             <xsl:variable name="prl" select="."/>
             <xsl:if test="$prl != ''">
-                <div class="prl-target" ref="#{$prl}" data-type="parallel">
+                <div class="prl-target" ref="#{$prl}" data-type="parallel" data-source="{$main-root/descendant::tei:cit[@xml:id=$prl]/descendant::tei:title/node()[not(self::tei:abbr)]}">
                     <span data-type="prl-n"><xsl:value-of select="$chapter"/>.<span><xsl:value-of select="$section"/></span></span>
                     <xsl:text> </xsl:text>
                     <span> = </span>

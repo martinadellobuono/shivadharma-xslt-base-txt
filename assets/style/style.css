@@ -25,8 +25,6 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 /* collapse */
 .btn-collapse::after {content: "\25be"; height: auto; top: -2px; margin-left: 5px;}
 .btn-collapse[aria-expanded="true"]::after {content: "\25B4";}
-.btn-collapse[data-target="prl"] {color: rgb(255, 166, 0) !important;}
-.btn-collapse[data-target="prl"]:hover {color: rgb(197, 128, 0) !important;}
 
 /* btn */
 .btn-app {color: #047D92 !important;}
@@ -84,19 +82,16 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 *[data-type="divider"], *[data-type="loc"], *[data-type="wit"] {font-style: normal;}
 .lay-app .app-click {margin-bottom: 5px;}
 
-/*.app-select, .app-click:hover {background: #80C3CF5D;}*/
 .app-select, .app-click:hover {background: #80C3CF5D;}
 *[data-type="parallel"].app-click:hover {background: rgba(0, 0, 0, 0);}
-/**[data-type="parallel"].app-select {background: rgba(255, 166, 0, 0.733);}*/
-/*.app-click:hover::after {color: #80C3CF; content: "→";}*/
 .prl-select {background: rgba(255, 166, 0, 0.733);}
 
 /* apparatus > omission */
 *[data-type="app-om-ins"], *[data-type="app-om-lm"], *[data-type="app-om-rdg"], *[data-type="rdg"] *[data-type="double-danda"], *[data-type="single-danda"] {font-style: normal !important;}
 
 /* apparatus inline */
-*[data-type="section"] span[data-bs-toggle="collapse"] {color: #047D92; font-size: 12px;}
-*[data-type="section"] span[data-bs-toggle="collapse"]:hover {color: #035360; cursor: pointer;}
+.btn-collapse[data-target="app"] {color: #047D92; font-size: 12px;}
+.btn-collapse[data-target="app"]:hover {color: #035360; cursor: pointer;}
 *[data-type="section"] .card {background: rgba(4, 125, 146, 0.2);}
 
 /* wit */
@@ -119,3 +114,7 @@ span[data-type="ph-nt"] {color: #99603D;}
 .prl-bibl {font-size: 12px;}
 .lay-prl *[data-type="parallel"] {font-size: 15px;}
 .lay-prl *[data-type="parallel"]:hover {background-color: rgba(255, 166, 0, 0.733);}
+.btn-collapse[data-target="prl"] {color: rgb(255, 166, 0); font-size: 12px;}
+.btn-collapse[data-target="prl"]:hover {color: rgb(197, 128, 0);}
+.prl-select-btn {color: #FFF !important; font-weight: 500;}
+.prl-sec {height: 30vh; overflow-x: hidden; overflow-y: scroll; resize: vertical;}
