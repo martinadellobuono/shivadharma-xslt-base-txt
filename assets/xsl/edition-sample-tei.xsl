@@ -35,18 +35,6 @@
                         </div>
                         <!-- lay 1 -->
                         <div class="row lay-1">
-                            <!-- apparatus > damages -->
-                            <!--<div class="app-nt-comp border col-md-1 sec" id="app-dmg">
-                                <div class="icon-cls">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </div>
-                                <div class="icon-opn">
-                                    <i class="fa-solid fa-expand"></i>
-                                </div>
-                                <div class="lay-dmg scrollbar">
-                                    <xsl:apply-templates select="//tei:gap[@start]" mode="gap-app"/>
-                                </div>
-                            </div>-->
                             <!-- text and commentary -->
                             <div class="border col-md-6 sec" id="txt">
                                 <div class="icon-cls">
@@ -661,11 +649,17 @@
                 </div>
             </xsl:if>
         </xsl:for-each>
+        <!-- see all -->
+        <xsl:if test="count(tokenize(translate(./@source, ' ', ''), '#')) > 2">
+            <div>
+                <a class="all-prl" ref="{tokenize(translate(./@source, ' ', ''), '#')}">See all</a>
+            </div>
+        </xsl:if>
     </xsl:template>
 
     <!-- translation of lg -->
     <xsl:template match="tei:div[@type='section']/tei:translation">
-        <div class="row py-3">
+        <div class="py-3" data-type="translation" data-n="{./ancestor::tei:div[@type='section']/@n}">
             <span>
                 <span><xsl:value-of select="./ancestor::tei:div[@type='chapter']/@n"/></span>.<span><xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/></span>
                 <xsl:value-of select="."/>
@@ -675,7 +669,7 @@
 
     <!-- translation of uvaca -->
     <xsl:template match="tei:div[@type='uvaca']/tei:translation">
-        <div class="row">
+        <div class="row" data-type="translation" data-n="">
             <div class="col-md-12 p-2" data-type="uvaca">
                 <span>
                     <xsl:value-of select="."/>
@@ -686,7 +680,7 @@
 
     <!-- uvaca -->
     <xsl:template match="tei:div[@type='uvaca']">
-        <div class="row">
+        <div class="row" data-type="section" data-n="">
             <div class="col-md-12 p-4" data-type="uvaca">
                 <span>
                     <xsl:apply-templates select="node()[not(self::tei:translation)]"/>

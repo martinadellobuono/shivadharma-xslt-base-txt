@@ -3,8 +3,8 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 
 /* scrollbar */
 ::-webkit-scrollbar {width: 8px; height: 8px;}
-::-webkit-scrollbar-thumb {background: #E5EB7A; border-radius: 10px;}
-::-webkit-scrollbar-thumb:hover {background: #E5EB7A}
+::-webkit-scrollbar-thumb {background: #D9D9D9; border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover {background: #D9D9D9;}
 ::-webkit-scrollbar-track {background: #FFF; border-radius: 10px; box-shadow: inset 7px 10px 12px #F0F0F0;}
 
 /* layers */
@@ -117,6 +117,7 @@ span[data-type="ph-nt"] {color: #99603D;}
 *[data-type="divider-lem"]::after {content: "\005D";}
 
 /* parallels */
+.all-prl {float: right; font-size: 10px;}
 .card-prl {background-color: #FFD280 !important;}
 .prl-bibl {font-size: 12px;}
 .lay-prl *[data-type="parallel"] {font-size: 15px;}
@@ -124,3 +125,7 @@ span[data-type="ph-nt"] {color: #99603D;}
 .btn-collapse[data-target="prl"] {color: #E65C00; font-size: 12px;}
 .btn-collapse[data-target="prl"]:hover {color: rgb(197, 128, 0);}
 .prl-sec {height: 30vh; overflow-x: hidden; overflow-y: scroll; resize: vertical;}
+
+/* translation */
+div[data-type="section"] {border-left:4px solid #99603D4D; margin-bottom: 5px;}
+.trans-active {background: #99603D4D;}

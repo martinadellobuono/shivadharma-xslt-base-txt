@@ -2,9 +2,9 @@ $(document).ready(() => {
     termLink();
     appLink();
     appNtClick();
-    //closeApp();
     getPrl();
     collapsibleDiv();
+    getTrans();
 });
 
 /* TERMS - link between the term in the text and in the commentary */
@@ -80,14 +80,6 @@ let appLink = () => {
     });
 };
 
-// close the section of the apparatus
-/*let closeApp = () => {
-    $("#app-see .btn-app").on("click", function() {
-        $("#app-see").removeClass("show");
-        $(".app-nt-comp .btn-collapse").attr("aria-expanded", "false");
-    });
-};*/
-
 /* APPARATUS ENTRY/NOTE - link between the apparatus entry and the corresponding note */
 /* when you hover one of them the other is highlighted */
 let appNtClick = () => {
@@ -150,6 +142,9 @@ let getPrl = () => {
     // click on the open the entire parallel button
     $(".prl-bibl").click("on", function() {
 
+        // remove translations
+        $(".trans-active").removeClass("trans-active");
+
         // close the not clicked inline parallel
         var collapseId = $(this).parents(".collapse").attr("id");
         $(".collapse[data-type='parallel'][id!='" + collapseId + "']").removeClass("show");
@@ -187,6 +182,9 @@ let getPrl = () => {
     // click on the txt
     $(".full-txt").click("on", function() {
 
+        // remove translations
+        $(".trans-active").removeClass("trans-active");
+
         var ex = $(this).data("excerpt");
         // remove other selected txt
         $(".prl-select").removeClass("prl-select");
@@ -215,6 +213,25 @@ let getPrl = () => {
         }, 500, "swing");
     });
 
+    // click on see all parallels
+    $(".all-prl").on("click", function() {
+        var originalStanza = $(this).parents(".row[data-type='section']").find(".col-md-12[data-type='lg']");
+        // remove translations
+        $(".trans-active").removeClass("trans-active");
+        // click on the parallel tab
+        $("#prl-tab").click();
+        // highlight all the parallels
+        var allPrl = ($(this).attr("ref").split(" "));
+        $(".full-txt.prl-select").removeClass("prl-select");
+        allPrl.forEach(function(prl) {
+            if (prl !== "") {
+                $(".full-txt[data-excerpt='" + prl + "']").addClass("prl-select");
+            };
+        });
+        // highlight the original stanza
+        $(originalStanza).addClass("prl-select");
+    });
+
 };
 
 /* DIMENSIONS COLLAPSE - on default the collapsible div have to measure 0 */
@@ -226,4 +243,56 @@ let collapsibleDiv = () => {
             $(this).next().removeClass("prl-sec");
         };
     });
+};
+
+/* TRANSLATION - click on a stanza and get the translation and vice versa */
+let getTrans = () => {
+
+    // click on a translated stanza
+    $("div[data-type='translation']").on("click", function() {
+        var stanza = $(this);
+        var n = $(this).data("n");
+        
+        // highlight the translated stanza
+        $(".trans-active").removeClass("trans-active")
+        $(stanza).addClass("trans-active");
+
+        // highlight the original stanza
+        $("div[data-type='section'][data-n='" + n + "']").addClass("trans-active");
+
+        // scroll to the original stanza
+        var divToScroll = $(".lay-txt");
+        var target = $("div[data-type='section'][data-n='" + n + "']");
+        divToScroll.animate({
+            scrollTop: $(target).position().top + divToScroll.scrollTop() - 100
+        }, 500, "swing");
+
+    });
+
+    // click on the original stanza
+    $("div[data-type='section']").click(function(e){
+        if (e.offsetX <= parseInt($(this).css("borderLeftWidth"))) {
+            var stanza = $(this);
+            var n = $(this).data("n");
+
+            // click the translation tab
+            $("#trl-tab").click();
+
+            // highlight the original stanza
+            $(".trans-active").removeClass("trans-active")
+            $(stanza).addClass("trans-active");
+
+            // highlight the original stanza
+            $("div[data-type='translation'][data-n='" + n + "']").addClass("trans-active");
+
+            // scroll to the translated stanza
+            var divToScroll = $(".lay-txt");
+            var target = $("div[data-type='translation'][data-n='" + n + "']");
+            divToScroll.animate({
+                scrollTop: $(target).position().top + divToScroll.scrollTop() - 100
+            }, 500, "swing");
+
+        };
+    });
+
 };
