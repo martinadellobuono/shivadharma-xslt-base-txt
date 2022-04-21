@@ -42,6 +42,9 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 .btn-or:hover {background-color: #FFA600 !important; border: 1px solid #FFA600 !important; color: #FFF !important;}
 .btn-sm {font-size: 12px !important; margin-right: 5px !important; padding: 5px !important;}
 
+/* borders */
+.border-right {border-right: 1px solid grey !important;}
+
 /* icons */
 .icon-opn {display: none;}
 .icon-cls i, .icon-opn i {color: #DEE2E6;}
@@ -49,6 +52,9 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 
 /* background */
 .bg-orange {background-color: #FABD4CBB;}
+
+/* hr */
+.card>hr {margin: 5px 0;}
 
 /* header */
 *[data-type="editor"] {font-style: italic;}

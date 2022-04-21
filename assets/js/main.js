@@ -2,7 +2,7 @@ $(document).ready(() => {
     termLink();
     appLink();
     appNtClick();
-    closeApp();
+    //closeApp();
     getPrl();
     collapsibleDiv();
 });
@@ -81,12 +81,12 @@ let appLink = () => {
 };
 
 // close the section of the apparatus
-let closeApp = () => {
+/*let closeApp = () => {
     $("#app-see .btn-app").on("click", function() {
         $("#app-see").removeClass("show");
         $(".app-nt-comp .btn-collapse").attr("aria-expanded", "false");
     });
-};
+};*/
 
 /* APPARATUS ENTRY/NOTE - link between the apparatus entry and the corresponding note */
 /* when you hover one of them the other is highlighted */
