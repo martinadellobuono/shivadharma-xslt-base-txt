@@ -149,55 +149,47 @@ let getPrl = () => {
 
     // click on the open the entire parallel button
     $(".prl-bibl").click("on", function() {
+
+        // close the not clicked inline parallel
+        var collapseId = $(this).parents(".collapse").attr("id");
+        $(".collapse[data-type='parallel'][id!='" + collapseId + "']").removeClass("show");
+        $(".btn-collapse[href!='" + collapseId + "'][data-target='prl']").attr("aria-expanded", "false");
+
         var ex = $(this).data("excerpt-ref");
-
         var src = $(this).data("source");
-
         // click on the parallel tab
         $("#prl-tab").click();
         // remove other selected txt
         $(".prl-select").removeClass("prl-select");
-        $(".prl-select-btn").removeClass("prl-select-btn");
         // highlight the txt
         $("div[data-excerpt='" + ex + "']").addClass("prl-select");
-
-
-
-        
         // open the collapsible div
         if ($(".title-full-prl[href='#" + src + "']").attr("aria-expanded") == "false") {
             $(".title-full-prl[href='#" + src + "']").attr("aria-expanded", "true");
             $(".full-" + src).addClass("prl-sec");
             $(".full-" + src).find(".collapse").addClass("show");
         };
-        
-
-
-
         // scroll the txt to the top
         var txtToScroll = $("div[data-excerpt='" + ex + "']").parents(".prl-sec");
         var target = $("div[data-excerpt='" + ex + "']");
         txtToScroll.animate({
             scrollTop: $(target).position().top + 50
         }, 500, "swing");
-        
-
-
         // highlight the stanza
         var prl = $(".prl-target[ref='#" + ex + "']").parents(".collapse[data-type='parallel']").attr("id");
         var target = $(".btn-collapse[href='#" + prl + "']").parents(".row[data-type='section']");
         $(target).find("div[data-type='lg']").addClass("prl-select");
-        $(target).find(".btn-collapse[data-target='prl']").addClass("prl-select-btn");
+        $(target).find(".btn-collapse[data-target='prl']").attr("aria-expanded", "true");
         // highlight the sigla
         $(".prl-target[ref='#" + ex + "']").addClass("prl-select");
     });
 
     // click on the txt
     $(".full-txt").click("on", function() {
+
         var ex = $(this).data("excerpt");
         // remove other selected txt
         $(".prl-select").removeClass("prl-select");
-        $(".prl-select-btn").removeClass("prl-select-btn");
         // highlight the txt
         $("div[data-excerpt='" + ex + "']").addClass("prl-select");
         // highlight the sigla
@@ -208,57 +200,14 @@ let getPrl = () => {
         if ($(".prl-target[ref='#" + ex + "']").parents(".collapse[data-type='parallel']").hasClass("show") == false) {
             $(".btn-collapse[href='#" + prl + "']").click();
         };
+
+        // close the not clicked inline parallel
+        $(".collapse[data-type='parallel'][id!='" + prl + "']").removeClass("show");
+        $(".btn-collapse[href!='" + prl + "'][data-target='prl']").attr("aria-expanded", "false");
+
         // highlight the stanza
         $(target).find("div[data-type='lg']").addClass("prl-select");
-        $(target).find(".btn-collapse[data-target='prl']").addClass("prl-select-btn");
-        // scroll the text of the edition
-        var divToScroll = $(".lay-txt");
-        divToScroll.animate({
-            scrollTop: $(target).position().top + divToScroll.scrollTop() - 100
-        }, 500, "swing");
-    });
-
-    // click on the sigla
-    $(".prl-target").click("on", function() {
-        var ex = $(this).attr("ref").replace("#", "");
-        var src = $(this).data("source");
-
-        // remove other selected txt
-        $(".prl-select").removeClass("prl-select");
-        $(".prl-select-btn").removeClass("prl-select-btn");
-        // highlight the sigla
-        $(this).addClass("prl-select");
-        // highlight the text
-        $("div[data-excerpt='" + ex + "']").addClass("prl-select");
-
-
-        // open the collapsible div
-        if ($(".title-full-prl[href='#" + src + "']").attr("aria-expanded") == "false") {
-            $(".title-full-prl[href='#" + src + "']").attr("aria-expanded", "true");
-            $(".full-" + src).addClass("prl-sec");
-            $(".full-" + src).find(".collapse").addClass("show");
-        };
-
-
-        // scroll the txt to the top
-        var txtToScroll = $("div[data-excerpt='" + ex + "']").parents(".prl-sec");
-        var target = $("div[data-excerpt='" + ex + "']");
-        txtToScroll.animate({
-            scrollTop: $(target).position().top + 50
-        }, 500, "swing");
-
-
-
-        
-        // open the inline parallel
-        var prl = $(".prl-target[ref='#" + ex + "']").parents(".collapse[data-type='parallel']").attr("id");
-        var target = $(".btn-collapse[href='#" + prl + "']").parents(".row[data-type='section']");
-        if ($(".prl-target[ref='#" + ex + "']").parents(".collapse[data-type='parallel']").hasClass("show") == false) {
-            $(".btn-collapse[href='#" + prl + "']").click();
-        };
-        // highlight the stanza
-        $(target).find("div[data-type='lg']").addClass("prl-select");
-        $(target).find(".btn-collapse[data-target='prl']").addClass("prl-select-btn");
+        $(target).find(".btn-collapse[data-target='prl']").attr("aria-expanded", "true");
         // scroll the text of the edition
         var divToScroll = $(".lay-txt");
         divToScroll.animate({
