@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <!-- lay 1 -->
-                        <div class="row lay-1">
+                        <div class="row">
                             <!-- text and commentary -->
                             <div class="border col-md-6 sec" id="txt">
                                 <div class="icon-cls">

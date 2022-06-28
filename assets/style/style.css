@@ -7,15 +7,9 @@ html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 ::-webkit-scrollbar-thumb:hover {background: #D9D9D9;}
 ::-webkit-scrollbar-track {background: #FFF; border-radius: 10px; box-shadow: inset 7px 10px 12px #F0F0F0;}
 
-/* layers */
-.lay-0 {height: 5vh;}
-.lay-1 {height: 85vh;}
-.lay-2 {height: 20vh;}
-.lay-3 {height: 15vh;}
-
 /* layout */
 .lay-prl, .lay-trs, .lay-txt {height: 80vh;}
-.lay-app {height: 20vh;}
+.lay-app {height: auto;}
 .lay-btn {background-color: #FFF; z-index: 90000;}
 .lay-dmg {font-size: 15px;}
 
@@ -41,7 +35,7 @@ a, .btn-collapse {cursor: pointer;}
 .btn-or {color: #FABD4CBB !important;}
 .btn-or.active {background-color: #FFA600 !important; border: 1px solid #FFA600 !important; color: #FFF !important;}
 .btn-or:hover {background-color: #FFA600 !important; border: 1px solid #FFA600 !important; color: #FFF !important;}
-.btn-sm {font-size: 12px !important; margin-right: 5px !important; padding: 5px !important;}
+.btn-sm {font-size: 12px !important; margin-right: 5px !important; padding: 3px !important;}
 
 /* borders */
 .border-right {border-right: 1px solid grey !important;}
@@ -129,3 +123,6 @@ span[data-type="ph-nt"] {color: #99603D;}
 /* translation */
 div[data-type="section"] {border-left:4px solid #99603D4D; margin-bottom: 5px;}
 .trans-active {background: #99603D4D;}
+
+/* resizable dimensions */
+#app {height: 20vh; overflow: auto; resize: both;}
