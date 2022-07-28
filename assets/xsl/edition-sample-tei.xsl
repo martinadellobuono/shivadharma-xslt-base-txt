@@ -58,26 +58,26 @@
                                 <div>
                                     <ul class="nav nav-pills" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                            <button class="btn-or btn-sm nav-link active" id="prl-tab" data-bs-toggle="tab" data-bs-target="#prl-targ" type="button" role="tab" aria-controls="lt-nt" aria-selected="false">Parallels</button>
+                                            <button class="btn-ph-nt btn-sm nav-link active" id="trl-tab" data-bs-toggle="tab" data-bs-target="#trl-targ" type="button" role="tab" aria-controls="ph-nt" aria-selected="false">Translation</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="btn-or btn-sm nav-link" id="prl-tab" data-bs-toggle="tab" data-bs-target="#prl-targ" type="button" role="tab" aria-controls="lt-nt" aria-selected="false">Parallels</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="btn-hs-nt btn-sm nav-link" id="cit-tab" data-bs-toggle="tab" data-bs-target="#cit-targ" type="button" role="tab" aria-controls="hs-nt" aria-selected="false">Citations</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="btn-ph-nt btn-sm nav-link" id="trl-tab" data-bs-toggle="tab" data-bs-target="#trl-targ" type="button" role="tab" aria-controls="ph-nt" aria-selected="false">Translation</button>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="tab-content">
                                     <!-- parallels full text-->
-                                    <div class="fade p-3 scrollbar tab-pane fade show active" id="prl-targ" role="tabpanel" aria-labelledby="Open the parallels"></div>
+                                    <div class="fade p-3 scrollbar tab-pane fade" id="prl-targ" role="tabpanel" aria-labelledby="Open the parallels"></div>
+                                    <!-- translation -->
+                                    <div class="fade p-3 lay-txt scrollbar tab-pane fade show active" id="trl-targ" role="tabpanel" aria-labelledby="Open the translation">
+                                        <xsl:apply-templates select="//tei:div[@type='section']/tei:translation | //tei:div[@type='uvaca']/tei:translation" />
+                                    </div>
                                     <!-- citations -->
                                     <div class="fade p-3 scrollbar tab-pane fade" id="cit-targ" role="tabpanel" aria-labelledby="Open the citations">
                                         Citations
-                                    </div>
-                                    <!-- translation -->
-                                    <div class="fade p-3 lay-txt scrollbar tab-pane fade" id="trl-targ" role="tabpanel" aria-labelledby="Open the translation">
-                                        <xsl:apply-templates select="//tei:div[@type='section']/tei:translation | //tei:div[@type='uvaca']/tei:translation" />
                                     </div>
                                 </div>
                             </div>
@@ -134,7 +134,7 @@
             <xsl:apply-templates select="@* | node()[not(self::tei:translation)]"/>
         </div>
     </xsl:template>
-    
+
     <!-- intro base-text -->
     <xsl:template match="tei:div[@type='chapter']/tei:head[@type='introduction']">
         <div class="row px-4">
@@ -220,11 +220,19 @@
                             <xsl:choose>
                                 <!-- lg -->
                                 <xsl:when test="./ancestor::tei:div[@type='chapter']/@n != ''">
-                                    <span data-type="double-danda"> || <span><xsl:value-of select="./ancestor::tei:div[@type='chapter']/@n"/></span>.<span><xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/></span> || </span>
+                                    <span data-type="double-danda"> ||                                        <span>
+                                            <xsl:value-of select="./ancestor::tei:div[@type='chapter']/@n"/>
+                                        </span>.                                        <span>
+                                            <xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/>
+                                        </span> || 
+                                    </span>
                                 </xsl:when>
                                 <!-- parallel -->
                                 <xsl:otherwise>
-                                    <span data-type="double-danda"> || <span><xsl:value-of select="../ancestor::tei:cit/tei:bibl/tei:citedRange"/></span> || </span>
+                                    <span data-type="double-danda"> ||                                        <span>
+                                            <xsl:value-of select="../ancestor::tei:cit/tei:bibl/tei:citedRange"/>
+                                        </span> || 
+                                    </span>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </span>
@@ -248,11 +256,19 @@
                             <xsl:choose>
                                 <!-- lg -->
                                 <xsl:when test="./ancestor::tei:div[@type='chapter']/@n != ''">
-                                    <span data-type="double-danda"> || <span><xsl:value-of select="./ancestor::tei:div[@type='chapter']/@n"/></span>.<span><xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/></span> || </span>
+                                    <span data-type="double-danda"> ||                                        <span>
+                                            <xsl:value-of select="./ancestor::tei:div[@type='chapter']/@n"/>
+                                        </span>.                                        <span>
+                                            <xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/>
+                                        </span> || 
+                                    </span>
                                 </xsl:when>
                                 <!-- parallel -->
                                 <xsl:otherwise>
-                                    <span data-type="double-danda"> || <span><xsl:value-of select="./preceding::tei:bibl/tei:citedRange"/></span> || </span>
+                                    <span data-type="double-danda"> ||                                        <span>
+                                            <xsl:value-of select="./preceding::tei:bibl/tei:citedRange"/>
+                                        </span> || 
+                                    </span>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </span>
@@ -261,8 +277,8 @@
                         <span data-type="{name()}" data-n="{@n}">
                             <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:app | ancestor-or-self::tei:note)] | node()/tei:lem[not(ancestor-or-self::tei:gap[@start])] | tei:lg/tei:l/tei:gap[@start]" />
                             <br/>
-                        </span>    
-                    </xsl:otherwise> 
+                        </span>
+                    </xsl:otherwise>
                 </xsl:choose>
             </xsl:otherwise>
         </xsl:choose>
@@ -291,7 +307,7 @@
     <xsl:template match="tei:div[@type='commentary']/tei:gloss">
         <xsl:variable name="app-loc">
             <xsl:value-of select="tei:app/@loc"/>
-        </xsl:variable>  
+        </xsl:variable>
         <span data-type="{name()}">
             <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:app)]"/>
             <xsl:apply-templates select="node()/tei:lem" />
@@ -303,7 +319,7 @@
     <xsl:template match="tei:head/tei:gloss">
         <xsl:variable name="app-loc">
             <xsl:value-of select="tei:app/@loc"/>
-        </xsl:variable>  
+        </xsl:variable>
         <span data-type="{../@type}">
             <xsl:apply-templates select="@* | node()[not(ancestor-or-self::tei:app)]"/>
             <xsl:apply-templates select="node()/tei:lem" />
@@ -335,7 +351,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
+
     <!-- apparatus > philological -->
     <xsl:template match="tei:app">
         <!-- app loc -->
@@ -344,7 +360,9 @@
             <xsl:value-of select="./ancestor::tei:l/@n"/>
         </xsl:variable>
         <div class="app-target" ref="#{@xml:id}" data-loc="{$app-loc}" data-type="{name()}">
-            <span data-type="loc"><xsl:value-of select="$app-loc"/></span>
+            <span data-type="loc">
+                <xsl:value-of select="$app-loc"/>
+            </span>
             <xsl:text> </xsl:text>
             <!-- lem -->
             <xsl:apply-templates select="tei:lem" mode="lemapp"/>
@@ -371,7 +389,7 @@
 
     <!-- lem in txt -->
     <xsl:template match="tei:lem">
-        <xsl:choose> 
+        <xsl:choose>
             <xsl:when test="@rend = 'circlefront'">
                 <span id="{../@xml:id}" class="app-click" data-type="{name()}" data-wit="{@wit}">
                     <xsl:apply-templates/>
@@ -381,7 +399,7 @@
                 <span id="{../@xml:id}" class="app-click" data-type="{name()}" data-wit="{@wit}">
                     <xsl:apply-templates/>
                 </span>
-            </xsl:when>  
+            </xsl:when>
             <xsl:when test="@rend = 'circlearound'">
                 <span id="{../@xml:id}" class="app-click" data-type="{name()}" data-wit="{@wit}">
                     <xsl:apply-templates/>
@@ -401,7 +419,7 @@
             <!-- circles -->
             <xsl:when test="@rend = 'circlefront'">
                 <span data-type="{name()}" data-wit="{@wit}">
-                    °<xsl:apply-templates/>
+                    °                    <xsl:apply-templates/>
                 </span>
                 <xsl:text> </xsl:text>
                 <span data-type="divider-lem"></span>
@@ -409,7 +427,8 @@
             </xsl:when>
             <xsl:when test="@rend = 'circleback'">
                 <span data-type="{name()}" data-wit="{@wit}">
-                    <xsl:apply-templates/>°
+                    <xsl:apply-templates/>
+°
                 </span>
                 <xsl:text> </xsl:text>
                 <span data-type="divider-lem"></span>
@@ -417,7 +436,8 @@
             </xsl:when>
             <xsl:when test="@rend = 'circlearound'">
                 <span data-type="{name()}" data-wit="{@wit}">
-                    °<xsl:apply-templates/>°
+                    °                    <xsl:apply-templates/>
+°
                 </span>
                 <xsl:text> </xsl:text>
                 <span data-type="divider-lem"></span>
@@ -446,33 +466,43 @@
         <!-- wit -->
         <xsl:apply-templates select="." mode="wit-codes"/>
     </xsl:template>
-    
+
     <!-- rdg -->
     <xsl:template match="tei:l/tei:app/tei:rdg | tei:gloss/tei:app/tei:rdg" mode="rdg">
         <span class="ms-3" data-wit="{@wit}">
             <xsl:choose>
                 <!-- post correctionem -->
                 <xsl:when test="./descendant::tei:witDetail[@type='pc']">
-                    <span data-type="{name()}"><xsl:value-of select="."/></span>
+                    <span data-type="{name()}">
+                        <xsl:value-of select="."/>
+                    </span>
                     <span> added </span>
                     <span data-type="pc">p.c.</span>
                     <span> in </span>
-                    <!-- wit -->  
+                    <!-- wit -->
                     <xsl:apply-templates select="." mode="wit-codes"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:choose>
                         <xsl:when test="@rend = 'circlefront'">
-                            °<span data-type="{name()}"><xsl:value-of select="."/></span>
+                            °                            <span data-type="{name()}">
+                                <xsl:value-of select="."/>
+                            </span>
                         </xsl:when>
                         <xsl:when test="@rend = 'circleback'">
-                            <span data-type="{name()}"><xsl:value-of select="."/></span>°
+                            <span data-type="{name()}">
+                                <xsl:value-of select="."/>
+                            </span>°
                         </xsl:when>
                         <xsl:when test="@rend = 'circlearound'">
-                            °<span data-type="{name()}"><xsl:value-of select="."/></span>°
+                            °                            <span data-type="{name()}">
+                                <xsl:value-of select="."/>
+                            </span>°
                         </xsl:when>
                         <xsl:otherwise>
-                            <span data-type="{name()}"><xsl:value-of select="."/></span>
+                            <span data-type="{name()}">
+                                <xsl:value-of select="."/>
+                            </span>
                         </xsl:otherwise>
                     </xsl:choose>
                     <xsl:text> </xsl:text>
@@ -496,7 +526,7 @@
             <xsl:apply-templates/>
         </sub>
     </xsl:template>
-    
+
     <!-- omission -->
     <!-- omission in apparatus -->
     <xsl:template match="tei:lg/tei:gap">
@@ -561,15 +591,15 @@
                     <xsl:otherwise>
                         <span data-type="{name()}" data-n="{@n}">
                             <xsl:apply-templates select="@* | node()" />
-                        </span>    
-                    </xsl:otherwise> 
+                        </span>
+                    </xsl:otherwise>
                 </xsl:choose>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
 
     <!-- rdg in omission in apparatus -->
-    <xsl:template match="tei:gap/tei:app/tei:rdg" mode="rdgap">  
+    <xsl:template match="tei:gap/tei:app/tei:rdg" mode="rdgap">
         <span class="ms-3" data-type="{name()}" data-wit="{@wit}">
             <!-- wit -->
             <xsl:apply-templates select="." mode="wit-codes"/>
@@ -595,12 +625,18 @@
             <xsl:value-of select="./ancestor::tei:l/@n"/>
         </xsl:variable>
         <div class="app-lac app-target col-md-12" ref="#{@xml:id}" data-loc="{$app-loc}" data-type="{name()}">
-            <span data-type="loc"><xsl:value-of select="$app-loc"/></span>
+            <span data-type="loc">
+                <xsl:value-of select="$app-loc"/>
+            </span>
             <xsl:text> </xsl:text>
             <span data-type="{name()}" data-wit="{@wit}">
-                <span data-type="lem"><xsl:value-of select="./@start"/></span>
+                <span data-type="lem">
+                    <xsl:value-of select="./@start"/>
+                </span>
                 <span data-type="divider-lac"></span>
-                <span data-type="lem"><xsl:value-of select="./@end"/></span>
+                <span data-type="lem">
+                    <xsl:value-of select="./@end"/>
+                </span>
             </span>
             <xsl:text> </xsl:text>
             <span data-type="divider-lem"></span>
@@ -611,7 +647,7 @@
         </div>
     </xsl:template>
 
-    <!-- note > philological --> 
+    <!-- note > philological -->
     <xsl:template match="tei:note[@type='philological']">
         <div data-type="{name()}" id="{@xml:id}">
             <xsl:variable name="app-loc">
@@ -621,7 +657,9 @@
             <span data-type="loc">
                 <xsl:value-of select="$app-loc"/>
             </span>
-            <span><xsl:value-of select="."/></span>
+            <span>
+                <xsl:value-of select="."/>
+            </span>
         </div>
     </xsl:template>
 
@@ -633,17 +671,23 @@
         <xsl:for-each select="tokenize(translate(./@source, ' ', ''), '#')">
             <xsl:variable name="prl" select="."/>
             <xsl:if test="$prl != ''">
-                <div> 
+                <div>
                     <a class="prl-bibl" data-source="{$main-root/descendant::tei:cit[@xml:id=$prl]/descendant::tei:title/node()[not(self::tei:abbr)]}" data-excerpt-ref="{$prl}">
-                        <span data-type="prl-title"><xsl:apply-templates select="$main-root/descendant::tei:cit[@xml:id=$prl]/descendant::tei:title/node()[not(self::tei:abbr)]"/></span>
+                        <span data-type="prl-title">
+                            <xsl:apply-templates select="$main-root/descendant::tei:cit[@xml:id=$prl]/descendant::tei:title/node()[not(self::tei:abbr)]"/>
+                        </span>
                         <xsl:text> </xsl:text>
-                        <span data-type="prl-locus"><xsl:apply-templates select="$main-root/descendant::tei:cit[@xml:id=$prl]/descendant::tei:citedRange"/></span>
+                        <span data-type="prl-locus">
+                            <xsl:apply-templates select="$main-root/descendant::tei:cit[@xml:id=$prl]/descendant::tei:citedRange"/>
+                        </span>
                     </a>
                 </div>
                 <div class="prl-target" ref="#{$prl}" data-type="parallel">
                     <div data-source="{$main-root/descendant::tei:cit[@xml:id=$prl]/descendant::tei:title/node()[not(self::tei:abbr)]}" data-type="parallel">
                         <div class="full-txt py-1" data-source="{$main-root/descendant::tei:cit[@xml:id=$prl]/descendant::tei:title/node()[not(self::tei:abbr)]}" data-excerpt="{$prl}" data-type="parallel">
-                            <span data-type="l"><xsl:apply-templates select="$main-root/descendant::tei:cit[@xml:id=$prl]/tei:quote/tei:lg/tei:l"/></span>
+                            <span data-type="l">
+                                <xsl:apply-templates select="$main-root/descendant::tei:cit[@xml:id=$prl]/tei:quote/tei:lg/tei:l"/>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -661,7 +705,11 @@
     <xsl:template match="tei:div[@type='section']/tei:translation">
         <div class="py-3" data-type="translation" data-n="{./ancestor::tei:div[@type='section']/@n}">
             <span>
-                <span><xsl:value-of select="./ancestor::tei:div[@type='chapter']/@n"/></span>.<span><xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/></span>
+                <span>
+                    <xsl:value-of select="./ancestor::tei:div[@type='chapter']/@n"/>
+                </span>.                <span>
+                    <xsl:value-of select="./ancestor::tei:div[@type='section']/@n"/>
+                </span>
                 <xsl:value-of select="."/>
             </span>
         </div>

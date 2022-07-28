@@ -35,123 +35,127 @@
         <cit xml:id="bhap-1-187-1">
           <bibl>
             <author ref="">Unknown</author>
-            <title ref="">Bhaviṣyapurāṇa<abbr>BhaP</abbr></title>
+            <title ref="">Bhaviṣyapurāṇa<abbr>BhaP</abbr>
+            </title>
             <citedRange corresp="">1.187.1</citedRange>
           </bibl>
           <quote>
             <lg met="Anuṣṭubh">
-                <l n="a">
+              <l n="a">
                   kāni puṇyāni kṛtveha
-                </l>
-                <l n="b"> 
+              </l>
+              <l n="b"> 
                   svargaṃ gacchanti mānavāḥ
-                </l>
-                <l n="c">
+              </l>
+              <l n="c">
                   manuṣyaloke sambhūtāḥ
-                </l>
-                <l n="d">
+              </l>
+              <l n="d">
                   svarloke gāminaḥ param
-                </l>
-              </lg>
+              </l>
+            </lg>
           </quote>
         </cit>
         <cit xml:id="bhap-1-187-2">
           <bibl>
             <author ref="">Unknown</author>
-            <title ref="">Bhaviṣyapurāṇa<abbr>BhaP</abbr></title>
+            <title ref="">Bhaviṣyapurāṇa<abbr>BhaP</abbr>
+            </title>
             <citedRange corresp="">1.187.2</citedRange>
           </bibl>
           <quote>
             <lg met="Anuṣṭubh">
-                <l n="a">
+              <l n="a">
                   karmayajñas tapoyajñaḥ
-                </l>
-                <l n="b"> 
+              </l>
+              <l n="b"> 
                   svādhyāyo dhyānanirmitaḥ
-                </l>
-                <l n="c">
+              </l>
+              <l n="c">
                   jñānayajñaś ca pañcaite
-                </l>
-                <l n="d">
+              </l>
+              <l n="d">
                   mahāyajñāḥ prakīrtitāḥ
-                </l>
-              </lg>
+              </l>
+            </lg>
           </quote>
         </cit>
         <cit xml:id="bhap-1-187-3">
           <bibl>
             <author ref="">Unknown</author>
-            <title ref="">Bhaviṣyapurāṇa<abbr>BhaP</abbr></title>
+            <title ref="">Bhaviṣyapurāṇa<abbr>BhaP</abbr>
+            </title>
             <citedRange corresp="">1.187.3</citedRange>
           </bibl>
           <quote>
             <lg met="Anuṣṭubh">
-                <l n="a">
+              <l n="a">
                   eteṣām eva yajñānām
-                </l>
-                <l n="b"> 
+              </l>
+              <l n="b"> 
                   uttamaḥ katamaḥ smṛtaḥ
-                </l>
-                <l n="c">
+              </l>
+              <l n="c">
                   etad yajñaphalānāṃ ca
-                </l>
-                <l n="d">
+              </l>
+              <l n="d">
                   kiṃ kalaṃ kā yatir bhavet
-                </l>
-              </lg>
+              </l>
+            </lg>
           </quote>
         </cit>
         <cit xml:id="bhap-1-187-9">
           <bibl>
             <author ref="">Unknown</author>
-            <title ref="">Bhaviṣyapurāṇa<abbr>BhaP</abbr></title>
+            <title ref="">Bhaviṣyapurāṇa<abbr>BhaP</abbr>
+            </title>
             <citedRange corresp="">1.187.9</citedRange>
           </bibl>
           <quote>
             <lg met="Anuṣṭubh">
-                <l n="a">
+              <l n="a">
                   śraddhāpūrvaḥ sadā dharmaḥ
-                </l>
-                <l n="b"> 
+              </l>
+              <l n="b"> 
                   śraddhāmadhyāntasahasthitaḥ
-                </l>
-                <l n="c">
+              </l>
+              <l n="c">
                   śraddhāniṣṭhapratiṣṭhaś ca
-                </l>
-                <l n="d">
+              </l>
+              <l n="d">
                   dharmaḥ śraddhā prakīrtitā
-                </l>
-              </lg>
+              </l>
+            </lg>
           </quote>
         </cit>
         <cit xml:id="devi-127-12">
           <bibl>
             <author ref="">Unknown</author>
-            <title ref="">Devīpurāṇa<abbr>DeP</abbr></title>
+            <title ref="">Devīpurāṇa<abbr>DeP</abbr>
+            </title>
             <citedRange corresp="">127.12</citedRange>
           </bibl>
           <quote>
             <lg met="Anuṣṭubh">
-                <l n="a">
+              <l n="a">
                   śraddhāpūrvāḥ smṛtā dharmā
-                </l>
-                <l n="b"> 
+              </l>
+              <l n="b"> 
                   śraddhāmadhyāntasaṃsthitā
-                </l>
-                <l n="c">
+              </l>
+              <l n="c">
                   śraddhāniṣṭhā pratiṣṭhāś ca
-                </l>
-                <l n="d">
+              </l>
+              <l n="d">
                   dharmāḥśraddhaiva kīrttitaḥ
-                </l>
-              </lg>
+              </l>
+            </lg>
           </quote>
         </cit>
       </listBibl>
       <!-- list witnesses -->
       <listWit>
         <!-- E -->
-        <!-- check the id -->
         <witness xml:id="E">
           <abbr type="siglum">E</abbr>
           <bibl>
@@ -189,194 +193,479 @@
             </history>
           </msDesc>
         </witness>
+        <!-- N -->
+        <witness xml:id="N">
+          <abbr type="siglum">N</abbr>
+          <bibl>
+            <!-- add the id of the bibliographic reference -->
+            <ptr target=""></ptr>
+          </bibl>
+          <!-- check the tag msDesc in case of printed edition -->
+          <msDesc>
+            <msIdentifier>
+              <idno>N</idno>
+              <settlement></settlement>
+              <repository></repository>
+            </msIdentifier>
+            <msContents>
+              <summary>All Nepalese manuscripts</summary>
+              <!-- n is for the number of the folio -->
+              <msItem n="">
+                <author></author>
+                <title></title>
+                <locus></locus>
+                <textLang xml:lang="sans1269">Sanskrit</textLang>
+                <filiation></filiation>
+                <colophon xml:lang=""></colophon>
+              </msItem>
+            </msContents>
+            <physDesc>
+              <handDesc hands="">
+                <handNote xml:id="" scriptRef=""></handNote>
+              </handDesc>
+            </physDesc>
+            <history>
+              <origDate></origDate>
+              <origPlace ref=""></origPlace>
+            </history>
+          </msDesc>
+        </witness>
         <!-- NC45 -->
         <witness xml:id="NC45">
           <abbr type="siglum">NC45</abbr>
           <bibl>
-              <!-- add the id of the bibliographic reference -->
-              <ptr target=""></ptr>
+            <!-- add the id of the bibliographic reference -->
+            <ptr target=""></ptr>
           </bibl>
           <!-- check the tag msDesc in case of printed edition -->
           <msDesc>
-              <msIdentifier>
-                  <idno>N<sup>C</sup><sub>45</sub></idno>
-                  <settlement>Cambridge University Library</settlement>
-                  <repository></repository>
-              </msIdentifier>
-              <msContents>
-                  <summary></summary>
-                  <!-- check the interval -->
-                  <!-- n is for the number of the folio -->
-                  <msItem n="1" xml:id="38r">
-                      <author></author>
-                      <title>Śivadharmottara</title>
-                      <locus></locus>
-                      <textLang xml:lang="sans1269">Sanskrit</textLang>
-                      <filiation></filiation>
-                      <colophon xml:lang=""></colophon>
-                  </msItem>
-              </msContents>
-              <physDesc>
-                  <handDesc hands="">
-                      <handNote xml:id="" scriptRef=""></handNote>
-                  </handDesc>
-              </physDesc>
-              <history>
-                  <origDate>Saṃvat 259 Śrāvaṇa Śuklapakṣa 12  (Monday, 10 July 1139?)</origDate>
-                  <origPlace ref="http://www.geonames.org/1282988/">Nepal</origPlace>
-              </history>
+            <msIdentifier>
+              <idno>N<sup>C</sup>
+                <sub>45</sub>
+              </idno>
+              <settlement>Cambridge University Library</settlement>
+              <repository></repository>
+            </msIdentifier>
+            <msContents>
+              <summary></summary>
+              <!-- check the interval -->
+              <!-- n is for the number of the folio -->
+              <msItem n="1" xml:id="38r">
+                <author></author>
+                <title>Śivadharmottara</title>
+                <locus></locus>
+                <textLang xml:lang="sans1269">Sanskrit</textLang>
+                <filiation></filiation>
+                <colophon xml:lang=""></colophon>
+              </msItem>
+            </msContents>
+            <physDesc>
+              <handDesc hands="">
+                <handNote xml:id="" scriptRef=""></handNote>
+              </handDesc>
+            </physDesc>
+            <history>
+              <origDate>Saṃvat 259 Śrāvaṇa Śuklapakṣa 12  (Monday, 10 July 1139?)</origDate>
+              <origPlace ref="http://www.geonames.org/1282988/">Nepal</origPlace>
+            </history>
           </msDesc>
         </witness>
         <!-- NK82 -->
         <witness xml:id="NK82">
           <abbr type="siglum">NK82</abbr>
           <bibl>
-              <!-- add the id of the bibliographic reference -->
-              <ptr target=""></ptr>
+            <!-- add the id of the bibliographic reference -->
+            <ptr target=""></ptr>
           </bibl>
           <!-- check the tag msDesc in case of printed edition -->
           <msDesc>
-              <msIdentifier>
-                  <idno>N<sup>K</sup><sub>82</sub></idno>
-                  <settlement>Cambridge University Library</settlement>
-                  <repository></repository>
-              </msIdentifier>
-              <msContents>
-                  <summary></summary>
-                  <!-- check the interval -->
-                  <!-- n is for the number of the folio -->
-                  <msItem n="1" xml:id="38r">
-                      <author></author>
-                      <title>Śivadharmottara</title>
-                      <locus></locus>
-                      <textLang xml:lang="sans1269">Sanskrit</textLang>
-                      <filiation></filiation>
-                      <colophon xml:lang=""></colophon>
-                  </msItem>
-              </msContents>
-              <physDesc>
-                  <handDesc hands="">
-                      <handNote xml:id="" scriptRef=""></handNote>
-                  </handDesc>
-              </physDesc>
-              <history>
-                  <origDate>Saṃvat 259 Śrāvaṇa Śuklapakṣa 12  (Monday, 10 July 1139?)</origDate>
-                  <origPlace ref="http://www.geonames.org/1282988/">Nepal</origPlace>
-              </history>
+            <msIdentifier>
+              <idno>N<sup>K</sup>
+                <sub>82</sub>
+              </idno>
+              <settlement>Cambridge University Library</settlement>
+              <repository></repository>
+            </msIdentifier>
+            <msContents>
+              <summary></summary>
+              <!-- check the interval -->
+              <!-- n is for the number of the folio -->
+              <msItem n="1" xml:id="38r">
+                <author></author>
+                <title>Śivadharmottara</title>
+                <locus></locus>
+                <textLang xml:lang="sans1269">Sanskrit</textLang>
+                <filiation></filiation>
+                <colophon xml:lang=""></colophon>
+              </msItem>
+            </msContents>
+            <physDesc>
+              <handDesc hands="">
+                <handNote xml:id="" scriptRef=""></handNote>
+              </handDesc>
+            </physDesc>
+            <history>
+              <origDate>Saṃvat 259 Śrāvaṇa Śuklapakṣa 12  (Monday, 10 July 1139?)</origDate>
+              <origPlace ref="http://www.geonames.org/1282988/">Nepal</origPlace>
+            </history>
           </msDesc>
         </witness>
         <!-- NO15 -->
         <witness xml:id="NO15">
           <abbr type="siglum">NO15</abbr>
           <bibl>
-              <!-- add the id of the bibliographic reference -->
-              <ptr target=""></ptr>
+            <!-- add the id of the bibliographic reference -->
+            <ptr target=""></ptr>
           </bibl>
           <!-- check the tag msDesc in case of printed edition -->
           <msDesc>
-              <msIdentifier>
-                  <idno>N<sup>0</sup><sub>15</sub></idno>
-                  <settlement>Cambridge University Library</settlement>
-                  <repository></repository>
-              </msIdentifier>
-              <msContents>
-                  <summary></summary>
-                  <!-- check the interval -->
-                  <!-- n is for the number of the folio -->
-                  <msItem n="1" xml:id="38r">
-                      <author></author>
-                      <title>Śivadharmottara</title>
-                      <locus></locus>
-                      <textLang xml:lang="sans1269">Sanskrit</textLang>
-                      <filiation></filiation>
-                      <colophon xml:lang=""></colophon>
-                  </msItem>
-              </msContents>
-              <physDesc>
-                  <handDesc hands="">
-                      <handNote xml:id="" scriptRef=""></handNote>
-                  </handDesc>
-              </physDesc>
-              <history>
-                  <origDate>Saṃvat 259 Śrāvaṇa Śuklapakṣa 12  (Monday, 10 July 1139?)</origDate>
-                  <origPlace ref="http://www.geonames.org/1282988/">Nepal</origPlace>
-              </history>
+            <msIdentifier>
+              <idno>N<sup>0</sup>
+                <sub>15</sub>
+              </idno>
+              <settlement>Cambridge University Library</settlement>
+              <repository></repository>
+            </msIdentifier>
+            <msContents>
+              <summary></summary>
+              <!-- check the interval -->
+              <!-- n is for the number of the folio -->
+              <msItem n="1" xml:id="38r">
+                <author></author>
+                <title>Śivadharmottara</title>
+                <locus></locus>
+                <textLang xml:lang="sans1269">Sanskrit</textLang>
+                <filiation></filiation>
+                <colophon xml:lang=""></colophon>
+              </msItem>
+            </msContents>
+            <physDesc>
+              <handDesc hands="">
+                <handNote xml:id="" scriptRef=""></handNote>
+              </handDesc>
+            </physDesc>
+            <history>
+              <origDate>Saṃvat 259 Śrāvaṇa Śuklapakṣa 12  (Monday, 10 July 1139?)</origDate>
+              <origPlace ref="http://www.geonames.org/1282988/">Nepal</origPlace>
+            </history>
           </msDesc>
         </witness>
         <!-- NK28 -->
         <witness xml:id="NK28">
           <abbr type="siglum">NK28</abbr>
           <bibl>
-              <!-- add the id of the bibliographic reference -->
-              <ptr target=""></ptr>
+            <!-- add the id of the bibliographic reference -->
+            <ptr target=""></ptr>
           </bibl>
           <!-- check the tag msDesc in case of printed edition -->
           <msDesc>
-              <msIdentifier>
-                  <idno>N<sup>K</sup><sub>28</sub></idno>
-                  <settlement>Cambridge University Library</settlement>
-                  <repository></repository>
-              </msIdentifier>
-              <msContents>
-                  <summary></summary>
-                  <!-- check the interval -->
-                  <!-- n is for the number of the folio -->
-                  <msItem n="1" xml:id="38r">
-                      <author></author>
-                      <title>Śivadharmottara</title>
-                      <locus></locus>
-                      <textLang xml:lang="sans1269">Sanskrit</textLang>
-                      <filiation></filiation>
-                      <colophon xml:lang=""></colophon>
-                  </msItem>
-              </msContents>
-              <physDesc>
-                  <handDesc hands="">
-                      <handNote xml:id="" scriptRef=""></handNote>
-                  </handDesc>
-              </physDesc>
-              <history>
-                  <origDate>Saṃvat 259 Śrāvaṇa Śuklapakṣa 12  (Monday, 10 July 1139?)</origDate>
-                  <origPlace ref="http://www.geonames.org/1282988/">Nepal</origPlace>
-              </history>
+            <msIdentifier>
+              <idno>N<sup>K</sup>
+                <sub>28</sub>
+              </idno>
+              <settlement>Cambridge University Library</settlement>
+              <repository></repository>
+            </msIdentifier>
+            <msContents>
+              <summary></summary>
+              <!-- check the interval -->
+              <!-- n is for the number of the folio -->
+              <msItem n="1" xml:id="38r">
+                <author></author>
+                <title>Śivadharmottara</title>
+                <locus></locus>
+                <textLang xml:lang="sans1269">Sanskrit</textLang>
+                <filiation></filiation>
+                <colophon xml:lang=""></colophon>
+              </msItem>
+            </msContents>
+            <physDesc>
+              <handDesc hands="">
+                <handNote xml:id="" scriptRef=""></handNote>
+              </handDesc>
+            </physDesc>
+            <history>
+              <origDate>Saṃvat 259 Śrāvaṇa Śuklapakṣa 12  (Monday, 10 July 1139?)</origDate>
+              <origPlace ref="http://www.geonames.org/1282988/">Nepal</origPlace>
+            </history>
+          </msDesc>
+        </witness>
+        <!-- NKO77 -->
+        <witness xml:id="NK82">
+          <abbr type="siglum">NKO7</abbr>
+          <bibl>
+            <!-- add the id of the bibliographic reference -->
+            <ptr target=""></ptr>
+          </bibl>
+          <!-- check the tag msDesc in case of printed edition -->
+          <msDesc>
+            <msIdentifier>
+              <idno>N<sup>KO</sup>
+                <sub>77</sub>
+              </idno>
+              <settlement></settlement>
+              <repository></repository>
+            </msIdentifier>
+            <msContents>
+              <summary></summary>
+              <!-- check the interval -->
+              <!-- n is for the number of the folio -->
+              <msItem n="1" xml:id="38r">
+                <author></author>
+                <title></title>
+                <locus></locus>
+                <textLang xml:lang="sans1269"></textLang>
+                <filiation></filiation>
+                <colophon xml:lang=""></colophon>
+              </msItem>
+            </msContents>
+            <physDesc>
+              <handDesc hands="">
+                <handNote xml:id="" scriptRef=""></handNote>
+              </handDesc>
+            </physDesc>
+            <history>
+              <origDate></origDate>
+              <origPlace ref=""></origPlace>
+            </history>
+          </msDesc>
+        </witness>
+        <!-- NKA12 -->
+        <witness xml:id="NKA12">
+          <abbr type="siglum">NKA12</abbr>
+          <bibl>
+            <!-- add the id of the bibliographic reference -->
+            <ptr target=""></ptr>
+          </bibl>
+          <!-- check the tag msDesc in case of printed edition -->
+          <msDesc>
+            <msIdentifier>
+              <idno>N<sup>K</sup>
+                <sub>A12</sub>
+              </idno>
+              <settlement></settlement>
+              <repository></repository>
+            </msIdentifier>
+            <msContents>
+              <summary></summary>
+              <!-- check the interval -->
+              <!-- n is for the number of the folio -->
+              <msItem n="" xml:id="">
+                <author></author>
+                <title></title>
+                <locus></locus>
+                <textLang xml:lang=""></textLang>
+                <filiation></filiation>
+                <colophon xml:lang=""></colophon>
+              </msItem>
+            </msContents>
+            <physDesc>
+              <handDesc hands="">
+                <handNote xml:id="" scriptRef=""></handNote>
+              </handDesc>
+            </physDesc>
+            <history>
+              <origDate></origDate>
+              <origPlace ref=""></origPlace>
+            </history>
+          </msDesc>
+        </witness>
+        <!-- GP43 -->
+        <witness xml:id="GP43">
+          <abbr type="siglum">GP43</abbr>
+          <bibl>
+            <!-- add the id of the bibliographic reference -->
+            <ptr target=""></ptr>
+          </bibl>
+          <!-- check the tag msDesc in case of printed edition -->
+          <msDesc>
+            <msIdentifier>
+              <idno>G<sup>P</sup>
+                <sub>43</sub>
+              </idno>
+              <settlement></settlement>
+              <repository></repository>
+            </msIdentifier>
+            <msContents>
+              <summary></summary>
+              <!-- check the interval -->
+              <!-- n is for the number of the folio -->
+              <msItem n="" xml:id="">
+                <author></author>
+                <title></title>
+                <locus></locus>
+                <textLang xml:lang=""></textLang>
+                <filiation></filiation>
+                <colophon xml:lang=""></colophon>
+              </msItem>
+            </msContents>
+            <physDesc>
+              <handDesc hands="">
+                <handNote xml:id="" scriptRef=""></handNote>
+              </handDesc>
+            </physDesc>
+            <history>
+              <origDate></origDate>
+              <origPlace ref=""></origPlace>
+            </history>
+          </msDesc>
+        </witness>
+        <!-- GP74 -->
+        <witness xml:id="GP43">
+          <abbr type="siglum">GP74</abbr>
+          <bibl>
+            <!-- add the id of the bibliographic reference -->
+            <ptr target=""></ptr>
+          </bibl>
+          <!-- check the tag msDesc in case of printed edition -->
+          <msDesc>
+            <msIdentifier>
+              <idno>G<sup>P</sup>
+                <sub>74</sub>
+              </idno>
+              <settlement></settlement>
+              <repository></repository>
+            </msIdentifier>
+            <msContents>
+              <summary></summary>
+              <!-- check the interval -->
+              <!-- n is for the number of the folio -->
+              <msItem n="" xml:id="">
+                <author></author>
+                <title></title>
+                <locus></locus>
+                <textLang xml:lang=""></textLang>
+                <filiation></filiation>
+                <colophon xml:lang=""></colophon>
+              </msItem>
+            </msContents>
+            <physDesc>
+              <handDesc hands="">
+                <handNote xml:id="" scriptRef=""></handNote>
+              </handDesc>
+            </physDesc>
+            <history>
+              <origDate></origDate>
+              <origPlace ref=""></origPlace>
+            </history>
+          </msDesc>
+        </witness>
+        <!-- PT75 -->
+        <witness xml:id="PT75">
+          <abbr type="siglum">PT75</abbr>
+          <bibl>
+            <!-- add the id of the bibliographic reference -->
+            <ptr target=""></ptr>
+          </bibl>
+          <!-- check the tag msDesc in case of printed edition -->
+          <msDesc>
+            <msIdentifier>
+              <idno>P<sup>T</sup>
+                <sub>75</sub>
+              </idno>
+              <settlement></settlement>
+              <repository></repository>
+            </msIdentifier>
+            <msContents>
+              <summary></summary>
+              <!-- check the interval -->
+              <!-- n is for the number of the folio -->
+              <msItem n="" xml:id="">
+                <author></author>
+                <title></title>
+                <locus></locus>
+                <textLang xml:lang=""></textLang>
+                <filiation></filiation>
+                <colophon xml:lang=""></colophon>
+              </msItem>
+            </msContents>
+            <physDesc>
+              <handDesc hands="">
+                <handNote xml:id="" scriptRef=""></handNote>
+              </handDesc>
+            </physDesc>
+            <history>
+              <origDate></origDate>
+              <origPlace ref=""></origPlace>
+            </history>
+          </msDesc>
+        </witness>
+        <!-- &#x3a3; -->
+        <witness xml:id="&#x3a3;">
+          <abbr type="siglum">&#x3a3;</abbr>
+          <bibl>
+            <!-- add the id of the bibliographic reference -->
+            <ptr target=""></ptr>
+          </bibl>
+          <!-- check the tag msDesc in case of printed edition -->
+          <msDesc>
+            <msIdentifier>
+              <idno>
+              &#x3a3;
+              </idno>
+              <settlement></settlement>
+              <repository></repository>
+            </msIdentifier>
+            <msContents>
+              <summary></summary>
+              <!-- check the interval -->
+              <!-- n is for the number of the folio -->
+              <msItem n="" xml:id="">
+                <author></author>
+                <title></title>
+                <locus></locus>
+                <textLang xml:lang=""></textLang>
+                <filiation></filiation>
+                <colophon xml:lang=""></colophon>
+              </msItem>
+            </msContents>
+            <physDesc>
+              <handDesc hands="">
+                <handNote xml:id="" scriptRef=""></handNote>
+              </handDesc>
+            </physDesc>
+            <history>
+              <origDate></origDate>
+              <origPlace ref=""></origPlace>
+            </history>
           </msDesc>
         </witness>
         <!-- P -->
         <witness xml:id="P">
           <abbr type="siglum">P</abbr>
           <bibl>
-              <!-- add the id of the bibliographic reference -->
-              <ptr target=""></ptr>
+            <!-- add the id of the bibliographic reference -->
+            <ptr target=""></ptr>
           </bibl>
           <!-- check the tag msDesc in case of printed edition -->
           <msDesc>
-              <msIdentifier>
-                  <idno>P</idno>
-                  <settlement>Cambridge University Library</settlement>
-                  <repository></repository>
-              </msIdentifier>
-              <msContents>
-                  <summary></summary>
-                  <!-- check the interval -->
-                  <!-- n is for the number of the folio -->
-                  <msItem n="1" xml:id="38r">
-                      <author></author>
-                      <title>Śivadharmottara</title>
-                      <locus></locus>
-                      <textLang xml:lang="sans1269">Sanskrit</textLang>
-                      <filiation></filiation>
-                      <colophon xml:lang=""></colophon>
-                  </msItem>
-              </msContents>
-              <physDesc>
-                  <handDesc hands="">
-                      <handNote xml:id="" scriptRef=""></handNote>
-                  </handDesc>
-              </physDesc>
-              <history>
-                  <origDate>Saṃvat 259 Śrāvaṇa Śuklapakṣa 12  (Monday, 10 July 1139?)</origDate>
-                  <origPlace ref="http://www.geonames.org/1282988/">Nepal</origPlace>
-              </history>
+            <msIdentifier>
+              <idno>P</idno>
+              <settlement>Cambridge University Library</settlement>
+              <repository></repository>
+            </msIdentifier>
+            <msContents>
+              <summary></summary>
+              <!-- check the interval -->
+              <!-- n is for the number of the folio -->
+              <msItem n="1" xml:id="38r">
+                <author></author>
+                <title>Śivadharmottara</title>
+                <locus></locus>
+                <textLang xml:lang="sans1269">Sanskrit</textLang>
+                <filiation></filiation>
+                <colophon xml:lang=""></colophon>
+              </msItem>
+            </msContents>
+            <physDesc>
+              <handDesc hands="">
+                <handNote xml:id="" scriptRef=""></handNote>
+              </handDesc>
+            </physDesc>
+            <history>
+              <origDate>Saṃvat 259 Śrāvaṇa Śuklapakṣa 12  (Monday, 10 July 1139?)</origDate>
+              <origPlace ref="http://www.geonames.org/1282988/">Nepal</origPlace>
+            </history>
           </msDesc>
         </witness>
       </listWit>
@@ -435,7 +724,9 @@
             <lg met="Vaṃśastha">
               <gap>
                 <app xml:id="app-1-1-1-1" resp="#flodes">
-                  <lem wit="#NK28 #NKo77 #P" rend=""><gap></gap></lem>
+                  <lem wit="#NK28 #NKo77 #P" rend="">
+                    <gap></gap>
+                  </lem>
                   <rdg wit="#PT75" rend="">
                     <lg met="">
                       <l n="a">śivam astu sarvajagatāṃ</l>
@@ -448,746 +739,749 @@
               </gap>
               <l n="a">
                 namo &#8217;stu tasmai śakalendu<app xml:id="app-1-1-1a-1" resp="#flodes">
-                  <lem wit="#NK82 #NO15 #E" rend="circlefront">dhāriṇe</lem>
-                  <rdg wit="#NC45" rend="">dhāraṇe</rdg>
-                </app>
-              </l>
-              <l n="b">
+                <lem wit="#NK82 #NO15 #E" rend="circlefront">dhāriṇe</lem>
+                <rdg wit="#NC45" rend="">dhāraṇe</rdg>
+              </app>
+            </l>
+            <l n="b">
                 phaṇīndraratnadyutikaṇṭha<app xml:id="app-1-1-1b-1" resp="#flodes">
-                  <lem wit="#NC45 #NO15 #E" rend="circlefront">rāgiṇe</lem>
-                  <rdg wit="#NK82" rend="">dhāriṇeṃ</rdg>
-                </app>
-              </l>
-              <l n="c">
+              <lem wit="#NC45 #NO15 #E" rend="circlefront">rāgiṇe</lem>
+              <rdg wit="#NK82" rend="">dhāriṇeṃ</rdg>
+            </app>
+          </l>
+          <l n="c">
                 harāya śubhrābhrakapālamāline
-              </l>
-              <l n="d">
+          </l>
+          <l n="d">
                 vibhinnadaityasphuritaikaśūline
-              </l>
-            </lg>
-            <translation>
+          </l>
+        </lg>
+        <translation>
               Veneration to the one who wears the half moon, whose colour in his throat has the splendour of the jewels [on the hood] of the serpent-king: to Hara, garlanded with skulls that are as bright as clouds, who holds a single-tipped spear trembling for the slaying of the Daitya [=Andhaka].
-            </translation>
-          </div>
-          <!-- stanza 2 -->
-          <div type="section" n="2">
-            <lg met="Anuṣṭubh">
-              <l n="a">
+        </translation>
+      </div>
+      <!-- stanza 2 -->
+      <div type="section" n="2">
+        <lg met="Anuṣṭubh">
+          <l n="a">
                 jñānaśaktidharaṃ śāntaṃ
-              </l>
-              <l n="b">
+          </l>
+          <l n="b">
                 kumāraṃ śaṅkarātmajam
-              </l>
-              <l n="c">
+          </l>
+          <l n="c">
                 devāri<app xml:id="app-1-1-2c-1" resp="#flodes">
-                  <lem wit="#NK28 #P" rend="circlefront">sūdanaṃ</lem>
-                  <rdg wit="#NC45 #NK82 #NKo77 #E" rend="circlefront">skandanaṃ</rdg>
-                  <rdg wit="#NO15" rend="circlefront">skadanaṃ</rdg>
-                </app>
-                <app xml:id="app-1-1-2c-2" resp="#flodes">
-                  <lem wit="#NC45 #NK28 #NK82 #NKo77 #P #E" rend="">skandam</lem>
-                  <rdg wit="#NO15" rend="">skadanam</rdg>
-                </app>
-              </l>
-              <l n="d">
-                <app xml:id="app-1-1-2d-1" resp="#flodes">
-                  <lem wit="#N #E" rend="">agastiḥ paripṛcchati</lem>
-                  <rdg wit="#PT75" rend="">agastyaḥ paripṛcchati</rdg>
-                  <rdg wit="#GP43" rend="">agastyaḥ parapracchati</rdg>
-                </app>
-              </l>
-            </lg>
-            <translation>
+            <lem wit="#NK28 #P" rend="circlefront">sūdanaṃ</lem>
+            <rdg wit="#NC45 #NK82 #NKo77 #E" rend="circlefront">skandanaṃ</rdg>
+            <rdg wit="#NO15" rend="circlefront">skadanaṃ</rdg>
+          </app>
+          <app xml:id="app-1-1-2c-2" resp="#flodes">
+            <lem wit="#NC45 #NK28 #NK82 #NKo77 #P #E" rend="">skandam</lem>
+            <rdg wit="#NO15" rend="">skadanam</rdg>
+          </app>
+        </l>
+        <l n="d">
+          <app xml:id="app-1-1-2d-1" resp="#flodes">
+            <lem wit="#N #E" rend="">agastiḥ paripṛcchati</lem>
+            <rdg wit="#PT75" rend="">agastyaḥ paripṛcchati</rdg>
+            <rdg wit="#GP43" rend="">agastyaḥ parapracchati</rdg>
+          </app>
+        </l>
+      </lg>
+      <translation>
               Agastya asks Skanda, the holder of the spear of knowledge, appeased, the child born from Śaṅkara, slayer of the Gods’ enemies:
-            </translation>
-          </div>
-          <div type="uvaca">
-            <p>agastir uvāca</p>
-            <translation>
+      </translation>
+    </div>
+    <div type="uvaca">
+      <p>agastir uvāca</p>
+      <translation>
               Agastya said
-            </translation>
-          </div> 
-          <!-- stanza 3 -->
-          <div type="section" n="3">
-            <lg met="Anuṣṭubh">
-              <l n="a">
+      </translation>
+    </div>
+    <!-- stanza 3 -->
+    <div type="section" n="3">
+      <lg met="Anuṣṭubh">
+        <l n="a">
                 bhagavan darśanāt tubhyam
-              </l>
-              <l n="b">
-                <app xml:id="app-1-3-3b-1" resp="#flodes">
-                  <lem wit="#Σ" rend="">antyajasyāpi</lem>
-                  <rdg wit="#NK82" rend="">antajasyāpi</rdg>
-                </app>
-                <app xml:id="app-1-3-3b-2" resp="#flodes">
-                  <lem wit="#Σ" rend="">sadgatiḥ</lem>
-                  <rdg wit="#GP43cm" rend="">dgatiḥ</rdg>
-                </app>
-              </l>
-              <l n="c">
+        </l>
+        <l n="b">
+          <app xml:id="app-1-3-3b-1" resp="#flodes">
+            <lem wit="#Σ" rend="">antyajasyāpi</lem>
+            <rdg wit="#NK82" rend="">antajasyāpi</rdg>
+          </app>
+          <app xml:id="app-1-3-3b-2" resp="#flodes">
+            <lem wit="#Σ" rend="">sadgatiḥ</lem>
+            <rdg wit="#GP43cm" rend="">dgatiḥ</rdg>
+          </app>
+        </l>
+        <l n="c">
                 sapta<app xml:id="app-1-3-3c-1" resp="#flodes">
-                  <lem wit="#N #E" rend="circlefront">janmāni</lem>
-                  <rdg wit="#PT75" rend="circlefront">janmani</rdg>
-                  <rdg wit="#GP43" rend="circlefront">janmasu</rdg>
-                </app>
-                <app xml:id="app-1-3-3c-2" resp="#flodes">
-                  <lem wit="#NK28 #NKo77 #NO15" rend="">vipraś ca</lem>
-                  <rdg wit="#NC45 #NK82 #PT75 #E" rend="">viprastu</rdg>
-                  <rdg wit="#GP43" rend="">vipraścā</rdg>
-                </app>
-              </l>
-              <l n="d">
-                <app xml:id="app-1-3-3d-1" resp="#flodes">
-                  <lem wit="#Σ" rend="">svargād</lem>
-                  <rdg wit="#NO15" rend="">svargīḥ</rdg>
-                </app>
-                <app xml:id="app-1-3-3d-2" resp="#flodes">
-                  <lem wit="#Σ" rend="">bhraṣṭaḥ prajāyate</lem>
-                  <rdg wit="#GP43" rend="">hṛṣṭasya jāyate</rdg>
-                </app>
-              </l>
-            </lg>
-            <translation>
+          <lem wit="#N #E" rend="circlefront">janmāni</lem>
+          <rdg wit="#PT75" rend="circlefront">janmani</rdg>
+          <rdg wit="#GP43" rend="circlefront">janmasu</rdg>
+        </app>
+        <app xml:id="app-1-3-3c-2" resp="#flodes">
+          <lem wit="#NK28 #NKo77 #NO15" rend="">vipraś ca</lem>
+          <rdg wit="#NC45 #NK82 #PT75 #E" rend="">viprastu</rdg>
+          <rdg wit="#GP43" rend="">vipraścā</rdg>
+        </app>
+      </l>
+      <l n="d">
+        <app xml:id="app-1-3-3d-1" resp="#flodes">
+          <lem wit="#Σ" rend="">svargād</lem>
+          <rdg wit="#NO15" rend="">svargīḥ</rdg>
+        </app>
+        <app xml:id="app-1-3-3d-2" resp="#flodes">
+          <lem wit="#Σ" rend="">bhraṣṭaḥ prajāyate</lem>
+          <rdg wit="#GP43" rend="">hṛṣṭasya jāyate</rdg>
+        </app>
+      </l>
+    </lg>
+    <translation>
               “O Bhagavān, by seeing you a good rebirth [comes to pass] even for a man of the lowest caste. Then, once this one falls from Heaven, he is reborn as a Brahmin for seven rebirths
-            </translation>
-          </div>
-          <!-- stanza 4 -->
-          <div type="section" n="4">
-            <lg met="Anuṣṭubh">
-              <l n="a">
-                <app xml:id="app-1-4-4a-1" resp="#flodes">
-                  <lem wit="#N #E" rend="">tenāsi</lem>
-                  <rdg wit="#PT75" rend="">tenāpi</rdg>
-                  <rdg wit="#GP43" rend="">yenāsi</rdg>
-                </app>
+    </translation>
+  </div>
+  <!-- stanza 4 -->
+  <div type="section" n="4">
+    <lg met="Anuṣṭubh">
+      <l n="a">
+        <app xml:id="app-1-4-4a-1" resp="#flodes">
+          <lem wit="#N #E" rend="">tenāsi</lem>
+          <rdg wit="#PT75" rend="">tenāpi</rdg>
+          <rdg wit="#GP43" rend="">yenāsi</rdg>
+        </app>
                   nātha bhūtānāṃ
-              </l>
-              <l n="b">
+      </l>
+      <l n="b">
                 sarveṣām anukampakaḥ
-              </l>
-              <l n="c">
+      </l>
+      <l n="c">
                 ataḥ 
-                <app xml:id="app-1-4-4c-1" resp="#flodes">
-                  <lem wit="#Σ" rend="">sarvahitaṃ</lem>
-                  <rdg wit="#PT75" rend="">saṃkṣepato</rdg>
-                </app>
-                <app xml:id="app-1-4-4c-2" resp="#flodes">
-                  <lem wit="#Σ" rend="">dharmaṃ</lem>
-                  <rdg wit="#NC45" rend="">dharma</rdg>
-                </app>
-              </l>
-              <l n="d">
-                <app xml:id="app-1-4-4c-3" resp="#flodes">
-                  <lem wit="#NC45 #NK82 #E" rend="">saṃkṣepāt prabravīhi me</lem>
-                  <rdg wit="#NK28" rend="">saṃkṣepāt prabravīhi taḥ</rdg>
-                  <rdg wit="#NKo77" rend="">saṃkṣepāt prabrahīhi taḥ</rdg>
-                  <rdg wit="#NO15" rend="">saṃkṣepāt tad bravīhi me</rdg>
-                  <rdg wit="#GP43" rend="">sukṣepāt prabravīhi me</rdg>
-                  <rdg wit="#PT75" rend="">brūhi sarvahitaṃ mama</rdg>
-                </app>
-              </l>
-            </lg>
-            <translation>
+        <app xml:id="app-1-4-4c-1" resp="#flodes">
+          <lem wit="#Σ" rend="">sarvahitaṃ</lem>
+          <rdg wit="#PT75" rend="">saṃkṣepato</rdg>
+        </app>
+        <app xml:id="app-1-4-4c-2" resp="#flodes">
+          <lem wit="#Σ" rend="">dharmaṃ</lem>
+          <rdg wit="#NC45" rend="">dharma</rdg>
+        </app>
+      </l>
+      <l n="d">
+        <app xml:id="app-1-4-4c-3" resp="#flodes">
+          <lem wit="#NC45 #NK82 #E" rend="">saṃkṣepāt prabravīhi me</lem>
+          <rdg wit="#NK28" rend="">saṃkṣepāt prabravīhi taḥ</rdg>
+          <rdg wit="#NKo77" rend="">saṃkṣepāt prabrahīhi taḥ</rdg>
+          <rdg wit="#NO15" rend="">saṃkṣepāt tad bravīhi me</rdg>
+          <rdg wit="#GP43" rend="">sukṣepāt prabravīhi me</rdg>
+          <rdg wit="#PT75" rend="">brūhi sarvahitaṃ mama</rdg>
+        </app>
+      </l>
+    </lg>
+    <translation>
               Therefore, o Lord, you are compassionate towards all beings; for this reason, tell us/me concisely the Dharma that is beneficial to all.
-            </translation>
-          </div>      
-          <!-- stanza 5 -->
-          <div type="section" n="5">
-            <lg met="Anuṣṭubh">
-              <l n="a">
+    </translation>
+  </div>
+  <!-- stanza 5 -->
+  <div type="section" n="5">
+    <lg met="Anuṣṭubh">
+      <l n="a">
                 dharmā bahuvidhā
-                <app xml:id="app-1-5-5a-1" resp="#flodes">
-                  <lem wit="em." rend="">devyai</lem>
-                  <rdg wit="#Σ" rend="">devyā</rdg>
-                  <rdg wit="#E" rend="">devyāḥ</rdg>
-                </app>
-              </l>
-              <l n="b">
+        <app xml:id="app-1-5-5a-1" resp="#flodes">
+          <lem wit="em." rend="">devyai</lem>
+          <rdg wit="#Σ" rend="">devyā</rdg>
+          <rdg wit="#E" rend="">devyāḥ</rdg>
+        </app>
+      </l>
+      <l n="b">
                 devena
-                <app xml:id="app-1-5-5b-1" resp="#flodes">
-                  <lem wit="#NK82 #NKo77 #GP43 #PT75" rend="">kathitāḥ</lem>
-                  <rdg wit="#NK28 #E" rend="">kathitā</rdg>
-                </app>
-                <app xml:id="app-1-5-5b-2" resp="#flodes">
-                  <lem wit="#NK28 #NK82 #NKo77 #NO15 #E #PT75" rend="">kila</lem>
-                  <rdg wit="#NC45" rend="">kilaḥ</rdg>
-                  <rdg wit="#GP43" rend="">kilā</rdg>
-                </app>
-              </l>
-              <l n="c">
+        <app xml:id="app-1-5-5b-1" resp="#flodes">
+          <lem wit="#NK82 #NKo77 #GP43 #PT75" rend="">kathitāḥ</lem>
+          <rdg wit="#NK28 #E" rend="">kathitā</rdg>
+        </app>
+        <app xml:id="app-1-5-5b-2" resp="#flodes">
+          <lem wit="#NK28 #NK82 #NKo77 #NO15 #E #PT75" rend="">kila</lem>
+          <rdg wit="#NC45" rend="">kilaḥ</rdg>
+          <rdg wit="#GP43" rend="">kilā</rdg>
+        </app>
+      </l>
+      <l n="c">
                 te ca 
-                <app xml:id="app-1-5-5c-1" resp="#flodes">
-                  <lem wit="#NC45 #NK82 #E #PT75" rend="">śrutās tvayā</lem>
-                  <rdg wit="#NK28" rend="">śrutā tvayā</rdg>
-                  <rdg wit="#NKo77" rend="">śrutvā tvayā</rdg>
-                  <rdg wit="#NO15" rend="">śrutvāskṛyā</rdg>
-                  <rdg wit="#GP43" rend="">śrutās vayā</rdg>
-                </app>
+        <app xml:id="app-1-5-5c-1" resp="#flodes">
+          <lem wit="#NC45 #NK82 #E #PT75" rend="">śrutās tvayā</lem>
+          <rdg wit="#NK28" rend="">śrutā tvayā</rdg>
+          <rdg wit="#NKo77" rend="">śrutvā tvayā</rdg>
+          <rdg wit="#NO15" rend="">śrutvāskṛyā</rdg>
+          <rdg wit="#GP43" rend="">śrutās vayā</rdg>
+        </app>
                 sarve
-              </l>
-              <l n="d">
+      </l>
+      <l n="d">
                 pṛcchāmi tvām ahaṃ
-                <app xml:id="app-1-5-5d-1" resp="#flodes">
-                  <lem wit="#NC45 #NK82 #NKo77 #P #E" rend="">tataḥ</lem>
-                  <rdg wit="#NK28 #NO15" rend="">punaḥ</rdg>
-                </app>
-              </l>
-            </lg>
-            <translation>
+        <app xml:id="app-1-5-5d-1" resp="#flodes">
+          <lem wit="#NC45 #NK82 #NKo77 #P #E" rend="">tataḥ</lem>
+          <rdg wit="#NK28 #NO15" rend="">punaḥ</rdg>
+        </app>
+      </l>
+    </lg>
+    <translation>
               It is said that many kinds of religious norms have been taught by the god for the goddess, and they have all been heard by you. For this reason, I ask you:
-            </translation>
-          </div>      
-          <!-- stanza 6 --> 
-          <div type="section" n="6">
-            <lg met="Anuṣṭubh">
-              <l n="a">
+    </translation>
+  </div>
+  <!-- stanza 6 -->
+  <div type="section" n="6">
+    <lg met="Anuṣṭubh">
+      <l n="a">
                 kiṃpradhānāḥ 
-                <app xml:id="app-1-6-6a-1" resp="#flodes">
-                  <lem wit="#NC45 #NK28 #NK82 #P" rend="">śive dharmāḥ</lem>
-                  <rdg wit="#NKo77" rend="">śivādharmo</rdg>
-                  <rdg wit="#NO15" rend="">śivedharmā</rdg>
-                  <rdg wit="#E" rend="">śivadharmāḥ</rdg>
-                </app> 
-              </l>
-              <l n="b">
+        <app xml:id="app-1-6-6a-1" resp="#flodes">
+          <lem wit="#NC45 #NK28 #NK82 #P" rend="">śive dharmāḥ</lem>
+          <rdg wit="#NKo77" rend="">śivādharmo</rdg>
+          <rdg wit="#NO15" rend="">śivedharmā</rdg>
+          <rdg wit="#E" rend="">śivadharmāḥ</rdg>
+        </app>
+      </l>
+      <l n="b">
                 śivavākyaṃ ca kīdṛśam
-              </l>
-              <l n="c">
-                <app xml:id="app-1-6-6c-1" resp="#flodes">
-                  <lem wit="#NC45 #NK28 #NK82 #NO15 #P #E" rend="">liṅge</lem>
-                  <rdg wit="#NKo77" rend="">liṅgo</rdg>
-                  <rdg wit="#PT75" rend="">
+      </l>
+      <l n="c">
+        <app xml:id="app-1-6-6c-1" resp="#flodes">
+          <lem wit="#NC45 #NK28 #NK82 #NO15 #P #E" rend="">liṅge</lem>
+          <rdg wit="#NKo77" rend="">liṅgo</rdg>
+          <rdg wit="#PT75" rend="">
                     śivaḥ
-                    <witDetail wit="#PT75" type="pc"/>
-                  </rdg>
-                </app>
+            <witDetail wit="#PT75" type="pc"/>
+          </rdg>
+        </app>
                 ’rcitaḥ śivaḥ kena
-              </l>
-              <l n="d">
+      </l>
+      <l n="d">
                 vidhinā samprasīdati
-              </l>
-            </lg>
-            <translation>
+      </l>
+    </lg>
+    <translation>
               What are the main religious rules with reference to Śiva, and what are the features of Śiva’s teachings? By which procedure is Śiva satisfied when he is worshipped in the liṅga?
               Śiva is satisfied when he is worshipped in the liṅga following which procedure?
-            </translation>
-          </div>     
-          <!-- stanza 7 -->
-          <div type="section" n="7">
-            <lg met="Anuṣṭubh">
-              <l n="a">
+    </translation>
+  </div>
+  <!-- stanza 7 -->
+  <div type="section" n="7">
+    <lg met="Anuṣṭubh">
+      <l n="a">
                 vidyādānaṃ ca
-                <app xml:id="app-1-7-7a-1" resp="#flodes">
-                  <lem wit="#Σ" rend="">dānānāṃ</lem>
-                  <rdg wit="#PT75" rend="">sarveṣām</rdg>
-                </app>
-                <note xml:id="nt-1-7-7a-1" type="philological" resp="#flodes">
+        <app xml:id="app-1-7-7a-1" resp="#flodes">
+          <lem wit="#Σ" rend="">dānānāṃ</lem>
+          <rdg wit="#PT75" rend="">sarveṣām</rdg>
+        </app>
+        <note xml:id="nt-1-7-7a-1" type="philological" resp="#flodes">
                   In #PT75 "dānānāṃ sarveṣām" is inverted: "sarveṣām dānānāṃ".
-                </note> 
-              </l>
-              <l n="b">
-                <app xml:id="app-1-7-7b-1" resp="#flodes">
-                  <lem wit="#Σ" rend="">sarveṣām</lem>
-                  <rdg wit="#PT75" rend="">dānānāṃ</rdg>
-                </app>
-                <app xml:id="app-1-7-7b-2" resp="#flodes">
-                  <lem wit="#Σ" rend="">uttamaṃ</lem>
-                  <rdg wit="#GP43" rend="">uttamā</rdg>
-                </app>
+        </note>
+      </l>
+      <l n="b">
+        <app xml:id="app-1-7-7b-1" resp="#flodes">
+          <lem wit="#Σ" rend="">sarveṣām</lem>
+          <rdg wit="#PT75" rend="">dānānāṃ</rdg>
+        </app>
+        <app xml:id="app-1-7-7b-2" resp="#flodes">
+          <lem wit="#Σ" rend="">uttamaṃ</lem>
+          <rdg wit="#GP43" rend="">uttamā</rdg>
+        </app>
                 kila
-              </l>
-              <l n="c">
+      </l>
+      <l n="c">
                 tac ca śrutau dvijendrāṇāṃ
-              </l>
-              <l n="d">
+      </l>
+      <l n="d">
                 nānyeṣāṃ samudāhṛtam
-              </l> 
-            </lg>
-            <translation>
+      </l>
+    </lg>
+    <translation>
               Moreover, it is said that the gift of knowledge is the most important of all gifts; and it has been described in the Revelation for no others than for the best among the twice-born:
-            </translation>
-          </div>      
-          <!-- stanza 8 -->
-          <div type="section" n="8">
-            <lg met="Anuṣṭubh">
-              <l n="a">
+    </translation>
+  </div>
+  <!-- stanza 8 -->
+  <div type="section" n="8">
+    <lg met="Anuṣṭubh">
+      <l n="a">
                 tatpuṇyaṃ sarvavarṇānāṃ
-              </l>
-              <l n="b">
+      </l>
+      <l n="b">
                 jāyate kena karmaṇā
-              </l>
-              <l n="c">
+      </l>
+      <l n="c">
                 jñeyaṃ katividhaṃ
-                <app xml:id="app-1-8-8c-1" resp="#flodes">
-                  <lem wit="#Σ" rend="">tac ca</lem>
-                  <rdg wit="#NKo77" rend="">ta ca</rdg>
-                </app>
-              </l>
-              <l n="d">
+        <app xml:id="app-1-8-8c-1" resp="#flodes">
+          <lem wit="#Σ" rend="">tac ca</lem>
+          <rdg wit="#NKo77" rend="">ta ca</rdg>
+        </app>
+      </l>
+      <l n="d">
                 vidyā<gap xml:id="app-1-8-8d-1" resp="#flodes" reason="damage" extent="15" unit="chars" start="dyā" end="m" wit="#NK28">dāna</gap>m anuttamam
-              </l>
-            </lg>
-            <translation>
+      </l>
+    </lg>
+    <translation>
               By means of what ritual procedure is merit deriving from this [practice] brought about for all varṇas? And [divided into] how many [different] types will this unsurpassable gift of knowledge be known?
-            </translation>
-          </div>      
-          <!-- stanza 9 -->
-          <div type="section" n="9">
-            <!-- parallel -->
-            <seg source="#bhap-1-187-1" type="" subtype="">
-              <lg met="Anuṣṭubh">
-                <l n="a">
+    </translation>
+  </div>
+  <!-- stanza 9 -->
+  <div type="section" n="9">
+    <!-- parallel -->
+    <seg source="#bhap-1-187-1" type="" subtype="">
+      <lg met="Anuṣṭubh">
+        <l n="a">
                   kāni
-                  <app xml:id="app-1-9-9a-1" resp="#flodes">
-                    <lem wit="#N #E" rend="">puṇyāni kṛtveha</lem>
-                    <rdg wit="#GP43" rend="">karmaṇi kṛtveha</rdg>
-                    <rdg wit="#PT75" rend="">kṛtvaiva karmāṇi</rdg>
-                  </app>
-                </l>
-                <l n="b"> 
-                  <app xml:id="app-1-9-9b-1" resp="#flodes">
-                    <lem wit="#N #PT75" rend="">gṛhiṇaḥ svargatāḥ</lem>
-                    <rdg wit="#GP43cm" rend="">gṛhasthasvarggāt</rdg>
-                    <rdg wit="#E" rend="">gṛhiṇaḥ svargiṇaḥ</rdg>
-                  </app>
+          <app xml:id="app-1-9-9a-1" resp="#flodes">
+            <lem wit="#N #E" rend="">puṇyāni kṛtveha</lem>
+            <rdg wit="#GP43" rend="">karmaṇi kṛtveha</rdg>
+            <rdg wit="#PT75" rend="">kṛtvaiva karmāṇi</rdg>
+          </app>
+        </l>
+        <l n="b">
+          <app xml:id="app-1-9-9b-1" resp="#flodes">
+            <lem wit="#N #PT75" rend="">gṛhiṇaḥ svargatāḥ</lem>
+            <rdg wit="#GP43cm" rend="">gṛhasthasvarggāt</rdg>
+            <rdg wit="#E" rend="">gṛhiṇaḥ svargiṇaḥ</rdg>
+          </app>
                   punaḥ
-                </l>
-                <l n="c">
-                  <app xml:id="app-1-9-9c-1" resp="#flodes">
-                    <lem wit="#NC45 #NK28 #NKo77 #NO15 #E" rend="circleback">manuṣyaloka</lem>
-                    <rdg wit="#NK82 #P" rend="">manuṣyaloke</rdg>
-                  </app>sambhūtā
-                </l>
-                <l n="d">
+        </l>
+        <l n="c">
+          <app xml:id="app-1-9-9c-1" resp="#flodes">
+            <lem wit="#NC45 #NK28 #NKo77 #NO15 #E" rend="circleback">manuṣyaloka</lem>
+            <rdg wit="#NK82 #P" rend="">manuṣyaloke</rdg>
+          </app>sambhūtā
+        </l>
+        <l n="d">
                   yogaṃ 
-                  <app xml:id="app-1-9-9d-1" resp="#flodes">
-                    <lem wit="#NK82 #NKo77 #PT75 #E" rend="">vindanti śāṅkaram</lem>
-                    <rdg wit="#NC45" rend="">vidanti śaṅkaram</rdg>
-                    <rdg wit="#NK28" rend="">vindanti śaṅkaram</rdg>
-                    <rdg wit="#NO15" rend="">vindanti sākaram</rdg>
-                  </app>
-                </l>
-              </lg>
-            </seg>
-            <translation>
+          <app xml:id="app-1-9-9d-1" resp="#flodes">
+            <lem wit="#NK82 #NKo77 #PT75 #E" rend="">vindanti śāṅkaram</lem>
+            <rdg wit="#NC45" rend="">vidanti śaṅkaram</rdg>
+            <rdg wit="#NK28" rend="">vindanti śaṅkaram</rdg>
+            <rdg wit="#NO15" rend="">vindanti sākaram</rdg>
+          </app>
+        </l>
+      </lg>
+    </seg>
+    <translation>
               By means of what meritorious actions done in this world do the householders who have gone to Heaven perform the yoga of Śaṅkara, once they are born again in the human world?
-            </translation>
-          </div>      
-          <!-- stanza 10 --> 
-          <div type="section" n="10">
-            <!-- parallel -->
-            <seg source="#bhap-1-187-2" type="" subtype="">
-              <lg met="Anuṣṭubh">
-                <l n="a"> 
-                  <app xml:id="app-1-10-10a-1" resp="#flodes">
-                    <lem wit="#NC45 #NK82  #PT75 #E" rend="">karmayajñas</lem>
-                    <rdg wit="#NK28" rend="">karmayajña</rdg>
-                    <rdg wit="#NO15" rend="">karmayajñās</rdg>
-                  </app>
+    </translation>
+  </div>
+  <!-- stanza 10 -->
+  <div type="section" n="10">
+    <!-- parallel -->
+    <seg source="#bhap-1-187-2" type="" subtype="">
+      <lg met="Anuṣṭubh">
+        <l n="a">
+          <app xml:id="app-1-10-10a-1" resp="#flodes">
+            <lem wit="#NC45 #NK82  #PT75 #E" rend="">karmayajñas</lem>
+            <rdg wit="#NK28" rend="">karmayajña</rdg>
+            <rdg wit="#NO15" rend="">karmayajñās</rdg>
+          </app>
                   tapoyajñaḥ
-                </l>
-                <l n="b">
+        </l>
+        <l n="b">
                   svādhyāyo
-                  <app xml:id="app-1-10-10b-1" resp="#flodes">
-                    <lem wit="#N #E" rend="">dhyā<gap xml:id="app-1-10-10b-2" resp="#flodes" reason="damage" extent="10" unit="chars" start="dhyā" end="ca" wit="#NKo77">nam eva</gap> ca</lem>
-                    <rdg wit="#GP43" rend="">dhyānanirmmitaḥ</rdg>
-                    <rdg wit="#PT75" rend="">dhyānanirvṛttiḥ</rdg>
-                  </app>
-                </l>
-                <l n="c">
+          <app xml:id="app-1-10-10b-1" resp="#flodes">
+            <lem wit="#N #E" rend="">dhyā<gap xml:id="app-1-10-10b-2" resp="#flodes" reason="damage" extent="10" unit="chars" start="dhyā" end="ca" wit="#NKo77">nam eva</gap> ca</lem>
+            <rdg wit="#GP43" rend="">dhyānanirmmitaḥ</rdg>
+            <rdg wit="#PT75" rend="">dhyānanirvṛttiḥ</rdg>
+          </app>
+        </l>
+        <l n="c">
                   jñānayajñaś ca pañcaite
-                </l>
-                <l n="d">
+        </l>
+        <l n="d">
                   mahāyajñāḥ prakīrtitāḥ
-                </l>
-              </lg>
-            </seg>
-            <translation>
+        </l>
+      </lg>
+    </seg>
+    <translation>
               The practice of rituals (karmayajña), the practice of askesis (tapoyajña), self-study [of the Vedas] (svādhyāya), meditation (dhyāna), and the practice of knowledge (jñānayajña): these are known as the five great religious practices (mahāyajña).
-            </translation>
-          </div>      
-          <!-- stanza 11 -->
-          <div type="section" n="11">
-            <!-- parallel -->
-            <seg source="#bhap-1-187-3" type="" subtype="">
-              <lg met="Anuṣṭubh">
-                <l n="a">
-                  <app xml:id="app-1-11-11a-1" resp="#flodes">
-                    <lem wit="#NC45 #NK28 #NKo77 #NO15 #PT75 #E" rend="">eṣāṃ ca</lem>
-                    <rdg wit="#NK82 #GP43" rend="">eteṣām</rdg>
-                  </app>
+    </translation>
+  </div>
+  <!-- stanza 11 -->
+  <div type="section" n="11">
+    <!-- parallel -->
+    <seg source="#bhap-1-187-3" type="" subtype="">
+      <lg met="Anuṣṭubh">
+        <l n="a">
+          <app xml:id="app-1-11-11a-1" resp="#flodes">
+            <lem wit="#NC45 #NK28 #NKo77 #NO15 #PT75 #E" rend="">eṣāṃ ca</lem>
+            <rdg wit="#NK82 #GP43" rend="">eteṣām</rdg>
+          </app>
                   pañcayajñānām
-                </l>
-                <l n="b">
-                  <app xml:id="app-1-11-11b-1" resp="#flodes">
-                    <lem wit="#Σ" rend="">uttamaḥ katamaḥ</lem>
-                    <rdg wit="#NO15" rend="">uttamakattamaḥ</rdg>
-                  </app>
+        </l>
+        <l n="b">
+          <app xml:id="app-1-11-11b-1" resp="#flodes">
+            <lem wit="#Σ" rend="">uttamaḥ katamaḥ</lem>
+            <rdg wit="#NO15" rend="">uttamakattamaḥ</rdg>
+          </app>
                   smṛtaḥ
-                </l>
-                <l n="c">
+        </l>
+        <l n="c">
                   etadyajñaratānāṃ ca
-                </l>
-                <l n="d">
+        </l>
+        <l n="d">
                   pradāne
-                  <app xml:id="app-1-11-11d-1" resp="#flodes">
-                    <lem wit="#Σ" rend="">kīdṛśaṃ</lem>
-                    <rdg wit="#NO15" rend="">kīdṛśa</rdg>
-                  </app>
+          <app xml:id="app-1-11-11d-1" resp="#flodes">
+            <lem wit="#Σ" rend="">kīdṛśaṃ</lem>
+            <rdg wit="#NO15" rend="">kīdṛśa</rdg>
+          </app>
                   phalam
-                </l>
-              </lg>
-            </seg>
-            <translation>
+        </l>
+      </lg>
+    </seg>
+    <translation>
               And, among these practices, which one is remembered as the best? And of what kind is that fruit [obtained] from gifting to those who rejoice in these five practices?
-            </translation>
-          </div>      
-          <!-- stanza 12 -->
-          <div type="section" n="12">
-            <lg met="Anuṣṭubh">
-              <l n="a">
+    </translation>
+  </div>
+  <!-- stanza 12 -->
+  <div type="section" n="12">
+    <lg met="Anuṣṭubh">
+      <l n="a">
                 dharmādharma<app xml:id="app-1-12-12a-1" resp="#flodes">
-                  <lem wit="#NC45 #NK82 #NKo77 #P #E" rend="circlefront">prabhedāś</lem>
-                  <rdg wit="#NK28 #NO15" rend="circlefront">prabhedāt</rdg>
-                </app> 
+        <lem wit="#NC45 #NK82 #NKo77 #P #E" rend="circlefront">prabhedāś</lem>
+        <rdg wit="#NK28 #NO15" rend="circlefront">prabhedāt</rdg>
+      </app> 
                 ca
-              </l>
-              <l n="b">
+    </l>
+    <l n="b">
                 kiyantaḥ
-                <app xml:id="app-1-12-12b-1" resp="#flodes">
-                  <lem wit="#Σ" rend="">parikīrtitāḥ</lem>
-                  <rdg wit="#NO15" rend="">parikīrtitaṃ</rdg>
-                </app>
-              </l>
-              <l n="c">
+      <app xml:id="app-1-12-12b-1" resp="#flodes">
+        <lem wit="#Σ" rend="">parikīrtitāḥ</lem>
+        <rdg wit="#NO15" rend="">parikīrtitaṃ</rdg>
+      </app>
+    </l>
+    <l n="c">
                 tat<app xml:id="app-1-12-12c-1" resp="#flodes">
-                  <lem wit="#NC45 #NK28 #NK82 #NO15 #E" rend="circlefront">sādhanāḥ katividhā</lem>
-                  <rdg wit="#NKo77" rend="">sādhanā katividhā</rdg>
-                  <rdg wit="#GP43" rend="">sādhanāni kativā</rdg>
-                  <rdg wit="#PT75" rend="">sādhanāni katidhā</rdg>
-                </app>
-              </l>
-              <l n="d">
+      <lem wit="#NC45 #NK28 #NK82 #NO15 #E" rend="circlefront">sādhanāḥ katividhā</lem>
+      <rdg wit="#NKo77" rend="">sādhanā katividhā</rdg>
+      <rdg wit="#GP43" rend="">sādhanāni kativā</rdg>
+      <rdg wit="#PT75" rend="">sādhanāni katidhā</rdg>
+    </app>
+  </l>
+  <l n="d">
                 gatayaś ca
-                <app xml:id="app-1-12-12d-1" resp="#flodes">
-                  <lem wit="#NC45 #NK28 #NK82 #NKo77 #PT75 #E" rend="">tadātmikāḥ</lem>
-                  <rdg wit="#NO15" rend="">tadātmikāṃ</rdg>
-                  <rdg wit="#GP43" rend="">tadātmikā</rdg>
-                </app>
-              </l>
-            </lg>
-            <translation>
+    <app xml:id="app-1-12-12d-1" resp="#flodes">
+      <lem wit="#NC45 #NK28 #NK82 #NKo77 #PT75 #E" rend="">tadātmikāḥ</lem>
+      <rdg wit="#NO15" rend="">tadātmikāṃ</rdg>
+      <rdg wit="#GP43" rend="">tadātmikā</rdg>
+    </app>
+  </l>
+</lg>
+<translation>
               And of what kind are the divisions of Dharma and Adharma said [to be]? Of how many kinds are the instruments for their realization, and the paths belonging to (leading to)  them?
-            </translation>
-          </div>       
-          <!-- stanza 13 -->
-          <div type="section" n="13">
-            <lg met="Anuṣṭubh">
-              <l n="a">
-                <app xml:id="app-1-13-13a-1" resp="#flodes">
-                  <lem wit="#NC45 #NK82 #NKo77 #E" rend="">svarganārakiṇāṃ puṃsām</lem>
-                  <rdg wit="#NK28" rend="">svarganārakiṇāṃ puṃsāmm</rdg>
-                  <rdg wit="#NO15" rend="">svarganārakinām</rdg>
-                  <rdg wit="#GP43" rend="">svarginārakinā puṃsām</rdg>
-                  <rdg wit="#PT75" rend="">svargā nārakiṇāṃ</rdg>
-                </app>
-              </l>
-              <l n="b">
-                <app xml:id="app-1-13-13b-1" resp="#flodes">
-                  <lem wit="#NC45 #NK28 #NK82 #NO15 #PT75 #E" rend="">āyātānāṃ punaḥ</lem>
-                  <rdg wit="#NKo77" rend="">āyātānāṃ puna</rdg>
-                  <rdg wit="#GP43" rend="">āgatānām puna</rdg>
-                </app>
+</translation>
+</div>
+<!-- stanza 13 -->
+<div type="section" n="13">
+<lg met="Anuṣṭubh">
+  <l n="a">
+    <app xml:id="app-1-13-13a-1" resp="#flodes">
+      <lem wit="#NC45 #NK82 #NKo77 #E" rend="">svarganārakiṇāṃ puṃsām</lem>
+      <rdg wit="#NK28" rend="">svarganārakiṇāṃ puṃsāmm</rdg>
+      <rdg wit="#NO15" rend="">svarganārakinām</rdg>
+      <rdg wit="#GP43" rend="">svarginārakinā puṃsām</rdg>
+      <rdg wit="#PT75" rend="">svargā nārakiṇāṃ</rdg>
+    </app>
+  </l>
+  <l n="b">
+    <app xml:id="app-1-13-13b-1" resp="#flodes">
+      <lem wit="#NC45 #NK28 #NK82 #NO15 #PT75 #E" rend="">āyātānāṃ punaḥ</lem>
+      <rdg wit="#NKo77" rend="">āyātānāṃ puna</rdg>
+      <rdg wit="#GP43" rend="">āgatānām puna</rdg>
+    </app>
                 kṣitau
-              </l>
-              <l n="c">
+  </l>
+  <l n="c">
                 kā<gap xml:id="app-1-13-13c-1" resp="#flodes" reason="damage" extent="8" unit="chars" start="kā" end="ni" wit="#NK28">ni cihnā</gap>ni jāyante
-              </l>
-              <l n="d">
-                <app xml:id="app-1-13-13d-1" resp="#flodes">
-                  <lem wit="#Σ" rend="circleback">bhukta</lem>
-                  <rdg wit="#NKo77" rend="">bhuktā</rdg>
-                </app>śeṣeṇa karmaṇā
-              </l>
-            </lg>
-            <translation>
+  </l>
+  <l n="d">
+    <app xml:id="app-1-13-13d-1" resp="#flodes">
+      <lem wit="#Σ" rend="circleback">bhukta</lem>
+      <rdg wit="#NKo77" rend="">bhuktā</rdg>
+    </app>śeṣeṇa karmaṇā
+  </l>
+</lg>
+<translation>
               Which distinctive marks arise through a karman that is left to be experienced for the inhabitants of heaven and hell, once they have come back to earth?
-            </translation>
-          </div>      
-          <!-- stanza 14 --> 
-          <div type="section" n="14">
-            <lg met="Anuṣṭubh">
-              <l n="a">
+</translation>
+</div>
+<!-- stanza 14 -->
+<div type="section" n="14">
+<lg met="Anuṣṭubh">
+  <l n="a">
                 saṃsārasāgarād ghorād
-              </l>
-              <l n="b">
+  </l>
+  <l n="b">
                 dharmādharmormisaṅkulāt
-              </l>
-              <l n="c">
+  </l>
+  <l n="c">
                 garbhādiduḥkha<app xml:id="app-1-14-14c-1" resp="#flodes">
-                  <lem wit="#NC45 #NK82 #GP43 #E" rend="circlefront">phenāḍhyān</lem>
-                  <rdg wit="#NK28" rend="circlefront">phenāḍhyaḥ</rdg>
-                  <rdg wit="#NKo77" rend="circlefront">phenāḍhya</rdg>
-                  <rdg wit="#NO15" rend="circlefront">phenāṭha</rdg>
-                  <rdg wit="#PT75" rend="circlefront">phenādvā</rdg>
-                </app>
-              </l>
-              <l n="d">
-                <app xml:id="app-1-14-14d-1" resp="#flodes">
-                  <lem wit="#NC45 #NK82 #GP43 #E" rend="">mucyante</lem>
-                  <rdg wit="#NK28" rend="">mucyate</rdg>
-                </app>
+    <lem wit="#NC45 #NK82 #GP43 #E" rend="circlefront">phenāḍhyān</lem>
+    <rdg wit="#NK28" rend="circlefront">phenāḍhyaḥ</rdg>
+    <rdg wit="#NKo77" rend="circlefront">phenāḍhya</rdg>
+    <rdg wit="#NO15" rend="circlefront">phenāṭha</rdg>
+    <rdg wit="#PT75" rend="circlefront">phenādvā</rdg>
+  </app>
+</l>
+<l n="d">
+  <app xml:id="app-1-14-14d-1" resp="#flodes">
+    <lem wit="#NC45 #NK82 #GP43 #E" rend="">mucyante</lem>
+    <rdg wit="#NK28" rend="">mucyate</rdg>
+  </app>
                 dehinaḥ katham
-              </l>
-            </lg>
-            <translation>
+</l>
+</lg>
+<translation>
               How do people endowed with a body free themselves from the terrible ocean of transmigration, agitated with the waves of Dharma and Adharma, abundant with the foam that is the anguish [experienced] by the embryos and so on?
-            </translation>
-          </div>      
-          <!-- stanza 15 -->
-          <div type="section" n="15">
-            <lg met="Anuṣṭubh">
-              <l n="a">
+</translation>
+</div>
+<!-- stanza 15 -->
+<div type="section" n="15">
+<lg met="Anuṣṭubh">
+<l n="a">
                 iti
-                <app xml:id="app-1-15-15a-1" resp="#flodes">
-                  <lem wit="#NC45 #NK28 #NK82 #PT75 #E" rend="">sañcoditaḥ skandaḥ</lem>
-                  <rdg wit="#NKo77" rend="">sañcoditaskanda</rdg>
-                  <rdg wit="#NO15" rend="">sañcoditaṃ skandas</rdg>
-                  <rdg wit="#GP43" rend="">sañcoditaskandas</rdg>
-                </app>
-              </l>
-              <!-- try > lacuna blank space vd. 15b-c -->
-              <l n="b">
+  <app xml:id="app-1-15-15a-1" resp="#flodes">
+    <lem wit="#NC45 #NK28 #NK82 #PT75 #E" rend="">sañcoditaḥ skandaḥ</lem>
+    <rdg wit="#NKo77" rend="">sañcoditaskanda</rdg>
+    <rdg wit="#NO15" rend="">sañcoditaṃ skandas</rdg>
+    <rdg wit="#GP43" rend="">sañcoditaskandas</rdg>
+  </app>
+</l>
+<!-- try > lacuna blank space vd. 15b-c -->
+<l n="b">
                 sarvapraśn<app xml:id="app-1-15-15b-1" resp="#flodes">
-                  <lem wit="#NC45 #NK82 #E" rend="circleback">ārthabhāṣakaḥ</lem>
-                  <rdg wit="#NK28 #NKo77" rend="circleback">ārthabhāṣakaṃ</rdg>
-                  <rdg wit="#NO15" rend="circleback">āvabhāsakaṃ</rdg>
-                  <rdg wit="#PT75" rend="circleback">ārthānubhāvakaḥ</rdg>
-                </app>
-              </l>
-              <l n="c">
+  <lem wit="#NC45 #NK82 #E" rend="circleback">ārthabhāṣakaḥ</lem>
+  <rdg wit="#NK28 #NKo77" rend="circleback">ārthabhāṣakaṃ</rdg>
+  <rdg wit="#NO15" rend="circleback">āvabhāsakaṃ</rdg>
+  <rdg wit="#PT75" rend="circleback">ārthānubhāvakaḥ</rdg>
+</app>
+</l>
+<l n="c">
                 pratyuvāca 
-                <app xml:id="app-1-15-15c-1" resp="#flodes">
-                  <lem wit="#Σ" rend="">mahā<gap xml:id="app-1-15-15c-2" resp="#flodes" reason="omitted" extent="12" unit="chars" start="pra" end="se" wit="#GP43"/>seno</lem>
-                  <rdg wit="#NK28" rend="">mahāsenau</rdg>
-                </app>
-              </l>
-              <l n="d">
-                <app xml:id="app-1-15-15d-1" resp="#flodes">
-                  <lem wit="#NC45 #NK82 #NKo77 #NO15 #GP43" rend="">namaskṛtvā</lem>
-                  <rdg wit="#NK28 #E" rend="">namaskṛtya</rdg>
-                  <rdg wit="#PT75" rend="">praṇipatya</rdg>
-                </app>
+<app xml:id="app-1-15-15c-1" resp="#flodes">
+  <lem wit="#Σ" rend="">mahā<gap xml:id="app-1-15-15c-2" resp="#flodes" reason="omitted" extent="12" unit="chars" start="pra" end="se" wit="#GP43"/>
+seno</lem>
+  <rdg wit="#NK28" rend="">mahāsenau</rdg>
+</app>
+</l>
+<l n="d">
+<app xml:id="app-1-15-15d-1" resp="#flodes">
+  <lem wit="#NC45 #NK82 #NKo77 #NO15 #GP43" rend="">namaskṛtvā</lem>
+  <rdg wit="#NK28 #E" rend="">namaskṛtya</rdg>
+  <rdg wit="#PT75" rend="">praṇipatya</rdg>
+</app>
                 maheśvaram
-              </l>
-            </lg>
-            <translation>
+</l>
+</lg>
+<translation>
               Thus impelled Skanda, the one who illustrates the contents of all queries, [leader of] the great [Gaṇa’s] army (mahāsena), after having revered Maheśvara, replied
-            </translation>
-          </div>       
-          <!-- stanza 16 -->
-          <div type="section" n="16">
-            <lg met="Anuṣṭubh">
-              <l n="a">
+</translation>
+</div>
+<!-- stanza 16 -->
+<div type="section" n="16">
+<lg met="Anuṣṭubh">
+<l n="a">
                 svargāpavargaphaladaṃ
-              </l>
-              <l n="b">
+</l>
+<l n="b">
                 narakārṇava<app xml:id="app-1-16-16b-1" resp="#flodes">
-                  <lem wit="#N #E" rend="circlefront">tārakam</lem>
-                  <rdg wit="#P" rend="">tāraṇam</rdg>
-                </app>
-              </l>
-              <l n="c">
+<lem wit="#N #E" rend="circlefront">tārakam</lem>
+<rdg wit="#P" rend="">tāraṇam</rdg>
+</app>
+</l>
+<l n="c">
                 śivadharmo<gap xml:id="app-1-16-16c-1" resp="#flodes" reason="damage" extent="11" unit="chars" start="rmo" end="śā" wit="#NK28">ttaraṃ nāma</gap>
-              </l>
-              <l n="d">
+</l>
+<l n="d">
                 śāstram 
-                <app xml:id="app-1-16-16d-1" resp="#flodes">
-                  <lem wit="#Σ" rend="circlefront">īśvara</lem>
-                  <rdg wit="#GP43" rend="">uttara</rdg>
-                </app>bhāṣitam
-              </l>
-            </lg>
-            <translation>
+<app xml:id="app-1-16-16d-1" resp="#flodes">
+<lem wit="#Σ" rend="circlefront">īśvara</lem>
+<rdg wit="#GP43" rend="">uttara</rdg>
+</app>bhāṣitam
+</l>
+</lg>
+<translation>
               [by expounding] what bestows the fruit of Heaven and liberation, what saves from the sea of hells, namely the treatise called Śivadharmottara, that has been taught by the Lord.
-            </translation>
-          </div> 
-          <div type="uvaca">
-            <p>skanda uvāca</p>
-            <translation>
+</translation>
+</div>
+<div type="uvaca">
+<p>skanda uvāca</p>
+<translation>
               Skanda said
-            </translation>
-          </div>    
-          <!-- stanza 17 -->
-          <div type="section" n="17">
-            <seg source="#bhap-1-187-9 #devi-127-12" type="" subtype="">
-              <lg met="Anuṣṭubh">
-                <l n="a">
+</translation>
+</div>
+<!-- stanza 17 -->
+<div type="section" n="17">
+<seg source="#bhap-1-187-9 #devi-127-12" type="" subtype="">
+<lg met="Anuṣṭubh">
+<l n="a">
                 śraddhā<app xml:id="app-1-17-17a-1" resp="#flodes">
-                  <lem wit="#NC45 #NK28 #NK82 #NO15 #GP43 #E" rend="circlefront">pūrvāḥ</lem>
-                  <rdg wit="#NKo77" rend="">pūrvā</rdg>
-                  <rdg wit="#PT75" rend="circlefront">pūrṇā</rdg>
-                </app>
+<lem wit="#NC45 #NK28 #NK82 #NO15 #GP43 #E" rend="circlefront">pūrvāḥ</lem>
+<rdg wit="#NKo77" rend="">pūrvā</rdg>
+<rdg wit="#PT75" rend="circlefront">pūrṇā</rdg>
+</app>
                 sarvadharmāḥ
-                </l>
-                <l n="b">
+</l>
+<l n="b">
                 śraddhāmadhyānta<app xml:id="app-1-17-17b-1" resp="#flodes">
-                  <lem wit="#Σ" rend="circlefront">saṃsthitāḥ</lem>
-                  <rdg wit="#GP43" rend="">saṃsthataḥ</rdg>
-                </app>
-                </l>
-                <l n="c">
+<lem wit="#Σ" rend="circlefront">saṃsthitāḥ</lem>
+<rdg wit="#GP43" rend="">saṃsthataḥ</rdg>
+</app>
+</l>
+<l n="c">
                   śraddhā<app xml:id="app-1-17-17c-1" resp="#flodes">
-                    <lem wit="#NK28 #NK82 #NKo77 #P" rend="circlefront">niṣṭhāḥ</lem>
-                    <rdg wit="#NC45 #E" rend="circlefront">niṣṭhā</rdg>
-                  </app>
+<lem wit="#NK28 #NK82 #NKo77 #P" rend="circlefront">niṣṭhāḥ</lem>
+<rdg wit="#NC45 #E" rend="circlefront">niṣṭhā</rdg>
+</app>
                   pratiṣṭhāś ca 
-                </l>
-                <l n="d">
+</l>
+<l n="d">
                   dharmāḥ 
-                  <app xml:id="app-1-17-17c-2" resp="#flodes">
-                    <lem wit="#Σ" rend="">śraddhaiva</lem>
-                    <rdg wit="#NC45" rend="">śraddharva</rdg>
-                  </app>
+<app xml:id="app-1-17-17c-2" resp="#flodes">
+<lem wit="#Σ" rend="">śraddhaiva</lem>
+<rdg wit="#NC45" rend="">śraddharva</rdg>
+</app>
                     kīrtitāḥ
-                </l>
-              </lg>
-            </seg>
-            <translation>
+</l>
+</lg>
+</seg>
+<translation>
               All teachings have faith at their beginning, they are established as having faith in the middle and at the end and the basements are grounded on faith, teachings are said to be just faith,
-            </translation>
-          </div>      
-          <!-- stanza 18 --> 
-          <div type="section" n="18">
-            <lg met="Anuṣṭubh">
-              <l n="a">
-                <app xml:id="app-1-18-18a-1" resp="#flodes">
-                  <lem wit="#Σ" rend="circleback">śruti</lem>
-                  <rdg wit="#NO15" rend="">śrutiṃ</rdg>
-                </app>mātra<app xml:id="app-1-18-18a-2" resp="#flodes">
-                  <lem wit="#NC45 #NK28 #NK82 #P #E" rend="circlefront">rasāḥ</lem>
-                  <rdg wit="#NKo77" rend="circlefront">ratāḥ</rdg>
-                  <rdg wit="#NO15" rend="circlefront">rasā</rdg>
-                </app>
+</translation>
+</div>
+<!-- stanza 18 -->
+<div type="section" n="18">
+<lg met="Anuṣṭubh">
+<l n="a">
+<app xml:id="app-1-18-18a-1" resp="#flodes">
+<lem wit="#Σ" rend="circleback">śruti</lem>
+<rdg wit="#NO15" rend="">śrutiṃ</rdg>
+</app>mātra<app xml:id="app-1-18-18a-2" resp="#flodes">
+<lem wit="#NC45 #NK28 #NK82 #P #E" rend="circlefront">rasāḥ</lem>
+<rdg wit="#NKo77" rend="circlefront">ratāḥ</rdg>
+<rdg wit="#NO15" rend="circlefront">rasā</rdg>
+</app>
                   sūkṣmāḥ
-              </l>
-              <l n="b">
-                <app xml:id="app-1-18-18b-1" resp="#flodes">
-                  <lem wit="#NC45 #NK28 #NK82 #P #E" rend="">pradhānapuruṣeśvarāḥ</lem>
-                  <rdg wit="#NKo77" rend="">pradhānāḥ puruṣeśvarāḥ</rdg>
-                  <rdg wit="#NO15" rend="">pradhānapuruṣeśvaraṃ</rdg>
-                </app>
-              </l>
-              <l n="c">
+</l>
+<l n="b">
+<app xml:id="app-1-18-18b-1" resp="#flodes">
+<lem wit="#NC45 #NK28 #NK82 #P #E" rend="">pradhānapuruṣeśvarāḥ</lem>
+<rdg wit="#NKo77" rend="">pradhānāḥ puruṣeśvarāḥ</rdg>
+<rdg wit="#NO15" rend="">pradhānapuruṣeśvaraṃ</rdg>
+</app>
+</l>
+<l n="c">
                 śraddhāmātreṇa gṛhyante
-              </l>
-              <l n="d">
-                <app xml:id="app-1-18-18d-1" resp="#flodes">
-                  <lem wit="#Σ" rend="">na kareṇa na cakṣuṣā</lem>
-                  <rdg wit="#PT75cm" rend="">nakareṇā cakṣuṣā</rdg>
-                </app>
-              </l>
-            </lg>
-            <translation>
+</l>
+<l n="d">
+<app xml:id="app-1-18-18d-1" resp="#flodes">
+<lem wit="#Σ" rend="">na kareṇa na cakṣuṣā</lem>
+<rdg wit="#PT75cm" rend="">nakareṇā cakṣuṣā</rdg>
+</app>
+</l>
+</lg>
+<translation>
               Having an essence that is nothing but Revelation, subtle, dealing with prakṛti, puruṣa, and the Lord, [these teachings] are seized only through faith, not with the hand nor with the eye. Check Niśvāsakārikā 34.17 – Note parallel in the DP with tarka, referring to the 3 pramāṇas 
-            </translation>
-          </div>     
-          <!-- stanza 19 -->   
-          <div type="section" n="19">
-            <lg met="Anuṣṭubh">
-              <l n="a">
-                <app xml:id="app-1-19-19a-1" resp="#flodes">
-                  <lem wit="#Σ" rend="circleback">kāya</lem>
-                  <rdg wit="#NKo77" rend="">kāla</rdg>
-                </app>kleśair
-                <app xml:id="app-1-19-19a-2" resp="#flodes">
-                  <lem wit="#Σ" rend="">na bahubhir</lem>
-                  <rdg wit="#GP43" rend="">makhaiś caivā</rdg>
-                </app>
-              </l>
-              <l n="b">
-                <app xml:id="app-1-19-19b-1" resp="#flodes">
-                  <lem wit="#N #E" rend="">na caivārthasya</lem>
-                  <rdg wit="#GP43cm" rend="">caivarthāsya</rdg>
-                  <rdg wit="#PT75" rend="circleback">caivārthani</rdg>
-                </app>
+</translation>
+</div>
+<!-- stanza 19 -->
+<div type="section" n="19">
+<lg met="Anuṣṭubh">
+<l n="a">
+<app xml:id="app-1-19-19a-1" resp="#flodes">
+<lem wit="#Σ" rend="circleback">kāya</lem>
+<rdg wit="#NKo77" rend="">kāla</rdg>
+</app>kleśair
+<app xml:id="app-1-19-19a-2" resp="#flodes">
+<lem wit="#Σ" rend="">na bahubhir</lem>
+<rdg wit="#GP43" rend="">makhaiś caivā</rdg>
+</app>
+</l>
+<l n="b">
+<app xml:id="app-1-19-19b-1" resp="#flodes">
+<lem wit="#N #E" rend="">na caivārthasya</lem>
+<rdg wit="#GP43cm" rend="">caivarthāsya</rdg>
+<rdg wit="#PT75" rend="circleback">caivārthani</rdg>
+</app>
                 rāśibhiḥ
-              </l>
-              <l n="c">
+</l>
+<l n="c">
                 dharmaḥ samprāpyate sūkṣmaḥ
-                <app xml:id="app-1-19-19c-1" resp="#flodes">
-                  <rdg wit="#NK28">
-                    <lacunaStart href="lac-1"/>rmaḥ<lacunaEnd/>sū
-                  </rdg>
-                </app>
-              </l>
-              <l n="d">
+<app xml:id="app-1-19-19c-1" resp="#flodes">
+<rdg wit="#NK28">
+<lacunaStart href="lac-1"/>
+rmaḥ<lacunaEnd/>
+sū
+</rdg>
+</app>
+</l>
+<l n="d">
                 śraddhāhīnaiḥ surair api
-              </l>
-            </lg>
-            <translation>
+</l>
+</lg>
+<translation>
               Not by means of many bodily afflictions, nor by heaping up wealth is a subtle teaching understood, not even by the gods, if they are devoid of faith.
-            </translation>
-          </div>
-          <!-- stanza 20 -->   
-          <div type="section" n="20">
-            <lg met="Anuṣṭubh">
-            <!-- try -->
-              <!--<gap xml:id="app-1-20-20ab-1" resp="#flodes" reason="illegible" extent="" unit="chars" start="" end="" wit="#NKA12">-->
-                <l n="a">
-                  <app xml:id="app-1-20-20a-1" resp="#flodes">
-                    <lem wit="#NKA12 #NK82 #NKo77 #NO15 #GP43 #E" rend="">śraddhā dharmaḥ paraḥ sūkṣmaḥ</lem>
-                    <rdg wit="#NC45" rend="">śraddhā dharmaḥ varaḥ sūkṣmaḥ</rdg>
-                    <rdg wit="#NK28" rend="">dharmādharmaḥ paraḥ sūkṣmaḥ</rdg>
-                    <rdg wit="#PT45" rend="">śraddhā dharmaṃ paraṃ sūkṣmaṃ</rdg>
-                  </app>
-                </l>
-                <l n="b">
+</translation>
+</div>
+<!-- stanza 20 -->
+<div type="section" n="20">
+<lg met="Anuṣṭubh">
+<!-- try -->
+<!--<gap xml:id="app-1-20-20ab-1" resp="#flodes" reason="illegible" extent="" unit="chars" start="" end="" wit="#NKA12">-->
+<l n="a">
+<app xml:id="app-1-20-20a-1" resp="#flodes">
+<lem wit="#NKA12 #NK82 #NKo77 #NO15 #GP43 #E" rend="">śraddhā dharmaḥ paraḥ sūkṣmaḥ</lem>
+<rdg wit="#NC45" rend="">śraddhā dharmaḥ varaḥ sūkṣmaḥ</rdg>
+<rdg wit="#NK28" rend="">dharmādharmaḥ paraḥ sūkṣmaḥ</rdg>
+<rdg wit="#PT45" rend="">śraddhā dharmaṃ paraṃ sūkṣmaṃ</rdg>
+</app>
+</l>
+<l n="b">
                   śraddhā 
-                  <app xml:id="app-1-20-20b-1" resp="#flodes">
-                    <lem wit="#NC45 #NK28 #NK82 #GP43 #E" rend="">jñānaṃ</lem>
-                    <rdg wit="#NKo77" rend="">jñāna</rdg>
-                    <rdg wit="#NO15" rend="">jānaṃ</rdg>
-                    <rdg wit="#PT75" rend="">dānaṃ</rdg>
-                  </app>
+<app xml:id="app-1-20-20b-1" resp="#flodes">
+<lem wit="#NC45 #NK28 #NK82 #GP43 #E" rend="">jñānaṃ</lem>
+<rdg wit="#NKo77" rend="">jñāna</rdg>
+<rdg wit="#NO15" rend="">jānaṃ</rdg>
+<rdg wit="#PT75" rend="">dānaṃ</rdg>
+</app>
                   hutaṃ tapaḥ
-                </l>
-              <!--</gap>-->
-              <l n="c">
-                <app xml:id="app-1-20-20c-1" resp="#flodes">
-                  <lem wit="#Σ" rend="">śraddhā</lem>
-                  <rdg wit="#NK82" rend="">
+</l>
+<!--</gap>-->
+<l n="c">
+<app xml:id="app-1-20-20c-1" resp="#flodes">
+<lem wit="#Σ" rend="">śraddhā</lem>
+<rdg wit="#NK82" rend="">
                     śraddhātaḥ
-                    <witDetail wit="#NK82" type="ac"/>
-                  </rdg>
-                </app>
-                <app xml:id="app-1-20-20c-2" resp="#flodes">
-                  <lem wit="#NC45 #NKA12 #NK82 #NKo77 #P #E" rend="">
+<witDetail wit="#NK82" type="ac"/>
+</rdg>
+</app>
+<app xml:id="app-1-20-20c-2" resp="#flodes">
+<lem wit="#NC45 #NKA12 #NK82 #NKo77 #P #E" rend="">
                     svargaś ca mokṣaś
-                    <witDetail wit="#NK82" type="pc"/>
-                  </lem>
-                  <rdg wit="#NK28" rend="">svargaṃ ca mokṣaṃ</rdg>
-                  <rdg wit="#NK82" rend="">
+<witDetail wit="#NK82" type="pc"/>
+</lem>
+<rdg wit="#NK28" rend="">svargaṃ ca mokṣaṃ</rdg>
+<rdg wit="#NK82" rend="">
                     svargomokṣaś
-                    <witDetail wit="#NK82" type="ac"/>
-                  </rdg>
-                  <rdg wit="#NO15" rend="">svargaś ca mokṣaṃ</rdg>
-                </app>
+<witDetail wit="#NK82" type="ac"/>
+</rdg>
+<rdg wit="#NO15" rend="">svargaś ca mokṣaṃ</rdg>
+</app>
                 ca
-              </l>
-              <l n="d">
+</l>
+<l n="d">
                 śraddhā sarvam idaṃ
-                <app xml:id="app-1-20-20d-1" resp="#flodes">
-                  <lem wit="#Σ" rend="">jagat</lem>
-                  <rdg wit="#NK82" rend="">jagataḥ</rdg>
-                </app>
-              </l>
-            </lg>
-            <translation>
+<app xml:id="app-1-20-20d-1" resp="#flodes">
+<lem wit="#Σ" rend="">jagat</lem>
+<rdg wit="#NK82" rend="">jagataḥ</rdg>
+</app>
+</l>
+</lg>
+<translation>
               Faith is the supreme, subtle Dharma; faith is knowledge, oblation and askesis; faith is both heaven and emancipation; faith is this entire universe.
-            </translation>
-          </div>      
-        </div>
-      </div>
-    </body>
-  </text>
+</translation>
+</div>
+</div>
+</div>
+</body>
+</text>
 </TEI>
